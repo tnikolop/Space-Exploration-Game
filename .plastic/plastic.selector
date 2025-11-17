@@ -1,0 +1,4 @@
+repository "Space Exploration Game/Space Exploration Game@6872784885256@cloud"
+  path "/"
+    br "/main"
+    co "/main"
