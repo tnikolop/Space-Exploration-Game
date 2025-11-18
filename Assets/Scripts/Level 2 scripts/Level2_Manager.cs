@@ -5,6 +5,10 @@ using TMPro;
 
 public class Level2_Manager : MonoBehaviour
 {
+
+    [Header("Debugging")]
+    [SerializeField] private bool showDebugLogs = true;
+    
     [Header("Settings")]
     [SerializeField] private Constellation_Data current_level_data;
     [SerializeField] private GameObject star_prefab;
@@ -26,6 +30,8 @@ public class Level2_Manager : MonoBehaviour
     void Start()
     {
         mainCam = Camera.main;
+        if (drag_line == null) Debug.LogError("drag_line is null!");
+        if (current_level_data == null) Debug.LogError("current_level_data is null!");
         Load_Level();
     }
 
@@ -34,11 +40,20 @@ public class Level2_Manager : MonoBehaviour
     {
         // Clear last constellation if it exists
         foreach (Transform child in transform)  // game manager children
+        {
+            if (child == drag_line.transform)   // dont destroy the drag line 
+                continue;   
             Destroy(child.gameObject);
+        }
         spawned_stars.Clear();
         completed_connections.Clear();
         win_panel.SetActive(false);
-        title_text.text = current_level_data.name;
+
+        if (current_level_data != null)
+        {
+            title_text.text = current_level_data.name;
+            if(showDebugLogs) Debug.Log($"Loaded: {current_level_data.name} with {current_level_data.star_positions.Count} stars.");
+        }
 
         // Spawn the stars
         for (int i = 0; i < current_level_data.star_positions.Count; i++)
@@ -75,6 +90,7 @@ public class Level2_Manager : MonoBehaviour
             // check if the object the ray hit(mouse click) was a star
             if (hit.collider != null && hit.collider.TryGetComponent(out Star_point star))
             {
+                if (showDebugLogs) Debug.Log($"Star_ID: {star.id} was clicked");
                 starting_star = star;
                 drag_line.gameObject.SetActive(true);
                 drag_line.SetPosition(0, starting_star.transform.position);
@@ -84,30 +100,46 @@ public class Level2_Manager : MonoBehaviour
         }
 
         // Drag - update the line
-        if(Input.GetMouseButtonDown(0) && starting_star != null)
+        if(Input.GetMouseButton(0) && starting_star != null)
         {
             drag_line.SetPosition(1, mouse_pos);
         }
 
         // Mouse Up - Check if there is a connection
-        if (Input.GetMouseButtonDown(0) && starting_star != null)
+        if (Input.GetMouseButtonUp(0) && starting_star != null)
         {
             RaycastHit2D hit = Physics2D.Raycast(mouse_pos, Vector2.zero);
-            bool connectionMade = false;
+            // bool connectionMade = false;
 
             if (hit.collider != null && hit.collider.TryGetComponent(out Star_point end_Star))
             {
+                if (showDebugLogs) Debug.Log($"2. You stopped draggin at star_id: {end_Star.id}");
                 if (end_Star != starting_star)
                 {
+                    bool valid = Is_Valid_Connection(starting_star.id, end_Star.id);
+                    bool exists = Connection_Exists(starting_star.id, end_Star.id);
                     //check if connection is valid
-                    if (Is_Valid_Connection(starting_star.id, end_Star.id) && !Connection_Exists(starting_star.id, end_Star.id))
+                    if (valid && !exists)
                     {
+                        if (showDebugLogs) Debug.Log("Connection Succesful!");
                         Draw_Line(starting_star.transform.position, end_Star.transform.position);
                         Register_Connection(starting_star.id, end_Star.id);
-                        connectionMade = true;
+                        // connectionMade = true;
                         Check_Win_Condition();
                     }
+                    else
+                    {
+                        if (showDebugLogs) Debug.Log($"Conection Failed! : Valid={valid}, Exists={exists}");
+                    }
                 }
+                else
+                {
+                    if (showDebugLogs) Debug.Log("Conection Failed! You clicked on the same star");
+                }
+            }
+            else
+            {
+                if(showDebugLogs) Debug.Log("Mouse up on empty space.");
             }
 
             //reset
@@ -155,6 +187,7 @@ public class Level2_Manager : MonoBehaviour
     private void Register_Connection(int ida, int idb)
     {
         completed_connections.Add(ida + "-" + idb);
+        if(showDebugLogs) Debug.Log($"Connection Registered {ida}-{ida}. Total: {completed_connections.Count}");
     }
 
     // Draw a permanent line bettween 2 start to mark a succesful connection
@@ -173,6 +206,8 @@ public class Level2_Manager : MonoBehaviour
     // Win Condition: current connection >= expected connections for this constellation
     private void Check_Win_Condition()
     {
+        if(showDebugLogs) Debug.Log($"Check Win: Completed Connections:{completed_connections.Count} / {current_level_data.connections_index.Count}.");
+
         if (completed_connections.Count >= current_level_data.connections_index.Count)
         {
             Debug.Log("Constellation Complete");
