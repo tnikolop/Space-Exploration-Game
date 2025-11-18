@@ -77,5 +77,7 @@ public class GameManager : MonoBehaviour
             InfoPanel.SetActive(false);
         else
             Debug.LogError("Info Panel is null!");
+
+        Audio_Manager.Instance.Play_Music();
     }
 }

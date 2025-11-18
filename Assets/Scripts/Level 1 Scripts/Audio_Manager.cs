@@ -29,28 +29,28 @@ public class Audio_Manager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        //Start playhing the background music when the game loads
-        if (background_music != null && music_source != null)
-            Play_Music(background_music);
-        else
-            Debug.LogWarning("Background music or music source not assigned in AudioManager.");
+    // // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // void Start()
+    // {
+    //     //Start playhing the background music when the game loads
+    //     if (background_music != null && music_source != null)
+    //         Play_Music(background_music);
+    //     else
+    //         Debug.LogWarning("Background music or music source not assigned in AudioManager.");
 
-    }
+    // }
 
     //Plays the background music, setting it to loop.
-    public void Play_Music(AudioClip clip)
+    public void Play_Music()
     {
-        if (music_source != null && clip != null)
+        if (music_source != null && background_music != null)
         {
-            music_source.clip = clip;
+            music_source.clip = background_music;
             music_source.loop = true;
             music_source.Play();
         }
         else
-            Debug.LogWarning(" Audio clip or music source is null.");
+            Debug.LogWarning(" background_music or music source is null.");
 
     }
 

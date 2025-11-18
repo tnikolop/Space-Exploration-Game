@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e8e013299c70cf586db76063101c84, type: 3}
+  m_Name: Megali Arktos
+  m_EditorClassIdentifier: Assembly-CSharp::Constellation_Data
+  name: "\u039C\u03B5\u03B3\u03AC\u03BB\u03B7 \u0386\u03C1\u03BA\u03C4\u03BF\u03C2"
+  description: "\u039C\u03BF\u03B9\u03AC\u03B6\u03B5\u03B9 \u03BC\u03B5 \u03BA\u03B1\u03C4\u03C3\u03B1\u03C1\u03BF\u03BB\u03AC\u03BA\u03B9
+    \u03AE \u03BA\u03BF\u03C5\u03C4\u03AC\u03BB\u03B1. \u0395\u03AF\u03BD\u03B1\u03B9
+    \u03B1\u03C0\u03CC \u03C4\u03BF\u03C5\u03C2 \u03C0\u03B9\u03BF \u03B5\u03CD\u03BA\u03BF\u03BB\u03BF\u03C5\u03C2
+    \u03BD\u03B1 \u03B2\u03C1\u03B5\u03B9\u03C2 \u03C3\u03C4\u03BF\u03BD \u03BF\u03C5\u03C1\u03B1\u03BD\u03CC."
+  myth: "\u03A3\u03CD\u03BC\u03C6\u03C9\u03BD\u03B1 \u03BC\u03B5 \u03C4\u03B7 \u03BC\u03C5\u03B8\u03BF\u03BB\u03BF\u03B3\u03AF\u03B1,
+    \u03B7 \u03BD\u03CD\u03BC\u03C6\u03B7 \u039A\u03B1\u03BB\u03BB\u03B9\u03C3\u03C4\u03CE
+    \u03BC\u03B5\u03C4\u03B1\u03BC\u03BF\u03C1\u03C6\u03CE\u03B8\u03B7\u03BA\u03B5
+    \u03C3\u03B5 \u03B1\u03C1\u03BA\u03BF\u03CD\u03B4\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B7
+    \u03B8\u03B5\u03AC \u0389\u03C1\u03B1."
+  star_positions:
+  - {x: 0.2, y: 0.3}
+  - {x: 0.25, y: 0.45}
+  - {x: 0.4, y: 0.48}
+  - {x: 0.38, y: 0.32}
+  - {x: 0.5, y: 0.36}
+  - {x: 0.6, y: 0.32}
+  - {x: 0.75, y: 0.45}
+  connections_index:
+  - {x: 0, y: 1}
+  - {x: 1, y: 2}
+  - {x: 2, y: 3}
+  - {x: 3, y: 0}
+  - {x: 3, y: 4}
+  - {x: 4, y: 5}
+  - {x: 5, y: 6}
