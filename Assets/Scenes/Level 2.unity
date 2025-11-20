@@ -1018,7 +1018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8203ab6a825fc1348af4141d3df9ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  showDebugLogs: 1
+  showDebugLogs: 0
   constellation_data_list:
   - {fileID: 11400000, guid: d445d6a869590aabc9e4d7068a627332, type: 2}
   - {fileID: 11400000, guid: a3c6444e6363a2be283ac0bd5c92c314, type: 2}
