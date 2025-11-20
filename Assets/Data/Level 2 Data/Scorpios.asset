@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e8e013299c70cf586db76063101c84, type: 3}
+  m_Name: Scorpios
+  m_EditorClassIdentifier: Assembly-CSharp::Constellation_Data
+  name: "\u03A3\u03BA\u03BF\u03C1\u03C0\u03B9\u03CC\u03C2"
+  description: 
+  myth: 
+  star_positions:
+  - {x: 0.38020104, y: 0.4149994}
+  - {x: 0.36128592, y: 0.3600006}
+  - {x: 0.35077646, y: 0.3330017}
+  - {x: 0.3796751, y: 0.2710022}
+  - {x: 0.43957618, y: 0.2730011}
+  - {x: 0.4774064, y: 0.3}
+  - {x: 0.4831887, y: 0.40400085}
+  - {x: 0.48896778, y: 0.48900145}
+  - {x: 0.5278499, y: 0.6350006}
+  - {x: 0.546765, y: 0.6780014}
+  - {x: 0.5698846, y: 0.69700015}
+  - {x: 0.6329382, y: 0.6750015}
+  - {x: 0.63346416, y: 0.7550003}
+  - {x: 0.6208541, y: 0.8280014}
+  connections_index:
+  - {x: 0, y: 1}
+  - {x: 1, y: 2}
+  - {x: 2, y: 3}
+  - {x: 3, y: 4}
+  - {x: 4, y: 5}
+  - {x: 5, y: 6}
+  - {x: 6, y: 7}
+  - {x: 7, y: 8}
+  - {x: 8, y: 9}
+  - {x: 9, y: 10}
+  - {x: 10, y: 11}
+  - {x: 10, y: 12}
+  - {x: 10, y: 13}

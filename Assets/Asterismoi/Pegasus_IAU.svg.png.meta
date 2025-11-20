@@ -1,0 +1,2314 @@
+fileFormatVersion: 2
+guid: 37bb3bd2d8d5a89ca95aff4244363552
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7974664693547401032
+    second: Pegasus_IAU.svg_0
+  - first:
+      213: 3574732888190494317
+    second: Pegasus_IAU.svg_1
+  - first:
+      213: 4504971563139146941
+    second: Pegasus_IAU.svg_2
+  - first:
+      213: -3286736035611596654
+    second: Pegasus_IAU.svg_3
+  - first:
+      213: 2403902795104138965
+    second: Pegasus_IAU.svg_4
+  - first:
+      213: -4031768967256326912
+    second: Pegasus_IAU.svg_5
+  - first:
+      213: 4033013870581467993
+    second: Pegasus_IAU.svg_6
+  - first:
+      213: -5317887377529014459
+    second: Pegasus_IAU.svg_7
+  - first:
+      213: 765448462815438849
+    second: Pegasus_IAU.svg_8
+  - first:
+      213: 8099207920319988980
+    second: Pegasus_IAU.svg_9
+  - first:
+      213: -1218617935957121155
+    second: Pegasus_IAU.svg_10
+  - first:
+      213: -263891585922202887
+    second: Pegasus_IAU.svg_11
+  - first:
+      213: -6738919247570186286
+    second: Pegasus_IAU.svg_12
+  - first:
+      213: 2585421849618536222
+    second: Pegasus_IAU.svg_13
+  - first:
+      213: 3308365023101752744
+    second: Pegasus_IAU.svg_14
+  - first:
+      213: 3962012651287817899
+    second: Pegasus_IAU.svg_15
+  - first:
+      213: -2569281041584699640
+    second: Pegasus_IAU.svg_16
+  - first:
+      213: 8937635039969721609
+    second: Pegasus_IAU.svg_17
+  - first:
+      213: -274139009214621937
+    second: Pegasus_IAU.svg_18
+  - first:
+      213: -6942866893125064841
+    second: Pegasus_IAU.svg_19
+  - first:
+      213: -9049844684561688698
+    second: Pegasus_IAU.svg_20
+  - first:
+      213: 3609319279289275826
+    second: Pegasus_IAU.svg_21
+  - first:
+      213: 7262908115831227583
+    second: Pegasus_IAU.svg_22
+  - first:
+      213: 5679462412946858844
+    second: Pegasus_IAU.svg_23
+  - first:
+      213: 4217738092458228339
+    second: Pegasus_IAU.svg_24
+  - first:
+      213: 4006057482139759480
+    second: Pegasus_IAU.svg_25
+  - first:
+      213: -4147950866643422558
+    second: Pegasus_IAU.svg_26
+  - first:
+      213: -3429913521472124520
+    second: Pegasus_IAU.svg_27
+  - first:
+      213: -6351103956367743137
+    second: Pegasus_IAU.svg_28
+  - first:
+      213: 7700921040527740610
+    second: Pegasus_IAU.svg_29
+  - first:
+      213: 3741744580531876498
+    second: Pegasus_IAU.svg_30
+  - first:
+      213: 8501170065137309876
+    second: Pegasus_IAU.svg_31
+  - first:
+      213: 8375154921397637846
+    second: Pegasus_IAU.svg_32
+  - first:
+      213: 8099425298064423636
+    second: Pegasus_IAU.svg_33
+  - first:
+      213: 5131848607886382458
+    second: Pegasus_IAU.svg_34
+  - first:
+      213: -3248345013400570997
+    second: Pegasus_IAU.svg_35
+  - first:
+      213: -6420176709570712330
+    second: Pegasus_IAU.svg_36
+  - first:
+      213: 2237487905111396474
+    second: Pegasus_IAU.svg_37
+  - first:
+      213: -5649383407395857709
+    second: Pegasus_IAU.svg_38
+  - first:
+      213: 1717837469340616619
+    second: Pegasus_IAU.svg_39
+  - first:
+      213: -4124463410324843573
+    second: Pegasus_IAU.svg_40
+  - first:
+      213: 4948009659482019060
+    second: Pegasus_IAU.svg_41
+  - first:
+      213: 5228380175457745263
+    second: Pegasus_IAU.svg_42
+  - first:
+      213: -5538089294776695156
+    second: Pegasus_IAU.svg_43
+  - first:
+      213: 4619438486002060810
+    second: Pegasus_IAU.svg_44
+  - first:
+      213: 1079434533061860080
+    second: Pegasus_IAU.svg_45
+  - first:
+      213: -5340847485855507876
+    second: Pegasus_IAU.svg_46
+  - first:
+      213: 2474021451865460154
+    second: Pegasus_IAU.svg_47
+  - first:
+      213: 7310809526205593738
+    second: Pegasus_IAU.svg_48
+  - first:
+      213: 6569486871544445388
+    second: Pegasus_IAU.svg_49
+  - first:
+      213: 950316910285735689
+    second: Pegasus_IAU.svg_50
+  - first:
+      213: -7263502193293848992
+    second: Pegasus_IAU.svg_51
+  - first:
+      213: -7767680691456650548
+    second: Pegasus_IAU.svg_52
+  - first:
+      213: 9200700292689467021
+    second: Pegasus_IAU.svg_53
+  - first:
+      213: -3263216043229445646
+    second: Pegasus_IAU.svg_54
+  - first:
+      213: -2144655249093796741
+    second: Pegasus_IAU.svg_55
+  - first:
+      213: 797654234280085726
+    second: Pegasus_IAU.svg_56
+  - first:
+      213: -2836179342206997950
+    second: Pegasus_IAU.svg_57
+  - first:
+      213: 3450606674159590876
+    second: Pegasus_IAU.svg_58
+  - first:
+      213: 8848675382083264762
+    second: Pegasus_IAU.svg_59
+  - first:
+      213: -8455568869671670484
+    second: Pegasus_IAU.svg_60
+  - first:
+      213: 3854472534468004551
+    second: Pegasus_IAU.svg_61
+  - first:
+      213: -2140489483484141138
+    second: Pegasus_IAU.svg_62
+  - first:
+      213: 6837973645499104167
+    second: Pegasus_IAU.svg_63
+  - first:
+      213: -8694364589688827872
+    second: Pegasus_IAU.svg_64
+  - first:
+      213: -1029997039839754607
+    second: Pegasus_IAU.svg_65
+  - first:
+      213: -954788908157951091
+    second: Pegasus_IAU.svg_66
+  - first:
+      213: 7060250822563742341
+    second: Pegasus_IAU.svg_67
+  - first:
+      213: -6514570908630946660
+    second: Pegasus_IAU.svg_68
+  - first:
+      213: 6258142725191198774
+    second: Pegasus_IAU.svg_69
+  - first:
+      213: -6146657233419112288
+    second: Pegasus_IAU.svg_70
+  - first:
+      213: -4524951335878687964
+    second: Pegasus_IAU.svg_71
+  - first:
+      213: 2426021158696236238
+    second: Pegasus_IAU.svg_72
+  - first:
+      213: -7816681786937179307
+    second: Pegasus_IAU.svg_73
+  - first:
+      213: 4382034190102181441
+    second: Pegasus_IAU.svg_74
+  - first:
+      213: -4583420028593306287
+    second: Pegasus_IAU.svg_75
+  - first:
+      213: -4408878263230057062
+    second: Pegasus_IAU.svg_76
+  - first:
+      213: 4683716278500262431
+    second: Pegasus_IAU.svg_77
+  - first:
+      213: -6080944387104048642
+    second: Pegasus_IAU.svg_78
+  - first:
+      213: 3377516862139320079
+    second: Pegasus_IAU.svg_79
+  - first:
+      213: -4254051197250931791
+    second: Pegasus_IAU.svg_80
+  - first:
+      213: 7766479508226381784
+    second: Pegasus_IAU.svg_81
+  - first:
+      213: 7432804853557149651
+    second: Pegasus_IAU.svg_82
+  - first:
+      213: 9150044776044318123
+    second: Pegasus_IAU.svg_83
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1024
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ffdb58943bbae60800000000000000
+      internalID: 7974664693547401032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_1
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1030
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d66208f3f900c9130800000000000000
+      internalID: 3574732888190494317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_2
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1024
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db42520b4cfd48e30800000000000000
+      internalID: 4504971563139146941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_3
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1030
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29825ee4dfa2362d0800000000000000
+      internalID: -3286736035611596654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_4
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1024
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d630c01bd06c5120800000000000000
+      internalID: 2403902795104138965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_5
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1024
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d3e3a4c774c08c0800000000000000
+      internalID: -4031768967256326912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_6
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1030
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b4b3a5fb428f730800000000000000
+      internalID: 4033013870581467993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_7
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1024
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54779d20b911336b0800000000000000
+      internalID: -5317887377529014459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_8
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1024
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108abf7425b6f9a00800000000000000
+      internalID: 765448462815438849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_9
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1030
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f404bc21ba266070800000000000000
+      internalID: 8099207920319988980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_10
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 1024
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d772b5a9179961fe0800000000000000
+      internalID: -1218617935957121155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_11
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 1024
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f284e13008765cf0800000000000000
+      internalID: -263891585922202887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_12
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1030
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df498e06ac8a72a0800000000000000
+      internalID: -6738919247570186286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_13
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1024
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17db0d597341e320800000000000000
+      internalID: 2585421849618536222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_14
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1024
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a59e45c57ca9ed20800000000000000
+      internalID: 3308365023101752744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_15
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1030
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae2d93c385ebf630800000000000000
+      internalID: 3962012651287817899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 942
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807c23c5184185cd0800000000000000
+      internalID: -2569281041584699640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_17
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 942
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90dba7917bbd80c70800000000000000
+      internalID: 8937635039969721609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_18
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 942
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f075fa80600123cf0800000000000000
+      internalID: -274139009214621937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 954
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777e578785bf5af90800000000000000
+      internalID: -6942866893125064841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_20
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 122
+        width: 1095
+        height: 902
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6875e30253e786280800000000000000
+      internalID: -9049844684561688698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_21
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 942
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b59103f2c0e61230800000000000000
+      internalID: 3609319279289275826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_22
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 942
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb40c6863780bc460800000000000000
+      internalID: 7262908115831227583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_23
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 942
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5361e639f081de40800000000000000
+      internalID: 5679462412946858844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_24
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 954
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a3b94d27a688a30800000000000000
+      internalID: 4217738092458228339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 791
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8737cb41e00689730800000000000000
+      internalID: 4006057482139759480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_26
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 791
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a2f1ffd9a48f66c0800000000000000
+      internalID: -4147950866643422558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_27
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 791
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 899485e13df7660d0800000000000000
+      internalID: -3429913521472124520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_28
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 803
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f576f1de9985cd7a0800000000000000
+      internalID: -6351103956367743137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_29
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 791
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ceccf792ea2fda60800000000000000
+      internalID: 7700921040527740610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_30
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 791
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29278d21fd85de330800000000000000
+      internalID: 3741744580531876498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_31
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 791
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b891b312293af570800000000000000
+      internalID: 8501170065137309876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_32
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 803
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d255cc07078a3470800000000000000
+      internalID: 8375154921397637846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 641
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da31ff5560f66070800000000000000
+      internalID: 8099425298064423636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_34
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 641
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7596228e1df73740800000000000000
+      internalID: 5131848607886382458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 641
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83f858bb6f8be2d0800000000000000
+      internalID: -3248345013400570997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_36
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 652
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc2dc65c43f6e6a0800000000000000
+      internalID: -6420176709570712330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_37
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 641
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70d56d15672d0f10800000000000000
+      internalID: 2237487905111396474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_38
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 641
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da1f2209bb5991b0800000000000000
+      internalID: -5649383407395857709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_39
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 641
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba747eda31cf6d710800000000000000
+      internalID: 1717837469340616619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_40
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 652
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3dd727166f2c6c0800000000000000
+      internalID: -4124463410324843573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 491
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f490a2d19cdaa440800000000000000
+      internalID: 4948009659482019060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_42
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 491
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f697ad48110fe8840800000000000000
+      internalID: 5228380175457745263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_43
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 491
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c860172e021c423b0800000000000000
+      internalID: -5538089294776695156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_44
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 503
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ecbe304da8b1040800000000000000
+      internalID: 4619438486002060810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_45
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 491
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa117d1dfbeafe00800000000000000
+      internalID: 1079434533061860080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_46
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 491
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a5b06328f71e5b0800000000000000
+      internalID: -5340847485855507876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_47
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 491
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd032d076d755220800000000000000
+      internalID: 2474021451865460154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_48
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 503
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88b60e9786357560800000000000000
+      internalID: 7310809526205593738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 341
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc9bff6c0818b2b50800000000000000
+      internalID: 6569486871544445388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_50
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 353
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 907c0a5e134303d00800000000000000
+      internalID: 950316910285735689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_51
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 341
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e03772d3bd23b90800000000000000
+      internalID: -7263502193293848992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_52
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 353
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2d019e097a33490800000000000000
+      internalID: -7767680691456650548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_53
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 192
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8696963b247faf70800000000000000
+      internalID: 9200700292689467021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_54
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f104f54c4ab6b2d0800000000000000
+      internalID: -3263216043229445646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_55
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 204
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c5610f967ac32e0800000000000000
+      internalID: -2144655249093796741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_56
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 192
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8c9d7cc46d11b00800000000000000
+      internalID: 797654234280085726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_57
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 192
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a637c3aedd3a8d0800000000000000
+      internalID: -2836179342206997950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_58
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 204
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdddfd0fc7403ef20800000000000000
+      internalID: 3450606674159590876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_59
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 100
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af021d1b06fccca70800000000000000
+      internalID: 8848675382083264762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_60
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 106
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d6e5d99e8c7aa80800000000000000
+      internalID: -8455568869671670484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_61
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 100
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca07752956dd7530800000000000000
+      internalID: 3854472534468004551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_62
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 100
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9e773d7247b42e0800000000000000
+      internalID: -2140489483484141138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_63
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 106
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7abf47b2dcc55ee50800000000000000
+      internalID: 6837973645499104167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_64
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 100
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 020dcdb6879675780800000000000000
+      internalID: -8694364589688827872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_65
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 100
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196c5a04627b4b1f0800000000000000
+      internalID: -1029997039839754607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_66
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 106
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8323c5fb88efb2f0800000000000000
+      internalID: -954788908157951091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_67
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 100
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582421067bc0bf160800000000000000
+      internalID: 7060250822563742341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_68
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 100
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c65f636489795a0800000000000000
+      internalID: -6514570908630946660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_69
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 106
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63867b8c6a369d650800000000000000
+      internalID: 6258142725191198774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_70
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 16
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0f7f500dfa2baa0800000000000000
+      internalID: -6146657233419112288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_71
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 20
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4238507fbb42431c0800000000000000
+      internalID: -4524951335878687964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_72
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 18
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec4bba5e365faa120800000000000000
+      internalID: 2426021158696236238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_73
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 20
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553085f4451958390800000000000000
+      internalID: -7816681786937179307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_74
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 20
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14638aef0ec10dc30800000000000000
+      internalID: 4382034190102181441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_75
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 20
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 155094b94cb6460c0800000000000000
+      internalID: -4583420028593306287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_76
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 22
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a953b3e249480d2c0800000000000000
+      internalID: -4408878263230057062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_77
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 20
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1209b0d327eff040800000000000000
+      internalID: 4683716278500262431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_78
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 23
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9f1c35c452c9ba0800000000000000
+      internalID: -6080944387104048642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_79
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 20
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07c4b6f0b95fde20800000000000000
+      internalID: 3377516862139320079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_80
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 23
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b3788b99f296f4c0800000000000000
+      internalID: -4254051197250931791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_81
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 20
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d71f23d6f318cb60800000000000000
+      internalID: 7766479508226381784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_82
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 0
+        width: 88
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dfb21532a0a62760800000000000000
+      internalID: 7432804853557149651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pegasus_IAU.svg_83
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 0
+        width: 94
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad4a0bae3d7bfe70800000000000000
+      internalID: 9150044776044318123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Pegasus_IAU.svg_0: 7974664693547401032
+      Pegasus_IAU.svg_1: 3574732888190494317
+      Pegasus_IAU.svg_10: -1218617935957121155
+      Pegasus_IAU.svg_11: -263891585922202887
+      Pegasus_IAU.svg_12: -6738919247570186286
+      Pegasus_IAU.svg_13: 2585421849618536222
+      Pegasus_IAU.svg_14: 3308365023101752744
+      Pegasus_IAU.svg_15: 3962012651287817899
+      Pegasus_IAU.svg_16: -2569281041584699640
+      Pegasus_IAU.svg_17: 8937635039969721609
+      Pegasus_IAU.svg_18: -274139009214621937
+      Pegasus_IAU.svg_19: -6942866893125064841
+      Pegasus_IAU.svg_2: 4504971563139146941
+      Pegasus_IAU.svg_20: -9049844684561688698
+      Pegasus_IAU.svg_21: 3609319279289275826
+      Pegasus_IAU.svg_22: 7262908115831227583
+      Pegasus_IAU.svg_23: 5679462412946858844
+      Pegasus_IAU.svg_24: 4217738092458228339
+      Pegasus_IAU.svg_25: 4006057482139759480
+      Pegasus_IAU.svg_26: -4147950866643422558
+      Pegasus_IAU.svg_27: -3429913521472124520
+      Pegasus_IAU.svg_28: -6351103956367743137
+      Pegasus_IAU.svg_29: 7700921040527740610
+      Pegasus_IAU.svg_3: -3286736035611596654
+      Pegasus_IAU.svg_30: 3741744580531876498
+      Pegasus_IAU.svg_31: 8501170065137309876
+      Pegasus_IAU.svg_32: 8375154921397637846
+      Pegasus_IAU.svg_33: 8099425298064423636
+      Pegasus_IAU.svg_34: 5131848607886382458
+      Pegasus_IAU.svg_35: -3248345013400570997
+      Pegasus_IAU.svg_36: -6420176709570712330
+      Pegasus_IAU.svg_37: 2237487905111396474
+      Pegasus_IAU.svg_38: -5649383407395857709
+      Pegasus_IAU.svg_39: 1717837469340616619
+      Pegasus_IAU.svg_4: 2403902795104138965
+      Pegasus_IAU.svg_40: -4124463410324843573
+      Pegasus_IAU.svg_41: 4948009659482019060
+      Pegasus_IAU.svg_42: 5228380175457745263
+      Pegasus_IAU.svg_43: -5538089294776695156
+      Pegasus_IAU.svg_44: 4619438486002060810
+      Pegasus_IAU.svg_45: 1079434533061860080
+      Pegasus_IAU.svg_46: -5340847485855507876
+      Pegasus_IAU.svg_47: 2474021451865460154
+      Pegasus_IAU.svg_48: 7310809526205593738
+      Pegasus_IAU.svg_49: 6569486871544445388
+      Pegasus_IAU.svg_5: -4031768967256326912
+      Pegasus_IAU.svg_50: 950316910285735689
+      Pegasus_IAU.svg_51: -7263502193293848992
+      Pegasus_IAU.svg_52: -7767680691456650548
+      Pegasus_IAU.svg_53: 9200700292689467021
+      Pegasus_IAU.svg_54: -3263216043229445646
+      Pegasus_IAU.svg_55: -2144655249093796741
+      Pegasus_IAU.svg_56: 797654234280085726
+      Pegasus_IAU.svg_57: -2836179342206997950
+      Pegasus_IAU.svg_58: 3450606674159590876
+      Pegasus_IAU.svg_59: 8848675382083264762
+      Pegasus_IAU.svg_6: 4033013870581467993
+      Pegasus_IAU.svg_60: -8455568869671670484
+      Pegasus_IAU.svg_61: 3854472534468004551
+      Pegasus_IAU.svg_62: -2140489483484141138
+      Pegasus_IAU.svg_63: 6837973645499104167
+      Pegasus_IAU.svg_64: -8694364589688827872
+      Pegasus_IAU.svg_65: -1029997039839754607
+      Pegasus_IAU.svg_66: -954788908157951091
+      Pegasus_IAU.svg_67: 7060250822563742341
+      Pegasus_IAU.svg_68: -6514570908630946660
+      Pegasus_IAU.svg_69: 6258142725191198774
+      Pegasus_IAU.svg_7: -5317887377529014459
+      Pegasus_IAU.svg_70: -6146657233419112288
+      Pegasus_IAU.svg_71: -4524951335878687964
+      Pegasus_IAU.svg_72: 2426021158696236238
+      Pegasus_IAU.svg_73: -7816681786937179307
+      Pegasus_IAU.svg_74: 4382034190102181441
+      Pegasus_IAU.svg_75: -4583420028593306287
+      Pegasus_IAU.svg_76: -4408878263230057062
+      Pegasus_IAU.svg_77: 4683716278500262431
+      Pegasus_IAU.svg_78: -6080944387104048642
+      Pegasus_IAU.svg_79: 3377516862139320079
+      Pegasus_IAU.svg_8: 765448462815438849
+      Pegasus_IAU.svg_80: -4254051197250931791
+      Pegasus_IAU.svg_81: 7766479508226381784
+      Pegasus_IAU.svg_82: 7432804853557149651
+      Pegasus_IAU.svg_83: 9150044776044318123
+      Pegasus_IAU.svg_9: 8099207920319988980
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
