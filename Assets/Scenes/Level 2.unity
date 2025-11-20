@@ -1020,14 +1020,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   showDebugLogs: 1
   constellation_data_list:
-  - {fileID: 11400000, guid: bd6a082222e429bcda660a94b45bb5af, type: 2}
-  - {fileID: 11400000, guid: 95acc01b34db4fdb0a15b135c13129a1, type: 2}
-  - {fileID: 11400000, guid: 0533006f63622d0febfeab163eafcd6b, type: 2}
-  - {fileID: 11400000, guid: caa913810ada50c6685663373aeb316f, type: 2}
-  - {fileID: 11400000, guid: 99e06cd66b0738f618d5c7f3eef95bf4, type: 2}
-  - {fileID: 11400000, guid: 5af54ed092c3509a8bb0a88ac74adad0, type: 2}
-  - {fileID: 11400000, guid: a3c6444e6363a2be283ac0bd5c92c314, type: 2}
   - {fileID: 11400000, guid: d445d6a869590aabc9e4d7068a627332, type: 2}
+  - {fileID: 11400000, guid: a3c6444e6363a2be283ac0bd5c92c314, type: 2}
+  - {fileID: 11400000, guid: 99e06cd66b0738f618d5c7f3eef95bf4, type: 2}
+  - {fileID: 11400000, guid: caa913810ada50c6685663373aeb316f, type: 2}
+  - {fileID: 11400000, guid: 95acc01b34db4fdb0a15b135c13129a1, type: 2}
+  - {fileID: 11400000, guid: 5af54ed092c3509a8bb0a88ac74adad0, type: 2}
+  - {fileID: 11400000, guid: 0533006f63622d0febfeab163eafcd6b, type: 2}
+  - {fileID: 11400000, guid: bd6a082222e429bcda660a94b45bb5af, type: 2}
   star_prefab: {fileID: 7565239219164850136, guid: 1cb6b7afa5fbbd740aaa1a76c524e74f, type: 3}
   line_prefab: {fileID: 6183938867891091981, guid: fc736499524a6e06db52c157e8aaf467, type: 3}
   drag_line: {fileID: 47786787}
