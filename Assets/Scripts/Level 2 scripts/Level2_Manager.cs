@@ -65,7 +65,7 @@ public class Level2_Manager : MonoBehaviour
         foreach (Transform child in transform)  // game manager children
         {
             if (child == drag_line.transform)   // dont destroy the drag line 
-                continue;   
+                continue;
             Destroy(child.gameObject);
         }
         spawned_stars.Clear();
@@ -76,7 +76,7 @@ public class Level2_Manager : MonoBehaviour
         {
             title_text.text = current_level_data.name;
             description.text = current_level_data.description;
-            if(showDebugLogs) Debug.Log($"Loaded: {current_level_data.name} with {current_level_data.star_positions.Count} stars.");
+            if (showDebugLogs) Debug.Log($"Loaded: {current_level_data.name} with {current_level_data.star_positions.Count} stars.");
         }
 
         // Spawn the stars
@@ -98,7 +98,7 @@ public class Level2_Manager : MonoBehaviour
     void Update()
     {
         Handle_Input();
-    
+
     }
     private void Handle_Input()
     {
@@ -124,7 +124,7 @@ public class Level2_Manager : MonoBehaviour
         }
 
         // Drag - update the line
-        if(Input.GetMouseButton(0) && starting_star != null)
+        if (Input.GetMouseButton(0) && starting_star != null)
         {
             drag_line.SetPosition(1, mouse_pos);
         }
@@ -163,7 +163,7 @@ public class Level2_Manager : MonoBehaviour
             }
             else
             {
-                if(showDebugLogs) Debug.Log("Mouse up on empty space.");
+                if (showDebugLogs) Debug.Log("Mouse up on empty space.");
             }
 
             //reset
@@ -211,7 +211,7 @@ public class Level2_Manager : MonoBehaviour
     private void Register_Connection(int ida, int idb)
     {
         completed_connections.Add(ida + "-" + idb);
-        if(showDebugLogs) Debug.Log($"Connection Registered {ida}-{ida}. Total: {completed_connections.Count}");
+        if (showDebugLogs) Debug.Log($"Connection Registered {ida}-{ida}. Total: {completed_connections.Count}");
     }
 
     // Draw a permanent line bettween 2 start to mark a succesful connection
@@ -230,7 +230,7 @@ public class Level2_Manager : MonoBehaviour
     // Win Condition: current connection >= expected connections for this constellation
     private void Check_Win_Condition()
     {
-        if(showDebugLogs) Debug.Log($"Check Win: Completed Connections:{completed_connections.Count} / {current_level_data.connections_index.Count}.");
+        if (showDebugLogs) Debug.Log($"Check Win: Completed Connections:{completed_connections.Count} / {current_level_data.connections_index.Count}.");
 
         if (completed_connections.Count >= current_level_data.connections_index.Count)
         {
@@ -257,4 +257,39 @@ public class Level2_Manager : MonoBehaviour
 
         }
     }
+
+#if UNITY_EDITOR
+    // Αυτό προσθέτει επιλογή στο δεξί κλικ του Component
+    [ContextMenu("💾 SAVE Star Positions")]
+    public void Save_Current_Positions()
+    {
+        if (current_level_data == null)
+        {
+            Debug.LogError("Δεν υπάρχει Level Data!");
+            return;
+        }
+
+        float height = 2f * mainCam.orthographicSize;
+        float width = height * mainCam.aspect;
+
+        // Ενημέρωση της λίστας δεδομένων με τις τρέχουσες θέσεις
+        for (int i = 0; i < spawned_stars.Count; i++)
+        {
+            // Παίρνουμε τη θέση του αστεριού από τον κόσμο (Scene)
+            Vector3 worldPos = spawned_stars[i].transform.position;
+
+            // Κάνουμε την αντίστροφη πράξη από το Get_World_Position
+            // Μετατρέπουμε το World Position πίσω σε Normalized (0-1)
+            float normX = (worldPos.x / width) + 0.5f;
+            float normY = (worldPos.y / height) + 0.5f;
+
+            // Αποθήκευση στο αρχείο
+            current_level_data.star_positions[i] = new Vector2(normX, normY);
+        }
+
+        // Ενημέρωση του Unity ότι αλλάξαμε το αρχείο (για να το σώσει στον δίσκο)
+        UnityEditor.EditorUtility.SetDirty(current_level_data);
+        Debug.Log($"✅ Οι θέσεις για το {current_level_data.name} αποθηκεύτηκαν!");
+    }
+#endif
 }

@@ -670,7 +670,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: TITLE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1020,8 +1020,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   showDebugLogs: 1
   constellation_data_list:
-  - {fileID: 11400000, guid: a3c6444e6363a2be283ac0bd5c92c314, type: 2}
   - {fileID: 11400000, guid: d445d6a869590aabc9e4d7068a627332, type: 2}
+  - {fileID: 11400000, guid: a3c6444e6363a2be283ac0bd5c92c314, type: 2}
   - {fileID: 11400000, guid: 5af54ed092c3509a8bb0a88ac74adad0, type: 2}
   - {fileID: 11400000, guid: 99e06cd66b0738f618d5c7f3eef95bf4, type: 2}
   star_prefab: {fileID: 7565239219164850136, guid: 1cb6b7afa5fbbd740aaa1a76c524e74f, type: 3}
