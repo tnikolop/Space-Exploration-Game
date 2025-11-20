@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e8e013299c70cf586db76063101c84, type: 3}
+  m_Name: Draco
+  m_EditorClassIdentifier: Assembly-CSharp::Constellation_Data
+  name: "\u0394\u03C1\u03AC\u03BA\u03BF\u03BD\u03C4\u03B1\u03C2"
+  description: 
+  myth: 
+  star_positions:
+  - {x: 0.7341908, y: 0.72905576}
+  - {x: 0.6900524, y: 0.6540558}
+  - {x: 0.6280507, y: 0.46105498}
+  - {x: 0.52716684, y: 0.3240555}
+  - {x: 0.47199613, y: 0.33005524}
+  - {x: 0.4520291, y: 0.40405577}
+  - {x: 0.4162995, y: 0.52805483}
+  - {x: 0.40579, y: 0.7250549}
+  - {x: 0.34010985, y: 0.8210556}
+  - {x: 0.32855168, y: 0.73105466}
+  - {x: 0.31278586, y: 0.43105468}
+  - {x: 0.27232906, y: 0.33905488}
+  - {x: 0.3169903, y: 0.3080551}
+  - {x: 0.32802573, y: 0.36005554}
+  connections_index:
+  - {x: 0, y: 1}
+  - {x: 1, y: 2}
+  - {x: 2, y: 3}
+  - {x: 3, y: 4}
+  - {x: 4, y: 5}
+  - {x: 5, y: 6}
+  - {x: 6, y: 7}
+  - {x: 7, y: 8}
+  - {x: 8, y: 9}
+  - {x: 9, y: 10}
+  - {x: 10, y: 11}
+  - {x: 11, y: 12}
+  - {x: 12, y: 13}
+  - {x: 13, y: 10}
