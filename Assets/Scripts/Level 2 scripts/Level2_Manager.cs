@@ -16,6 +16,8 @@ public class Level2_Manager : MonoBehaviour
     [SerializeField] private GameObject star_prefab;
     [SerializeField] private GameObject line_prefab;
     [SerializeField] private LineRenderer drag_line;    // the line the player will be creating when draggin
+    [SerializeField] private LineRenderer hint_line;    // the line that will be created for the hints
+
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI title_text;
@@ -23,6 +25,8 @@ public class Level2_Manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private TextMeshProUGUI myth;
     [SerializeField] private GameObject next_level_button;
+    [SerializeField] private GameObject hint_button;
+
 
     private List<Star_point> spawned_stars = new List<Star_point>();    // list with all the current spawned stars
     private HashSet<string> completed_connections = new HashSet<string>();  // stores all the completed lines/ star connections
@@ -31,12 +35,15 @@ public class Level2_Manager : MonoBehaviour
 
     private Constellation_Data current_level_data;  // ta data tou torinou asterismou
     private int current_level_index; // se pio shmeio ths listas eimaste
+    private bool is_hint_active = false;    // ama yparxei active hint on screen
+    private Vector2Int hint_pair;       // the hint star pair
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         mainCam = Camera.main;
         if (drag_line == null) Debug.LogError("drag_line is null!");
+        if (hint_line == null) Debug.LogError("hint_line is null!");
         if (constellation_data_list.Count == 0) Debug.LogError("no constellation data found!");
         current_level_index = 0;
         Load_Level();
@@ -64,13 +71,14 @@ public class Level2_Manager : MonoBehaviour
         // Clear last constellation if it exists
         foreach (Transform child in transform)  // game manager children
         {
-            if (child == drag_line.transform)   // dont destroy the drag line 
+            if (child == drag_line.transform || child == hint_line.transform)   // dont destroy the drag/hint line 
                 continue;
             Destroy(child.gameObject);
         }
         spawned_stars.Clear();
         completed_connections.Clear();
         win_panel.SetActive(false);
+        hint_line.gameObject.SetActive(false);
 
         if (current_level_data != null)
         {
@@ -198,7 +206,7 @@ public class Level2_Manager : MonoBehaviour
         return false;
     }
 
-    // check if connection exists
+    // check if connection exists bettween 2 numbers
     private bool Connection_Exists(int ida, int idb)
     {
         string key1 = ida + "-" + idb;
@@ -212,6 +220,12 @@ public class Level2_Manager : MonoBehaviour
     {
         completed_connections.Add(ida + "-" + idb);
         if (showDebugLogs) Debug.Log($"Connection Registered {ida}-{ida}. Total: {completed_connections.Count}");
+        if (is_hint_active && ((hint_pair.x == ida && hint_pair.y == idb) || (hint_pair.x == idb && hint_pair.y == ida)))
+        {
+            // molis simplirothike to hint
+            hint_line.gameObject.SetActive(false);
+            is_hint_active = false;
+        }
     }
 
     // Draw a permanent line bettween 2 start to mark a succesful connection
@@ -255,6 +269,39 @@ public class Level2_Manager : MonoBehaviour
                 }
             }
 
+        }
+    }
+
+    // Shows one missing star pair
+    public void Show_Hint()
+    {
+        // if hint is active dont show another hint
+        if (is_hint_active)
+            return;
+        if (showDebugLogs) Debug.Log("Show_Hint was pressed");
+
+        List<Vector2Int> missing_connections = new List<Vector2Int>();
+
+        foreach (var connection in current_level_data.connections_index)
+        {
+            // if connection does not exist, store it
+            if (!Connection_Exists(connection.x, connection.y))
+                missing_connections.Add(connection);
+
+            // choose a random 
+            if (missing_connections.Count > 0)
+            {
+                is_hint_active = true;
+
+                int k = Random.Range(0, missing_connections.Count);
+                hint_pair = missing_connections[k];
+
+                // draw the hint line
+                hint_line.gameObject.SetActive(true);
+                // spawned_stars list is in order so star_id = x will be spawned_stars[x]
+                hint_line.SetPosition(0, spawned_stars[hint_pair.x].transform.position);
+                hint_line.SetPosition(1, spawned_stars[hint_pair.y].transform.position);
+            }
         }
     }
 
