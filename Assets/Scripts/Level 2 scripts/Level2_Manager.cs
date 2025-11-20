@@ -46,7 +46,7 @@ public class Level2_Manager : MonoBehaviour
         if (hint_line == null) Debug.LogError("hint_line is null!");
         if (constellation_data_list.Count == 0) Debug.LogError("no constellation data found!");
         current_level_index = 0;
-        Load_Level();
+        // Load_Level();
     }
 
     public void Load_next_level()
@@ -63,7 +63,7 @@ public class Level2_Manager : MonoBehaviour
     }
 
     // Clear previous Constellation and spawn new stars
-    private void Load_Level()
+    public void Load_Level()
     {
         // load the data
         current_level_data = constellation_data_list[current_level_index];
