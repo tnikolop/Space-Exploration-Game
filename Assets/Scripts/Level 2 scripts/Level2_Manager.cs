@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
-
+using UnityEngine.SceneManagement;
 
 public class Level2_Manager : MonoBehaviour
 {
@@ -58,7 +58,7 @@ public class Level2_Manager : MonoBehaviour
         }
         else    // finshed minigame
         {
-            // go to main menu
+            SceneManager.LoadScene("Default Screen");
         }
     }
 
@@ -336,7 +336,6 @@ public class Level2_Manager : MonoBehaviour
 
         // Ενημέρωση του Unity ότι αλλάξαμε το αρχείο (για να το σώσει στον δίσκο)
         UnityEditor.EditorUtility.SetDirty(current_level_data);
-        Debug.Log($"✅ Οι θέσεις για το {current_level_data.name} αποθηκεύτηκαν!");
     }
 #endif
 }
