@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 
 
 public class Level2_Manager : MonoBehaviour
@@ -8,9 +10,9 @@ public class Level2_Manager : MonoBehaviour
 
     [Header("Debugging")]
     [SerializeField] private bool showDebugLogs = true;
-    
+
     [Header("Settings")]
-    [SerializeField] private Constellation_Data current_level_data;
+    [SerializeField] private List<Constellation_Data> constellation_data_list;
     [SerializeField] private GameObject star_prefab;
     [SerializeField] private GameObject line_prefab;
     [SerializeField] private LineRenderer drag_line;    // the line the player will be creating when draggin
@@ -18,26 +20,47 @@ public class Level2_Manager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI title_text;
     [SerializeField] private GameObject win_panel;
-    [SerializeField] private TextMeshProUGUI win_description;
-    [SerializeField] private TextMeshProUGUI win_myth;
+    [SerializeField] private TextMeshProUGUI description;
+    [SerializeField] private TextMeshProUGUI myth;
+    [SerializeField] private GameObject next_level_button;
 
     private List<Star_point> spawned_stars = new List<Star_point>();    // list with all the current spawned stars
     private HashSet<string> completed_connections = new HashSet<string>();  // stores all the completed lines/ star connections
     private Star_point starting_star;   // from which star the player started drawing
     private Camera mainCam;
 
+    private Constellation_Data current_level_data;  // ta data tou torinou asterismou
+    private int current_level_index; // se pio shmeio ths listas eimaste
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         mainCam = Camera.main;
         if (drag_line == null) Debug.LogError("drag_line is null!");
-        if (current_level_data == null) Debug.LogError("current_level_data is null!");
+        if (constellation_data_list.Count == 0) Debug.LogError("no constellation data found!");
+        current_level_index = 0;
         Load_Level();
+    }
+
+    public void Load_next_level()
+    {
+        if (current_level_index < constellation_data_list.Count)
+        {
+            current_level_index++;
+            Load_Level();
+        }
+        else    // finshed minigame
+        {
+            // go to main menu
+        }
     }
 
     // Clear previous Constellation and spawn new stars
     private void Load_Level()
     {
+        // load the data
+        current_level_data = constellation_data_list[current_level_index];
+
         // Clear last constellation if it exists
         foreach (Transform child in transform)  // game manager children
         {
@@ -52,6 +75,7 @@ public class Level2_Manager : MonoBehaviour
         if (current_level_data != null)
         {
             title_text.text = current_level_data.name;
+            description.text = current_level_data.description;
             if(showDebugLogs) Debug.Log($"Loaded: {current_level_data.name} with {current_level_data.star_positions.Count} stars.");
         }
 
@@ -212,9 +236,25 @@ public class Level2_Manager : MonoBehaviour
         {
             Debug.Log("Constellation Complete");
             win_panel.SetActive(true);
-            win_description.text = current_level_data.description;
-            win_myth.text = current_level_data.myth;
+            myth.text = current_level_data.myth;
             // audio here
+
+            if (current_level_index >= constellation_data_list.Count - 1)
+            {
+                if (next_level_button != null)
+                {
+                    next_level_button.SetActive(false);
+                    // end message
+                }
+            }
+            else
+            {
+                if (next_level_button != null)
+                {
+                    next_level_button.SetActive(true);
+                }
+            }
+
         }
     }
 }
