@@ -19,6 +19,7 @@ public class Audio_Manager : MonoBehaviour
     public AudioClip correct_placement_sfx;
     // Sound effect when the game is won
     public AudioClip game_win_sfx;
+    public AudioClip error_sfx;
 
     void Awake()
     {
@@ -76,5 +77,10 @@ public class Audio_Manager : MonoBehaviour
     public void PlayGameWin_SFX()
     {
         Play_SFX(game_win_sfx);
+    }
+
+    public void Play_Error_SFX()
+    {
+        Play_SFX(error_sfx);
     }
 }

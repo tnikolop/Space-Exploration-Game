@@ -46,7 +46,7 @@ public class Level2_Manager : MonoBehaviour
         if (hint_line == null) Debug.LogError("hint_line is null!");
         if (constellation_data_list.Count == 0) Debug.LogError("no constellation data found!");
         current_level_index = 0;
-        // Load_Level();
+        Audio_Manager.Instance.Play_Music();
     }
 
     public void Load_next_level()
@@ -150,13 +150,16 @@ public class Level2_Manager : MonoBehaviour
                 {
                     bool valid = Is_Valid_Connection(starting_star.id, end_Star.id);
                     bool exists = Connection_Exists(starting_star.id, end_Star.id);
+                    if (valid == false)
+                        Audio_Manager.Instance.Play_Error_SFX();
+                        
                     //check if connection is valid
                     if (valid && !exists)
                     {
                         if (showDebugLogs) Debug.Log("Connection Succesful!");
                         Draw_Line(starting_star.transform.position, end_Star.transform.position);
                         Register_Connection(starting_star.id, end_Star.id);
-                        // connectionMade = true;
+                        Audio_Manager.Instance.PlayCorrectPlacement_SFX();
                         Check_Win_Condition();
                     }
                     else
@@ -251,7 +254,7 @@ public class Level2_Manager : MonoBehaviour
             Debug.Log("Constellation Complete");
             win_panel.SetActive(true);
             myth.text = current_level_data.myth;
-            // audio here
+            Audio_Manager.Instance.PlayGameWin_SFX();
 
             if (current_level_index >= constellation_data_list.Count - 1)
             {
