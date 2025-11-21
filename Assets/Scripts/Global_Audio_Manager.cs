@@ -1,4 +1,7 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Global_Audio_Manager : MonoBehaviour
 {
@@ -9,6 +12,15 @@ public class Global_Audio_Manager : MonoBehaviour
     [SerializeField] private AudioSource music_source;
     // Source for one-shot sound effects
     [SerializeField] private AudioSource sfx_source;
+
+    [Header("UI Settings")]
+    [SerializeField] private GameObject settings_panel;
+    [SerializeField] private Slider music_slider;
+    [SerializeField] private Slider sfx_slider;
+    [SerializeField] private TextMeshProUGUI sfx_slider_text;
+    [SerializeField] private TextMeshProUGUI music_slider_text;
+    
+
 
     void Awake()
     {
@@ -23,6 +35,61 @@ public class Global_Audio_Manager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        if (settings_panel != null)
+        {
+            settings_panel.SetActive(false);
+
+            if (music_slider != null)
+                music_slider.value = music_source.volume;
+            else
+                Debug.LogError("music slider is null");
+
+            if (sfx_slider != null)
+                sfx_slider.value = sfx_source.volume;
+            else
+                Debug.LogError("sfx slider is null");
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Toggle_Settings();
+        }
+    }
+
+    public void Toggle_Settings()
+    {
+        if (settings_panel == null)
+        {
+            Debug.LogError("Settings Panel is null");
+            return;
+        }
+
+        bool is_active = settings_panel.activeSelf;
+        settings_panel.SetActive(!is_active);   // toggle on/off
+    }
+
+    public void Quit_Game()
+    {
+        Application.Quit();
+    }
+
+    public void Set_Music_Volume(float volume)
+    {
+        music_source.volume = volume;
+        music_slider_text.text = volume.ToString("F2");
+    }
+
+    public void Set_SFX_Volume(float volume)
+    {
+        sfx_source.volume = volume;
+        sfx_slider_text.text = volume.ToString("F2");
+    }
+
     // for background music
     public void Play_Music(AudioClip clip, float volume = 1f)
     {
@@ -35,6 +102,9 @@ public class Global_Audio_Manager : MonoBehaviour
         // if the same music was playing dont change it
         if (music_source.clip == clip && music_source.isPlaying)
         {
+            // update slider
+            if (music_slider != null)
+                music_source.volume = music_slider.value;
             music_source.volume = volume;
             return;
         }
@@ -42,6 +112,9 @@ public class Global_Audio_Manager : MonoBehaviour
         // Play the music
         music_source.clip = clip;
         music_source.volume = volume;
+        // update slider
+        if (music_slider != null)
+            music_slider.value = volume;
         music_source.loop = true;
         music_source.Play();
     }
@@ -56,14 +129,14 @@ public class Global_Audio_Manager : MonoBehaviour
 
     public void Play_SFX_correct()
     {
-        Play_SFX(Scene_Audio.Instance.sfx_correct,Scene_Audio.Instance.volume);
+        Play_SFX(Scene_Audio.Instance.sfx_correct, Scene_Audio.Instance.volume);
     }
     public void Play_Win_SFX()
     {
-        Play_SFX(Scene_Audio.Instance.sfx_win,Scene_Audio.Instance.volume);
+        Play_SFX(Scene_Audio.Instance.sfx_win, Scene_Audio.Instance.volume);
     }
     public void Play_Error_SFX()
     {
-        Play_SFX(Scene_Audio.Instance.sfx_error,Scene_Audio.Instance.volume);
+        Play_SFX(Scene_Audio.Instance.sfx_error, Scene_Audio.Instance.volume);
     }
 }
