@@ -1,10 +1,5 @@
 using UnityEngine;
 using TMPro;
-using System.Linq.Expressions;
-using System.Diagnostics;
-using Microsoft.Unity.VisualStudio.Editor;
-using UnityEngine.UI;
-using Unity.VisualScripting;
 
 public class InfoDisplay_TMP : MonoBehaviour
 {
@@ -52,7 +47,7 @@ public class InfoDisplay_TMP : MonoBehaviour
     public void HideInfo()
     {
         UnityEngine.Debug.Log("InfoDisplay_TMP.HideInfo called");
-         // clear UI
+        // clear UI
         titleText.text = "";
         descriptionText.text = "";
         funFactText.text = "";

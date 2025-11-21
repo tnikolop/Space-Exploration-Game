@@ -1,7 +1,4 @@
-using Unity.VisualScripting;
-using UnityEditor.Timeline;
 using UnityEngine;
-using UnityEngine.InputSystem.Processors;
 
 public class Audio_Manager : MonoBehaviour
 {

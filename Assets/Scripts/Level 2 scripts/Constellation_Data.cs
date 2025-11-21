@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Constellation_Data : ScriptableObject
 {
     [Header("Πληροφορίες")]
-    public string name;
+    public new string name;
     [TextArea] public string description;
     [TextArea] public string myth;
 
