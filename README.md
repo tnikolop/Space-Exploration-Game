@@ -4,5 +4,4 @@
 
 ## Level 2
 - show constellation image
-- x/8 isws?
 - make pretty
