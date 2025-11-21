@@ -26,8 +26,10 @@ public class Level2_Manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI myth;
     [SerializeField] private GameObject next_level_button;
     [SerializeField] private GameObject main_menu_button;
-    
+
     [SerializeField] private GameObject hint_button;
+    [SerializeField] private TextMeshProUGUI level_text;
+    
 
 
 
@@ -85,6 +87,7 @@ public class Level2_Manager : MonoBehaviour
 
         if (current_level_data != null)
         {
+            level_text.text = current_level_index + 1 + "/" + constellation_data_list.Count;
             title_text.text = current_level_data.name;
             description.text = current_level_data.description;
             if (showDebugLogs) Debug.Log($"Loaded: {current_level_data.name} with {current_level_data.star_positions.Count} stars.");
