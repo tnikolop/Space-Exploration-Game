@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // Load the main menu screen / go to next level
+    // Load the main menu screen
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("Default Screen");

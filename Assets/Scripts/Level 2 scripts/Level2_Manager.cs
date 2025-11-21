@@ -25,7 +25,10 @@ public class Level2_Manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private TextMeshProUGUI myth;
     [SerializeField] private GameObject next_level_button;
+    [SerializeField] private GameObject main_menu_button;
+    
     [SerializeField] private GameObject hint_button;
+
 
 
     private List<Star_point> spawned_stars = new List<Star_point>();    // list with all the current spawned stars
@@ -261,7 +264,7 @@ public class Level2_Manager : MonoBehaviour
                 if (next_level_button != null)
                 {
                     next_level_button.SetActive(false);
-                    // end message
+                    main_menu_button.SetActive(true);
                 }
             }
             else
@@ -308,6 +311,11 @@ public class Level2_Manager : MonoBehaviour
         }
     }
 
+    // Load the main menu screen
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Default Screen");
+    }
 #if UNITY_EDITOR
     // Αυτό προσθέτει επιλογή στο δεξί κλικ του Component
     [ContextMenu("💾 SAVE Star Positions")]

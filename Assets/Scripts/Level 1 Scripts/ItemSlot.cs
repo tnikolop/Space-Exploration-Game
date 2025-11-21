@@ -20,6 +20,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         if (occupied)
         {
             Debug.Log("Slot already occupied!");
+            Audio_Manager.Instance.Play_Error_SFX();
             return;
         }
 
@@ -41,7 +42,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         if (dragged.data.orderFromSun != expectedOrder)
         {
             Debug.Log($"Wrong slot! Planet {dragged.data.planetName} cannot go in slot {expectedOrder}");
-            // Could add visual feedback here
+            Audio_Manager.Instance.Play_Error_SFX();
             return;
         }
 
