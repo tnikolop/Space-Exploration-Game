@@ -20,7 +20,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         if (occupied)
         {
             Debug.Log("Slot already occupied!");
-            Audio_Manager.Instance.Play_Error_SFX();
+            Global_Audio_Manager.Instance.Play_Error_SFX();
             return;
         }
 
@@ -42,7 +42,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         if (dragged.data.orderFromSun != expectedOrder)
         {
             Debug.Log($"Wrong slot! Planet {dragged.data.planetName} cannot go in slot {expectedOrder}");
-            Audio_Manager.Instance.Play_Error_SFX();
+            Global_Audio_Manager.Instance.Play_Error_SFX();
             return;
         }
 
@@ -63,12 +63,12 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             Debug.LogError("Game Manager Instance is null!!");
 
         // Play SFX for the correct planet placement
-        if (Audio_Manager.Instance != null && Audio_Manager.Instance.correct_placement_sfx != null)
+        if (Global_Audio_Manager.Instance != null)
         {
-            Audio_Manager.Instance.PlayCorrectPlacement_SFX();
+            Global_Audio_Manager.Instance.Play_SFX_correct();
         }
         else
-            Debug.LogError("Audio Manager or correct_placement SFX is null!!");
+            Debug.LogError("Global Audio Manager is null!!");
 
     }
 }

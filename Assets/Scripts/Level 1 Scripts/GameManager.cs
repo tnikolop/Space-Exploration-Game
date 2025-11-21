@@ -56,10 +56,10 @@ public class GameManager : MonoBehaviour
         else
             Debug.LogError("Win Panel is null!!!");
 
-        if (Audio_Manager.Instance != null && Audio_Manager.Instance.game_win_sfx != null)
-            Audio_Manager.Instance.PlayGameWin_SFX();
+        if (Global_Audio_Manager.Instance != null)
+            Global_Audio_Manager.Instance.Play_Win_SFX();
         else
-            Debug.LogError("Audio Manager or game_win SFX is null!!");
+            Debug.LogError("Global Audio Manager is null!!");
 
 
     }
