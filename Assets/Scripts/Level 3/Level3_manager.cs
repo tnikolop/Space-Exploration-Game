@@ -11,20 +11,35 @@ public class Level3_manager : MonoBehaviour
     [SerializeField] private int rows = 4;
     [SerializeField] private int cols = 3;
     [SerializeField] private float padding = 20f;     // Space between cards
-    [SerializeField] private int edge_padding = 20; 
+    [SerializeField] private int edge_padding = 20;
 
     [Header("Game Settings")]
     [SerializeField] private float timeToWait = 1.0f; // Time before wrong pair closes
 
     private Memory_Card _first_card;
     private Memory_Card _second_card;
-    private bool _is_checking;
-
+    private bool _is_checking = false;
+    private bool _is_waiting_to_reset = false;      // wait for the clock to finish (cant open new card)
+    private float _timer = 0f;                      // the clock
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Setup_Grid_Layout();
         Generate_Grid();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // clock
+        if (_is_waiting_to_reset)
+        {
+            _timer -= Time.deltaTime;
+            if (_timer <= 0)
+            {
+                Close_Mismatch();
+            }
+        }
     }
 
     // function for dynamically setting up the grid layout
@@ -57,7 +72,7 @@ public class Level3_manager : MonoBehaviour
         float panel_height = rect.rect.height - paddingY;
         float total_spacingY = (rows - 1) * padding;
         float cell_height = (panel_height - total_spacingY) / rows;
-        
+
         // Pick the smaller one to ensure it fits in both dimensions
         float cellSize = Mathf.Min(cell_width, cell_height);
 
@@ -94,7 +109,7 @@ public class Level3_manager : MonoBehaviour
             card_ids[i] = card_ids[k];
             card_ids[k] = temp;
         }
-        
+
         //Spawn cards
         foreach (int id in card_ids)
         {
@@ -103,5 +118,63 @@ public class Level3_manager : MonoBehaviour
             card.name = $"Card_{id}";
             script.Setup(id, this);
         }
+    }
+
+    // Cant open a card if we are checking or we are waiting for the clock
+    public bool Can_Flip()
+    {
+        return (!_is_checking && !_is_waiting_to_reset);
+    }
+
+    // assing card as Face Up
+    public void Card_Revealed(Memory_Card card)
+    {
+        if (_first_card == null)
+        {
+            _first_card = card;
+            Debug.Log($"Revealed card id:{_first_card.get_ID()}");
+
+        }
+        else
+        {
+            _second_card = card;
+            Debug.Log($"Revealed card id:{_second_card.get_ID()}");
+            Check_Match();
+        }
+    }
+
+    private void Check_Match()
+    {
+        _is_checking = true;
+
+        if (_first_card.get_ID() == _second_card.get_ID())  // match
+        {
+            Debug.Log($"Match found for card id:{_first_card.get_ID()}");
+            _first_card = null;
+            _second_card = null;
+            _is_checking = false;
+        }
+        else    // Mismatch
+        {
+            Debug.Log("Mismatch");
+            _timer = timeToWait;
+            _is_waiting_to_reset = true;
+        }
+    }
+
+    // close the open cards when the time runs out
+    private void Close_Mismatch()
+    {
+        if (_first_card == null)
+            Debug.LogError("_First_Card is null!");
+        if (_first_card == null)
+            Debug.LogError("_Second_Card is null!");
+            
+        _first_card.Flip_Closed();
+        _second_card.Flip_Closed();
+        _first_card = null;
+        _second_card = null;
+        _is_waiting_to_reset = false;
+        _is_checking = false;
     }
 }

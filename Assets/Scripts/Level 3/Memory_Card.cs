@@ -14,37 +14,37 @@ public class Memory_Card : MonoBehaviour
     {
         _id = id;
         _manager = manager;
-        image.color = Color.gray; //face down
+        Flip_Closed();
     }
 
     public void Card_Clicked()
     {
+        Debug.Log($"CLicked on card id:{get_ID()}");
+        if (_is_FaceUp)     //if already open
+            return;
+        if (_manager.Can_Flip() == false)   // if 2 cards are open already
+            return;
 
+        Flip_Open();
+        _manager.Card_Revealed(this);
     }
 
     public void Flip_Open()
     {
-
+        _is_FaceUp = true;
+        image.color = Color.green;
+        Debug.Log($"Flip_Open() called on card id:{get_ID()}");
     }
 
     public void Flip_Closed()
     {
-
+        _is_FaceUp = false;
+        image.color = Color.gray;
+        Debug.Log($"Flip_Closed() called on card id:{get_ID()}");
     }
     
-    public void get_ID()
+    public int get_ID()
     {
-        
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return _id;
     }
 }
