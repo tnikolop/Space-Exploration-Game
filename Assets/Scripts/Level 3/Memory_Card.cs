@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,6 +7,7 @@ public class Memory_Card : MonoBehaviour
 {
     [SerializeField] private Image image;
     [SerializeField] private Button button;
+    [SerializeField] private TextMeshProUGUI text;
 
     private int _id;    // the matching pair id
     private Level3_manager _manager;
@@ -14,6 +17,7 @@ public class Memory_Card : MonoBehaviour
     {
         _id = id;
         _manager = manager;
+        text.text = _id.ToString();
         Flip_Closed();
     }
 
@@ -33,6 +37,7 @@ public class Memory_Card : MonoBehaviour
     {
         _is_FaceUp = true;
         image.color = Color.green;
+        text.gameObject.SetActive(true);
         Debug.Log($"Flip_Open() called on card id:{get_ID()}");
     }
 
@@ -40,6 +45,7 @@ public class Memory_Card : MonoBehaviour
     {
         _is_FaceUp = false;
         image.color = Color.gray;
+        text.gameObject.SetActive(false);
         Debug.Log($"Flip_Closed() called on card id:{get_ID()}");
     }
     
