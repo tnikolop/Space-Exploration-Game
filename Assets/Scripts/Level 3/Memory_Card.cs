@@ -8,6 +8,8 @@ public class Memory_Card : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private Button button;
     [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private bool showDebugLogs = true;
+
 
     private int _id;    // the matching pair id
     private Level3_manager _manager;
@@ -23,7 +25,7 @@ public class Memory_Card : MonoBehaviour
 
     public void Card_Clicked()
     {
-        Debug.Log($"CLicked on card id:{get_ID()}");
+        if (showDebugLogs) Debug.Log($"CLicked on card id:{get_ID()}");
         if (_is_FaceUp)     //if already open
             return;
         if (_manager.Can_Flip() == false)   // if 2 cards are open already
@@ -38,7 +40,7 @@ public class Memory_Card : MonoBehaviour
         _is_FaceUp = true;
         image.color = Color.green;
         text.gameObject.SetActive(true);
-        Debug.Log($"Flip_Open() called on card id:{get_ID()}");
+        if (showDebugLogs) Debug.Log($"Flip_Open() called on card id:{get_ID()}");
     }
 
     public void Flip_Closed()
@@ -46,7 +48,7 @@ public class Memory_Card : MonoBehaviour
         _is_FaceUp = false;
         image.color = Color.gray;
         text.gameObject.SetActive(false);
-        Debug.Log($"Flip_Closed() called on card id:{get_ID()}");
+        if (showDebugLogs) Debug.Log($"Flip_Closed() called on card id:{get_ID()}");
     }
     
     public int get_ID()

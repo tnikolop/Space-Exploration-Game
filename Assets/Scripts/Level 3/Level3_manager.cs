@@ -15,6 +15,8 @@ public class Level3_manager : MonoBehaviour
 
     [Header("Game Settings")]
     [SerializeField] private float timeToWait = 1.0f; // Time before wrong pair closes
+    [SerializeField] private bool showDebugLogs = true;
+
 
     private Memory_Card _first_card;
     private Memory_Card _second_card;
@@ -47,7 +49,7 @@ public class Level3_manager : MonoBehaviour
     {
         GridLayoutGroup grid_layout = grid_panel.GetComponent<GridLayoutGroup>();
         if (grid_layout == null)
-            Debug.LogError("Grid Layout Component in Grid Panel does not exists!");
+            if (showDebugLogs) Debug.LogError("Grid Layout Component in Grid Panel does not exists!");
 
         grid_layout.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         grid_layout.constraintCount = cols;
@@ -80,6 +82,7 @@ public class Level3_manager : MonoBehaviour
         grid_layout.cellSize = new Vector2(cellSize, cellSize);
     }
 
+    // Create the cards
     private void Generate_Grid()
     {
         // Clean old cards
@@ -89,7 +92,7 @@ public class Level3_manager : MonoBehaviour
         int total_cards = rows * cols;
         if (total_cards % 2 != 0)
         {
-            Debug.LogError("Total Cards must be even!");
+            if (showDebugLogs) Debug.LogError("Total Cards must be even!");
             return;
         }
 
@@ -132,13 +135,13 @@ public class Level3_manager : MonoBehaviour
         if (_first_card == null)
         {
             _first_card = card;
-            Debug.Log($"Revealed card id:{_first_card.get_ID()}");
+            if (showDebugLogs) Debug.Log($"Revealed card id:{_first_card.get_ID()}");
 
         }
         else
         {
             _second_card = card;
-            Debug.Log($"Revealed card id:{_second_card.get_ID()}");
+            if (showDebugLogs) Debug.Log($"Revealed card id:{_second_card.get_ID()}");
             Check_Match();
         }
     }
@@ -149,16 +152,18 @@ public class Level3_manager : MonoBehaviour
 
         if (_first_card.get_ID() == _second_card.get_ID())  // match
         {
-            Debug.Log($"Match found for card id:{_first_card.get_ID()}");
+            if (showDebugLogs) Debug.Log($"Match found for card id:{_first_card.get_ID()}");
             _first_card = null;
             _second_card = null;
             _is_checking = false;
+            Global_Audio_Manager.Instance.Play_SFX_correct();
         }
         else    // Mismatch
         {
-            Debug.Log("Mismatch");
+            if (showDebugLogs) Debug.Log("Mismatch");
             _timer = timeToWait;
             _is_waiting_to_reset = true;
+            Global_Audio_Manager.Instance.Play_Error_SFX();
         }
     }
 
@@ -166,9 +171,9 @@ public class Level3_manager : MonoBehaviour
     private void Close_Mismatch()
     {
         if (_first_card == null)
-            Debug.LogError("_First_Card is null!");
+            if (showDebugLogs) Debug.LogError("_First_Card is null!");
         if (_first_card == null)
-            Debug.LogError("_Second_Card is null!");
+            if (showDebugLogs) Debug.LogError("_Second_Card is null!");
             
         _first_card.Flip_Closed();
         _second_card.Flip_Closed();

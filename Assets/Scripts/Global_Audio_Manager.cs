@@ -129,14 +129,19 @@ public class Global_Audio_Manager : MonoBehaviour
 
     public void Play_SFX_correct()
     {
-        Play_SFX(Scene_Audio.Instance.sfx_correct, Scene_Audio.Instance.volume);
+        Play_SFX(Scene_Audio.Instance.GetAudio_SFX_Correct(), Scene_Audio.Instance.Get_Volume());
     }
     public void Play_Win_SFX()
     {
-        Play_SFX(Scene_Audio.Instance.sfx_win, Scene_Audio.Instance.volume);
+        Play_SFX(Scene_Audio.Instance.GetAudio_SFX_Win(), Scene_Audio.Instance.Get_Volume());
     }
     public void Play_Error_SFX()
     {
-        Play_SFX(Scene_Audio.Instance.sfx_error, Scene_Audio.Instance.volume);
+        Play_SFX(Scene_Audio.Instance.GetAudio_SFX_Error(), Scene_Audio.Instance.Get_Volume());
+    }
+
+    public void Play_Click_SFX()
+    {
+        Play_SFX(Scene_Audio.Instance.GetAudio_SFX_Click(), Scene_Audio.Instance.Get_Volume());
     }
 }

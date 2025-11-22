@@ -530,11 +530,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94f6eacffaa0328bbd693c9f049b79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scene_Audio
-  background_music: {fileID: 8300000, guid: c8fab657022a31ca0830c83ac7e52eb9, type: 3}
-  sfx_correct: {fileID: 8300000, guid: 4b7091c3bf23ec174ab246ca6a0e752e, type: 3}
-  sfx_error: {fileID: 8300000, guid: b2d5f6fece5680918abfe640a0339b3d, type: 3}
-  sfx_win: {fileID: 8300000, guid: 74313c5522c4b66b69814c82e95537cd, type: 3}
-  volume: 1
+  _background_music: {fileID: 8300000, guid: c8fab657022a31ca0830c83ac7e52eb9, type: 3}
+  _sfx_correct: {fileID: 8300000, guid: 5aa823be3c60d7b0a832927db13dbda2, type: 3}
+  _sfx_error: {fileID: 8300000, guid: b2d5f6fece5680918abfe640a0339b3d, type: 3}
+  _sfx_win: {fileID: 8300000, guid: fff77861e3eced61a8cf86b911d6766c, type: 3}
+  _sfx_click: {fileID: 0}
+  _volume: 1
 --- !u!4 &160226031
 Transform:
   m_ObjectHideFlags: 0
