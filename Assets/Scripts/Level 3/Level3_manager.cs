@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,10 @@ public class Level3_manager : MonoBehaviour
 
     [SerializeField] private Transform GameInfoPanel;
     [SerializeField] private Transform InfoPanel;
+    [SerializeField] private TextMeshProUGUI InfoText;
+    [SerializeField] private TextMeshProUGUI TitleText;
+    [SerializeField] private Image imageSlot;
+
 
     [Header("Data list")]
     [SerializeField] private List<Card_data> level1_data;
@@ -158,8 +163,8 @@ public class Level3_manager : MonoBehaviour
         {
             GameObject card = Instantiate(card_prefab, grid_panel);
             Memory_Card script = card.GetComponent<Memory_Card>();
-            card.name = $"Card_{id}";
-            script.Setup(id, this, _current_level_data[id].sprite);
+            card.name = $"Card_{id}";                                   // to onoma pou tha exei ston editor
+            script.Setup(id, this, _current_level_data[id]);
         }
     }
 
@@ -191,9 +196,12 @@ public class Level3_manager : MonoBehaviour
         if (_first_card.get_ID() == _second_card.get_ID())  // match
         {
             if (showDebugLogs) Debug.Log($"Match found for card id:{_first_card.get_ID()}");
-            _first_card = null;
-            _second_card = null;
             Global_Audio_Manager.Instance.Play_SFX_correct();
+            imageSlot.sprite = _first_card.Get_Sprite();
+            InfoText.text = _first_card.Get_Description();
+            TitleText.text = _first_card.Get_Name();
+            _second_card = null;
+            _first_card = null;
         }
         else    // Mismatch
         {
@@ -201,6 +209,11 @@ public class Level3_manager : MonoBehaviour
             _timer = timeToWait;
             _is_waiting_to_reset = true;
             Global_Audio_Manager.Instance.Play_Error_SFX();
+
+            // delayyyy
+            imageSlot.sprite = null; 
+            InfoText.text = null;
+            TitleText.text = null;
         }
     }
 

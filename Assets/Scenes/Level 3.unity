@@ -1357,13 +1357,10 @@ MonoBehaviour:
   showDebugLogs: 1
   GameInfoPanel: {fileID: 737815339}
   InfoPanel: {fileID: 491490933}
+  InfoText: {fileID: 905608459}
+  TitleText: {fileID: 1287997256}
+  imageSlot: {fileID: 1225351388}
   level1_data:
-  - {fileID: 11400000, guid: 782737991a75c3733bd7100ea7fd15a0, type: 2}
-  - {fileID: 11400000, guid: 782737991a75c3733bd7100ea7fd15a0, type: 2}
-  - {fileID: 11400000, guid: 782737991a75c3733bd7100ea7fd15a0, type: 2}
-  - {fileID: 11400000, guid: 782737991a75c3733bd7100ea7fd15a0, type: 2}
-  - {fileID: 11400000, guid: 782737991a75c3733bd7100ea7fd15a0, type: 2}
-  - {fileID: 11400000, guid: 782737991a75c3733bd7100ea7fd15a0, type: 2}
   - {fileID: 11400000, guid: 782737991a75c3733bd7100ea7fd15a0, type: 2}
   - {fileID: 11400000, guid: 782737991a75c3733bd7100ea7fd15a0, type: 2}
   - {fileID: 11400000, guid: 782737991a75c3733bd7100ea7fd15a0, type: 2}

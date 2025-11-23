@@ -11,18 +11,18 @@ public class Memory_Card : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private bool showDebugLogs = true;
 
-    private Card_data data;
+    private Card_data _data;
 
 
     private int _id;    // the matching pair id
     private Level3_manager _manager;
     private bool _is_FaceUp;
-    private Sprite _face_sprite;
-    public void Setup(int id, Level3_manager manager, Sprite face_sprite)
+
+    public void Setup(int id, Level3_manager manager, Card_data data)
     {
         _id = id;
         _manager = manager;
-        _face_sprite = face_sprite;
+        _data = data;
         text.text = _id.ToString();
         Flip_Closed();
     }
@@ -42,8 +42,8 @@ public class Memory_Card : MonoBehaviour
     public void Flip_Open()
     {
         _is_FaceUp = true;
-        image.sprite = _face_sprite;
-        // image.color = Color.green;
+        image.sprite = _data.sprite;
+        image.color = Color.white;
         text.gameObject.SetActive(true);
         if (showDebugLogs) Debug.Log($"Flip_Open() called on card id:{get_ID()}");
     }
@@ -57,9 +57,24 @@ public class Memory_Card : MonoBehaviour
         text.gameObject.SetActive(false);
         if (showDebugLogs) Debug.Log($"Flip_Closed() called on card id:{get_ID()}");
     }
-    
+
     public int get_ID()
     {
         return _id;
+    }
+
+    public string Get_Name()
+    {
+        return _data.name;
+    }
+
+    public string Get_Description()
+    {
+        return _data.description;
+    }
+
+    public Sprite Get_Sprite()
+    {
+        return _data.sprite;
     }
 }
