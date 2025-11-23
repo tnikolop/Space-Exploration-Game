@@ -6,5 +6,5 @@ public class Card_data : ScriptableObject
     [Header("Πληροφορίες")]
     public new string name;
     public Sprite sprite;
-    [TextArea] public string description;
+    [TextArea(3,10)] public string description;
 }

@@ -23,25 +23,41 @@ public class Level3_manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI InfoText;
     [SerializeField] private TextMeshProUGUI TitleText;
     [SerializeField] private Image imageSlot;
+    [Header("Levels Buttons")]
+    [SerializeField] private Image[] level_button_image;
 
 
-    [Header("Data list")]
+
+    [Header("Data lists")]
     [SerializeField] private List<Card_data> level1_data;
     [SerializeField] private List<Card_data> level2_data;
     [SerializeField] private List<Card_data> level3_data;
 
 
     private List<Card_data> _current_level_data;
-    private Memory_Card _first_card;
-    private Memory_Card _second_card;
+    private Memory_Card _first_card;                // first card flipped open
+    private Memory_Card _second_card;               // second card flipped open
     private bool _is_waiting_to_reset = false;      // wait for the clock to finish (cant open new card)
     private float _timer = 0f;                      // the clock
-    
-    
+    private bool[] _levels_won = new bool[3];        // true if a level has been won (automatically initialized to false in C#)
+    private int _current_level_index;               // current level playing
+    private int match_count = 0;                    // how many matches have been found, (win condition check)
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        GameInfoPanel.gameObject.SetActive(true);
+        InfoPanel.gameObject.SetActive(false);
+        grid_panel.gameObject.SetActive(false);
+
+        for (int i = 0; i < 3; i++)
+        {   
+            Color temp = level_button_image[i].color;
+            temp.a = 0.4f;
+            level_button_image[i].color = temp;
+        }
     }
 
     // Update is called once per frame
@@ -61,15 +77,16 @@ public class Level3_manager : MonoBehaviour
     // Load necessary game data
     public void Select_Level(int level_number)
     {
+        _current_level_index = level_number;
         switch (level_number)
         {
-            case 1:
+            case 0:
                 _current_level_data = level1_data;
                 break;
-            case 2:
+            case 1:
                 _current_level_data = level2_data;
                 break;
-            case 3:
+            case 2:
                 _current_level_data = level3_data;
                 break;
             default:
@@ -87,6 +104,7 @@ public class Level3_manager : MonoBehaviour
         grid_panel.gameObject.SetActive(true);
         Setup_Grid_Layout();
         Generate_Grid();
+        match_count = 0;
     }
 
     // function for dynamically setting up the grid layout
@@ -196,12 +214,14 @@ public class Level3_manager : MonoBehaviour
         if (_first_card.get_ID() == _second_card.get_ID())  // match
         {
             if (showDebugLogs) Debug.Log($"Match found for card id:{_first_card.get_ID()}");
-            Global_Audio_Manager.Instance.Play_SFX_correct();
             imageSlot.sprite = _first_card.Get_Sprite();
             InfoText.text = _first_card.Get_Description();
             TitleText.text = _first_card.Get_Name();
             _second_card = null;
             _first_card = null;
+            Global_Audio_Manager.Instance.Play_SFX_correct();
+            match_count++;
+            Check_Win();
         }
         else    // Mismatch
         {
@@ -209,13 +229,26 @@ public class Level3_manager : MonoBehaviour
             _timer = timeToWait;
             _is_waiting_to_reset = true;
             Global_Audio_Manager.Instance.Play_Error_SFX();
-
-            // delayyyy
-            imageSlot.sprite = null; 
-            InfoText.text = null;
-            TitleText.text = null;
+            // imageSlot.sprite = null;
+            // InfoText.text = null;
+            // TitleText.text = null;
         }
     }
+
+    private void Check_Win()
+    {
+        if (match_count >= _current_level_data.Count)
+        {
+            Global_Audio_Manager.Instance.Play_Win_SFX();
+            _levels_won[_current_level_index] = true;
+            Color temp = Color.white;
+            temp.a = 1f;
+            level_button_image[_current_level_index].color = temp;
+            Check_Game_Completed();
+        }
+        
+    }
+
 
     // close the open cards when the time runs out
     private void Close_Mismatch()
@@ -224,11 +257,20 @@ public class Level3_manager : MonoBehaviour
             if (showDebugLogs) Debug.LogError("_First_Card is null!");
         if (_first_card == null)
             if (showDebugLogs) Debug.LogError("_Second_Card is null!");
-            
+
         _first_card.Flip_Closed();
         _second_card.Flip_Closed();
         _first_card = null;
         _second_card = null;
         _is_waiting_to_reset = false;
+    }
+
+
+    private void Check_Game_Completed()
+    {
+        if (_levels_won[0] && _levels_won[1] && _levels_won[2])
+        {
+            // GAME COMPLETE
+        }
     }
 }
