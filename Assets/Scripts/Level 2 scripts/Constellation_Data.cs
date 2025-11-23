@@ -14,6 +14,4 @@ public class Constellation_Data : ScriptableObject
 
     [Header("Συνδέσεις (Connections Index)")]    // pio asteri enonete me pio
     public List<Vector2Int> connections_index;
-    
-
 }

@@ -147,9 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   image: {fileID: 8988887899990111486}
+  back_sprite: {fileID: 0}
   button: {fileID: 5925941312205975606}
   text: {fileID: 809045216689705802}
-  showDebugLogs: 0
+  showDebugLogs: 1
 --- !u!1 &8434727058760679894
 GameObject:
   m_ObjectHideFlags: 0

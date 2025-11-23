@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,13 +14,21 @@ public class Level3_manager : MonoBehaviour
     [SerializeField] private int edge_padding = 20;
 
     [Header("Game Settings")]
-    [SerializeField] private float timeToWait = 1.0f; // Time before wrong pair closes
-    [SerializeField] private bool showDebugLogs = true;
+    [SerializeField] private float timeToWait = 1.0f; // Time before wrong pair closes in seconds
+    [SerializeField] private bool showDebugLogs = false;
+
+    [SerializeField] private Transform GameInfoPanel;
+    [SerializeField] private Transform InfoPanel;
+
+    [Header("Data list")]
+    [SerializeField] private List<Card_data> level1_data;
+    [SerializeField] private List<Card_data> level2_data;
+    [SerializeField] private List<Card_data> level3_data;
 
 
+    private List<Card_data> _current_level_data;
     private Memory_Card _first_card;
     private Memory_Card _second_card;
-    private bool _is_checking = false;
     private bool _is_waiting_to_reset = false;      // wait for the clock to finish (cant open new card)
     private float _timer = 0f;                      // the clock
     
@@ -27,8 +36,7 @@ public class Level3_manager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Setup_Grid_Layout();
-        Generate_Grid();
+        
     }
 
     // Update is called once per frame
@@ -43,6 +51,37 @@ public class Level3_manager : MonoBehaviour
                 Close_Mismatch();
             }
         }
+    }
+
+    // Load necessary game data
+    public void Select_Level(int level_number)
+    {
+        switch (level_number)
+        {
+            case 1:
+                _current_level_data = level1_data;
+                break;
+            case 2:
+                _current_level_data = level2_data;
+                break;
+            case 3:
+                _current_level_data = level3_data;
+                break;
+            default:
+                Debug.LogError($"Invalid Level Number Selected!: {level_number}");
+                return;
+        }
+
+        Setup_Level();
+    }
+
+    private void Setup_Level()
+    {
+        GameInfoPanel.gameObject.SetActive(false);
+        InfoPanel.gameObject.SetActive(true);
+        grid_panel.gameObject.SetActive(true);
+        Setup_Grid_Layout();
+        Generate_Grid();
     }
 
     // function for dynamically setting up the grid layout
@@ -120,14 +159,14 @@ public class Level3_manager : MonoBehaviour
             GameObject card = Instantiate(card_prefab, grid_panel);
             Memory_Card script = card.GetComponent<Memory_Card>();
             card.name = $"Card_{id}";
-            script.Setup(id, this);
+            script.Setup(id, this, _current_level_data[id].sprite);
         }
     }
 
-    // Cant open a card if we are checking or we are waiting for the clock
+    // Cant open a card if we are waiting for the clock
     public bool Can_Flip()
     {
-        return (!_is_checking && !_is_waiting_to_reset);
+        return !_is_waiting_to_reset;
     }
 
     // assing card as Face Up
@@ -149,14 +188,11 @@ public class Level3_manager : MonoBehaviour
 
     private void Check_Match()
     {
-        _is_checking = true;
-
         if (_first_card.get_ID() == _second_card.get_ID())  // match
         {
             if (showDebugLogs) Debug.Log($"Match found for card id:{_first_card.get_ID()}");
             _first_card = null;
             _second_card = null;
-            _is_checking = false;
             Global_Audio_Manager.Instance.Play_SFX_correct();
         }
         else    // Mismatch
@@ -181,6 +217,5 @@ public class Level3_manager : MonoBehaviour
         _first_card = null;
         _second_card = null;
         _is_waiting_to_reset = false;
-        _is_checking = false;
     }
 }

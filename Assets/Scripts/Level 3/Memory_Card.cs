@@ -6,19 +6,23 @@ using UnityEngine.UI;
 public class Memory_Card : MonoBehaviour
 {
     [SerializeField] private Image image;
+    [SerializeField] private Sprite back_sprite;
     [SerializeField] private Button button;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private bool showDebugLogs = true;
+
+    private Card_data data;
 
 
     private int _id;    // the matching pair id
     private Level3_manager _manager;
     private bool _is_FaceUp;
-
-    public void Setup(int id, Level3_manager manager)
+    private Sprite _face_sprite;
+    public void Setup(int id, Level3_manager manager, Sprite face_sprite)
     {
         _id = id;
         _manager = manager;
+        _face_sprite = face_sprite;
         text.text = _id.ToString();
         Flip_Closed();
     }
@@ -38,7 +42,8 @@ public class Memory_Card : MonoBehaviour
     public void Flip_Open()
     {
         _is_FaceUp = true;
-        image.color = Color.green;
+        image.sprite = _face_sprite;
+        // image.color = Color.green;
         text.gameObject.SetActive(true);
         if (showDebugLogs) Debug.Log($"Flip_Open() called on card id:{get_ID()}");
     }
@@ -46,6 +51,8 @@ public class Memory_Card : MonoBehaviour
     public void Flip_Closed()
     {
         _is_FaceUp = false;
+
+        image.sprite = back_sprite;
         image.color = Color.gray;
         text.gameObject.SetActive(false);
         if (showDebugLogs) Debug.Log($"Flip_Closed() called on card id:{get_ID()}");

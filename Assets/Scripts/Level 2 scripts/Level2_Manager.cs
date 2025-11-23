@@ -8,15 +8,12 @@ public class Level2_Manager : MonoBehaviour
 
     [Header("Debugging")]
     [SerializeField] private bool showDebugLogs = true;
-
     [Header("Settings")]
     [SerializeField] private List<Constellation_Data> constellation_data_list;
     [SerializeField] private GameObject star_prefab;
     [SerializeField] private GameObject line_prefab;
     [SerializeField] private LineRenderer drag_line;    // the line the player will be creating when draggin
     [SerializeField] private LineRenderer hint_line;    // the line that will be created for the hints
-
-
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI title_text;
     [SerializeField] private GameObject win_panel;
@@ -24,18 +21,13 @@ public class Level2_Manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI myth;
     [SerializeField] private GameObject next_level_button;
     [SerializeField] private GameObject main_menu_button;
-
     [SerializeField] private GameObject hint_button;
     [SerializeField] private TextMeshProUGUI level_text;
     
-
-
-
     private List<Star_point> spawned_stars = new List<Star_point>();    // list with all the current spawned stars
     private HashSet<string> completed_connections = new HashSet<string>();  // stores all the completed lines/ star connections
     private Star_point starting_star;   // from which star the player started drawing
     private Camera mainCam;
-
     private Constellation_Data current_level_data;  // ta data tou torinou asterismou
     private int current_level_index; // se pio shmeio ths listas eimaste
     private bool is_hint_active = false;    // ama yparxei active hint on screen

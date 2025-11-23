@@ -2203,6 +2203,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94f6eacffaa0328bbd693c9f049b79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scene_Audio
+  _background_music: {fileID: 0}
+  _sfx_correct: {fileID: 0}
+  _sfx_error: {fileID: 0}
+  _sfx_win: {fileID: 0}
+  _sfx_click: {fileID: 0}
+  _volume: 1
 --- !u!4 &779942207
 Transform:
   m_ObjectHideFlags: 0
@@ -3450,7 +3456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1424659865
 AudioSource:
   m_ObjectHideFlags: 0
