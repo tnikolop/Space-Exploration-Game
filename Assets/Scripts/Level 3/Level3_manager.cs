@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,6 +22,8 @@ public class Level3_manager : MonoBehaviour
     private bool _is_checking = false;
     private bool _is_waiting_to_reset = false;      // wait for the clock to finish (cant open new card)
     private float _timer = 0f;                      // the clock
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
