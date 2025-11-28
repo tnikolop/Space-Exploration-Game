@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +23,8 @@ public class Level3_manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI InfoText;
     [SerializeField] private TextMeshProUGUI TitleText;
     [SerializeField] private Image imageSlot;
+    [SerializeField] private Button startScreenButton;
+
     [Header("Levels Buttons")]
     [SerializeField] private Image[] level_button_image;
 
@@ -51,6 +53,7 @@ public class Level3_manager : MonoBehaviour
         GameInfoPanel.gameObject.SetActive(true);
         InfoPanel.gameObject.SetActive(false);
         grid_panel.gameObject.SetActive(false);
+        startScreenButton.gameObject.SetActive(false);
 
         for (int i = 0; i < 3; i++)
         {
@@ -107,6 +110,7 @@ public class Level3_manager : MonoBehaviour
         Setup_Grid_Layout();
         Generate_Grid();
         match_count = 0;
+        Show_Info(null, null, null);
     }
 
     // function for dynamically setting up the grid layout
@@ -270,7 +274,7 @@ public class Level3_manager : MonoBehaviour
     {
         if (_levels_won[0] && _levels_won[1])
         {
-            // GAME COMPLETE
+            startScreenButton.gameObject.SetActive(true);
         }
     }
 
@@ -299,5 +303,10 @@ public class Level3_manager : MonoBehaviour
             return false;
         else
             return true;
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Default Screen");
     }
 }
