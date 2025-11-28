@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\u039A\u03C1\u03CC\u03BD\u03BF\u03C2"
   m_EditorClassIdentifier: Assembly-CSharp::Card_data
   name: "\u039A\u03C1\u03CC\u03BD\u03BF\u03C2"
-  sprite: {fileID: 5528776806964859323, guid: 8e318fa8d50cc773888b29195d371670, type: 3}
+  sprite: {fileID: -7547743231986663354, guid: a729cad8f2298c522a86bb000685a8b9, type: 3}
   description: "\u039F \u03B4\u03B5\u03CD\u03C4\u03B5\u03C1\u03BF\u03C2 \u03B1\u03AD\u03C1\u03B9\u03BF\u03C2
     \u03B3\u03AF\u03B3\u03B1\u03BD\u03C4\u03B1\u03C2 \u03C4\u03BF\u03C5 \u03B7\u03BB\u03B9\u03BA\u03BF\u03CD
     \u03BC\u03B1\u03C2 \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03BF\u03C2.

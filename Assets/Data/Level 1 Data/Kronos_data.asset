@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kronos_data
   m_EditorClassIdentifier: Assembly-CSharp::PlanetData
   planetName: "\u039A\u03C1\u03CC\u03BD\u03BF\u03C2"
-  sprite: {fileID: 5528776806964859323, guid: 8e318fa8d50cc773888b29195d371670, type: 3}
+  sprite: {fileID: -7547743231986663354, guid: a729cad8f2298c522a86bb000685a8b9, type: 3}
   largeSprite: {fileID: 0}
   shortDescription: "\u039E\u03B5\u03C7\u03C9\u03C1\u03AF\u03B6\u03B5\u03B9 \u03B1\u03C0\u03CC
     \u03C4\u03BF\u03C5\u03C2 \u03C0\u03B1\u03BD\u03AD\u03BC\u03BF\u03C1\u03C6\u03BF\u03C5\u03C2

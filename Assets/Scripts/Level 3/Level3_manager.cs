@@ -31,7 +31,7 @@ public class Level3_manager : MonoBehaviour
     [Header("Data lists")]
     [SerializeField] private List<Card_data> level1_data;
     [SerializeField] private List<Card_data> level2_data;
-    [SerializeField] private List<Card_data> level3_data;
+    // [SerializeField] private List<Card_data> level3_data;
 
 
     private List<Card_data> _current_level_data;
@@ -87,7 +87,7 @@ public class Level3_manager : MonoBehaviour
                 _current_level_data = level2_data;
                 break;
             case 2:
-                _current_level_data = level3_data;
+                // _current_level_data = level3_data;
                 break;
             default:
                 Debug.LogError($"Invalid Level Number Selected!: {level_number}");
@@ -268,7 +268,7 @@ public class Level3_manager : MonoBehaviour
 
     private void Check_Game_Completed()
     {
-        if (_levels_won[0] && _levels_won[1] && _levels_won[2])
+        if (_levels_won[0] && _levels_won[1])
         {
             // GAME COMPLETE
         }
