@@ -27,8 +27,12 @@ public class Memory_Card : MonoBehaviour
     public void Card_Clicked()
     {
         if (showDebugLogs) Debug.Log($"CLicked on card id:{get_ID()}");
-        if (_is_FaceUp)     //if already open
+        if (_is_FaceUp)
+        {    
+            if (!_manager.First_Card_selected())       //if already open just show info
+                _manager.Show_Info(Get_Sprite(),Get_Description(),Get_Name());
             return;
+        }
         if (_manager.Can_Flip() == false)   // if 2 cards are open already
             return;
 

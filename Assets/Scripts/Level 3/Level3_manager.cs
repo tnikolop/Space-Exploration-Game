@@ -10,7 +10,7 @@ public class Level3_manager : MonoBehaviour
     [SerializeField] private Transform grid_panel; // The Panel holding the cards
     [SerializeField] private GameObject card_prefab;   // The card object to spawn
     [SerializeField] private int rows = 4;
-    [SerializeField] private int cols = 3;
+    [SerializeField] private int cols = 4;
     [SerializeField] private float padding = 20f;     // Space between cards
     [SerializeField] private int edge_padding = 20;
 
@@ -39,7 +39,7 @@ public class Level3_manager : MonoBehaviour
     private Memory_Card _second_card;               // second card flipped open
     private bool _is_waiting_to_reset = false;      // wait for the clock to finish (cant open new card)
     private float _timer = 0f;                      // the clock
-    private bool[] _levels_won = new bool[3];        // true if a level has been won (automatically initialized to false in C#)
+    private bool[] _levels_won = new bool[2];        // true if a level has been won (automatically initialized to false in C#)
     private int _current_level_index;               // current level playing
     private int match_count = 0;                    // how many matches have been found, (win condition check)
 
@@ -53,7 +53,7 @@ public class Level3_manager : MonoBehaviour
         grid_panel.gameObject.SetActive(false);
 
         for (int i = 0; i < 3; i++)
-        {   
+        {
             Color temp = level_button_image[i].color;
             temp.a = 0.4f;
             level_button_image[i].color = temp;
@@ -82,9 +82,11 @@ public class Level3_manager : MonoBehaviour
         {
             case 0:
                 _current_level_data = level1_data;
+                cols = 4;
                 break;
             case 1:
                 _current_level_data = level2_data;
+                cols = 5;
                 break;
             case 2:
                 // _current_level_data = level3_data;
@@ -214,9 +216,7 @@ public class Level3_manager : MonoBehaviour
         if (_first_card.get_ID() == _second_card.get_ID())  // match
         {
             if (showDebugLogs) Debug.Log($"Match found for card id:{_first_card.get_ID()}");
-            imageSlot.sprite = _first_card.Get_Sprite();
-            InfoText.text = _first_card.Get_Description();
-            TitleText.text = _first_card.Get_Name();
+            Show_Info();
             _second_card = null;
             _first_card = null;
             Global_Audio_Manager.Instance.Play_SFX_correct();
@@ -246,7 +246,7 @@ public class Level3_manager : MonoBehaviour
             level_button_image[_current_level_index].color = temp;
             Check_Game_Completed();
         }
-        
+
     }
 
 
@@ -272,5 +272,32 @@ public class Level3_manager : MonoBehaviour
         {
             // GAME COMPLETE
         }
+    }
+
+    public void Show_Info()
+    {
+        if (_first_card == null)
+        {
+            if (showDebugLogs) Debug.LogError("_First_Card is null!");
+            return;
+        }
+        Show_Info(_first_card.Get_Sprite(), _first_card.Get_Description(), _first_card.Get_Name());
+    }
+
+    // Show card info on the side panel
+    public void Show_Info(Sprite sprite, string info, string title)
+    {
+        imageSlot.sprite = sprite;
+        InfoText.text = info;
+        TitleText.text = title;
+    }
+
+    // Returns true if the player has clicked on the first card and a match hasnt been made yet
+    public bool First_Card_selected()
+    {
+        if (_first_card == null)
+            return false;
+        else
+            return true;
     }
 }
