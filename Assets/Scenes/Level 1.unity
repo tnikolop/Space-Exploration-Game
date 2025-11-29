@@ -1130,9 +1130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   WinPanel: {fileID: 1751613758}
-  InfoPanel: {fileID: 551638586}
+  GameInfoPanel: {fileID: 551638586}
   winText: {fileID: 1589942700}
-  button: {fileID: 0}
+  top_info_panel: {fileID: 1591602611}
 --- !u!1 &551638586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 551638589}
   - component: {fileID: 551638590}
   m_Layer: 5
-  m_Name: Game Start Panel
+  m_Name: Game Info Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

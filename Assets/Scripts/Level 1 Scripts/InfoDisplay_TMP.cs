@@ -23,6 +23,7 @@ public class InfoDisplay_TMP : MonoBehaviour
     // Public method to get the texts from PlanetData
     public void ShowInfo(PlanetData data)
     {
+        this.gameObject.SetActive(true);
         UnityEngine.Debug.Log($"InfoDisplay_TMP.ShowInfo called for: {data?.planetName}");
         if (data == null)
         {
@@ -46,6 +47,7 @@ public class InfoDisplay_TMP : MonoBehaviour
 
     public void HideInfo()
     {
+        this.gameObject.SetActive(false);
         UnityEngine.Debug.Log("InfoDisplay_TMP.HideInfo called");
         // clear UI
         titleText.text = "";

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,9 +16,9 @@ public class GameManager : MonoBehaviour
     [Header("UI References")]
     public GameObject WinPanel;
 
-    public GameObject InfoPanel;
+    public GameObject GameInfoPanel;
     public TMP_Text winText;
-    public Button button;   // return to main menu button
+    public GameObject top_info_panel;
 
     void Awake()
     {
@@ -72,11 +73,12 @@ public class GameManager : MonoBehaviour
     
     public void Start_Game()
     {
-        if (InfoPanel != null)
-            InfoPanel.SetActive(false);
+        if (GameInfoPanel != null)
+            GameInfoPanel.SetActive(false);
         else
             Debug.LogError("Info Panel is null!");
 
         // Audio_Manager.Instance.Play_Music();
+        top_info_panel.gameObject.SetActive(false);
     }
 }
