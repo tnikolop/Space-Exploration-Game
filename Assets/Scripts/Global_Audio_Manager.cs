@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class Global_Audio_Manager : MonoBehaviour
 {
@@ -19,8 +19,6 @@ public class Global_Audio_Manager : MonoBehaviour
     [SerializeField] private Slider sfx_slider;
     [SerializeField] private TextMeshProUGUI sfx_slider_text;
     [SerializeField] private TextMeshProUGUI music_slider_text;
-    
-
 
     void Awake()
     {
@@ -91,6 +89,12 @@ public class Global_Audio_Manager : MonoBehaviour
     }
 
     // for background music
+    public void Play_Music(AudioClip clip)
+    {
+        if (music_slider.value == 0)
+            music_slider.value = 1;
+        Play_Music(clip, music_slider.value);
+    }
     public void Play_Music(AudioClip clip, float volume = 1f)
     {
         if (clip == null)
@@ -143,5 +147,10 @@ public class Global_Audio_Manager : MonoBehaviour
     public void Play_Click_SFX()
     {
         Play_SFX(Scene_Audio.Instance.GetAudio_SFX_Click(), Scene_Audio.Instance.Get_Volume());
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Default Screen");
     }
 }

@@ -25,7 +25,7 @@ public class Scene_Audio : MonoBehaviour
     void Start()
     {
         if (Global_Audio_Manager.Instance != null)
-            Global_Audio_Manager.Instance.Play_Music(_background_music, _volume);
+            Global_Audio_Manager.Instance.Play_Music(_background_music);
         else
             Debug.LogError("Global_Audio_Manager Instance is null");
     }
