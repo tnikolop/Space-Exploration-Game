@@ -41,7 +41,7 @@ public class Level3_manager : MonoBehaviour
     private Memory_Card _second_card;               // second card flipped open
     private bool _is_waiting_to_reset = false;      // wait for the clock to finish (cant open new card)
     private float _timer = 0f;                      // the clock
-    private bool[] _levels_won = new bool[2];        // true if a level has been won (automatically initialized to false in C#)
+   [SerializeField] private bool[] _levels_won = new bool[2];        // true if a level has been won (automatically initialized to false in C#)
     private int _current_level_index;               // current level playing
     private int match_count = 0;                    // how many matches have been found, (win condition check)
 
@@ -66,6 +66,7 @@ public class Level3_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Check_Game_Completed();
         // clock
         if (_is_waiting_to_reset)
         {
@@ -273,6 +274,7 @@ public class Level3_manager : MonoBehaviour
     {
         if (_levels_won[0] && _levels_won[1])
         {
+            Global_Audio_Manager.Instance.Play_Game_Completed_SFX();
             startScreenButton.gameObject.SetActive(true);
         }
     }

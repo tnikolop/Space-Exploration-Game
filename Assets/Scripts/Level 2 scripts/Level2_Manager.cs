@@ -244,30 +244,36 @@ public class Level2_Manager : MonoBehaviour
     {
         if (showDebugLogs) Debug.Log($"Check Win: Completed Connections:{completed_connections.Count} / {current_level_data.connections_index.Count}.");
 
-        if (completed_connections.Count >= current_level_data.connections_index.Count)
+        if (completed_connections.Count >= current_level_data.connections_index.Count)      // constellation completed
         {
             Debug.Log("Constellation Complete");
             win_panel.SetActive(true);
             myth.text = current_level_data.myth;
             Global_Audio_Manager.Instance.Play_Win_SFX();
 
-            if (current_level_index >= constellation_data_list.Count - 1)
-            {
-                if (next_level_button != null)
-                {
-                    next_level_button.SetActive(false);
-                    main_menu_button.SetActive(true);
-                }
-            }
-            else
-            {
-                if (next_level_button != null)
-                {
-                    next_level_button.SetActive(true);
-                }
-            }
+            Check_Game_Completed(); 
 
         }
+    }
+    
+    // Is Game completed?
+    private void Check_Game_Completed()
+    {
+        if (current_level_index >= constellation_data_list.Count - 1)
+        {
+            if (next_level_button != null)
+            {
+                next_level_button.SetActive(false);
+                main_menu_button.SetActive(true);
+            }
+        }
+        else
+        {
+            if (next_level_button != null)
+            {
+                next_level_button.SetActive(true);
+            }
+    }
     }
 
     // Shows one missing star pair

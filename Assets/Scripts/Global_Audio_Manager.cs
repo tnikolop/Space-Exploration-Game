@@ -149,6 +149,12 @@ public class Global_Audio_Manager : MonoBehaviour
         Play_SFX(Scene_Audio.Instance.GetAudio_SFX_Click(), Scene_Audio.Instance.Get_Volume());
     }
 
+    public void Play_Game_Completed_SFX()
+    {
+        Play_SFX(Scene_Audio.Instance.GetAudio_SFX_Game_Completed(), Scene_Audio.Instance.Get_Volume());
+
+    }
+
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("Default Screen");
