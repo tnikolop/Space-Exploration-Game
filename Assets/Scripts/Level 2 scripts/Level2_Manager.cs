@@ -41,7 +41,6 @@ public class Level2_Manager : MonoBehaviour
         if (hint_line == null) Debug.LogError("hint_line is null!");
         if (constellation_data_list.Count == 0) Debug.LogError("no constellation data found!");
         current_level_index = 0;
-        // Global_Audio_Manager.Instance.Play_Music();
     }
 
     public void Load_next_level()
