@@ -66,7 +66,7 @@ public class Level3_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Check_Game_Completed();
+        Check_Game_Completed(); // to be removed!!!!!!!!!!!!!!!!!!!!!!
         // clock
         if (_is_waiting_to_reset)
         {
