@@ -2025,6 +2025,7 @@ MonoBehaviour:
   _sfx_error: {fileID: 8300000, guid: b2d5f6fece5680918abfe640a0339b3d, type: 3}
   _sfx_win: {fileID: 8300000, guid: fff77861e3eced61a8cf86b911d6766c, type: 3}
   _sfx_click: {fileID: 0}
+  _sfx_game_completed: {fileID: 0}
   _volume: 1
 --- !u!4 &1136486597
 Transform:
@@ -3108,7 +3109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1934443207
 RectTransform:
   m_ObjectHideFlags: 0
