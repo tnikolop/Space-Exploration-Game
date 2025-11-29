@@ -111,6 +111,8 @@ public class Level3_manager : MonoBehaviour
         Generate_Grid();
         match_count = 0;
         Show_Info(null, null, null);
+        imageSlot.gameObject.SetActive(false);
+
     }
 
     // function for dynamically setting up the grid layout
@@ -233,9 +235,6 @@ public class Level3_manager : MonoBehaviour
             _timer = timeToWait;
             _is_waiting_to_reset = true;
             Global_Audio_Manager.Instance.Play_Error_SFX();
-            // imageSlot.sprite = null;
-            // InfoText.text = null;
-            // TitleText.text = null;
         }
     }
 
@@ -294,6 +293,7 @@ public class Level3_manager : MonoBehaviour
         imageSlot.sprite = sprite;
         InfoText.text = info;
         TitleText.text = title;
+        imageSlot.gameObject.SetActive(true);
     }
 
     // Returns true if the player has clicked on the first card and a match hasnt been made yet
