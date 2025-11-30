@@ -3,6 +3,10 @@
 ## TO DO:
 - Game win SFX
 - Settings panel colors
+- Settings panel background blur behind the panel
+- lock next levels?
+- add images to levels
+- Return to Level Screen
 ## Level 1
 ## Level 2
 - show constellation image
@@ -16,3 +20,6 @@
 - - borders of info panel
 
 ## Level 4
+- Random Questions
+- Start/End Panel
+- Large Dataset

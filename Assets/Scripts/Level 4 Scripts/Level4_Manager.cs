@@ -143,6 +143,6 @@ public class Level4_Manager : MonoBehaviour
     {
         Global_Audio_Manager.Instance.Play_Win_SFX();
         endPanel.SetActive(true);
-        finalScoreText.text = _score.ToString();
+        // finalScoreText.text = _score.ToString();
     }
 }
