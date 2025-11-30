@@ -2,7 +2,6 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.UI;
-using UnityEngine.SocialPlatforms.Impl;
 using System.Collections;
 public class Level4_Manager : MonoBehaviour
 {
@@ -37,12 +36,6 @@ public class Level4_Manager : MonoBehaviour
         Start_Game();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void Show_Start_Screen()
     {
         startPanel.SetActive(true);
@@ -59,13 +52,16 @@ public class Level4_Manager : MonoBehaviour
         // load questions
         _questions = _levelData.questions;
 
-        startPanel.SetActive(true);
+        // startPanel.SetActive(true);
         endPanel.SetActive(false);
         _score = 0;
         _current_Q_index = 0;
         Update_Score_UI();
         Load_Question();
     }
+
+    // Loads the next question
+    // also checks if the game is finished
     private void Load_Question()
     {
         if (_current_Q_index >= _questions.Count)
@@ -89,16 +85,23 @@ public class Level4_Manager : MonoBehaviour
             button.GetComponentInChildren<TextMeshProUGUI>().text = q.options[i];
             button.GetComponent<Image>().color = normalColor;
             // add Listener
-            button.GetComponent<Button>().onClick.AddListener(() => On_Answer_Selected(i, button));
+            int index = i;
+            button.GetComponent<Button>().onClick.AddListener(() => On_Answer_Selected(index, button));
         }
 
     }
+    // Coroutine so the program will wait 2 seconds before moving on
+    // and loads the next question
     IEnumerator Next_Question_Delay()
     {
         yield return new WaitForSeconds(2f);
         _current_Q_index++;
         Load_Question();
     }
+
+    // Answer button listener
+    // Checks if the button that was clicked(itself) was the correct answer or not
+    // and acts accordingly
     private void On_Answer_Selected(int index, GameObject button)
     {
         if (_can_answear == false)
@@ -112,12 +115,14 @@ public class Level4_Manager : MonoBehaviour
         if (index == q.correct_index)
         {
             // correct answer
+            Global_Audio_Manager.Instance.Play_SFX_correct();
             img.color = correctColor;
             _score += 10;
         }
         else
         {
             // wrong answer
+            Global_Audio_Manager.Instance.Play_Error_SFX();
             img.color = wrongColor;
             // show correct answer
             Transform correct_btn = answersContainer.GetChild(q.correct_index);
@@ -127,6 +132,8 @@ public class Level4_Manager : MonoBehaviour
         StartCoroutine(Next_Question_Delay());
 
     }
+ 
+    // Updates the UI text for the score
     private void Update_Score_UI()
     {
         scoreText.text = "SCORE: " + _score;
@@ -134,6 +141,7 @@ public class Level4_Manager : MonoBehaviour
 
     private void Game_Over()
     {
+        Global_Audio_Manager.Instance.Play_Win_SFX();
         endPanel.SetActive(true);
         finalScoreText.text = _score.ToString();
     }
