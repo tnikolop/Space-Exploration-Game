@@ -7,6 +7,15 @@
 - lock next levels?
 - add images to levels
 - Return to Level Screen
+- Maybe 2 quizes?
+- Save progress
+- Final victory Panel?
+- Hard Mode
+- Storyline
+- Achievements
+    - Complete all minigames
+    - Complete all minigames in hardmode
+    - No errors on quizes
 ## Level 1
 ## Level 2
 - show constellation image
@@ -23,3 +32,4 @@
 - Random Questions
 - Start/End Panel
 - Large Dataset
+- Win Condition

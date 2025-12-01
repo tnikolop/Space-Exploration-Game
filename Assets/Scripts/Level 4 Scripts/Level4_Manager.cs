@@ -3,6 +3,8 @@ using TMPro;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.VisualScripting.FullSerializer;
+using NUnit.Framework;
 public class Level4_Manager : MonoBehaviour
 {
     [Header("UI Elements")]
@@ -21,8 +23,6 @@ public class Level4_Manager : MonoBehaviour
     [SerializeField] private Color correctColor = new Color32(78, 204, 163, 255); // Πράσινο Neon
     [SerializeField] private Color wrongColor = new Color32(233, 69, 96, 255);   // Κόκκινο Neon
 
-    [Header("Data File")]
-    [SerializeField] private QuizData _levelData;
 
     private List<QuizData.Question> _questions;
     private int _current_Q_index = 0;
@@ -33,7 +33,25 @@ public class Level4_Manager : MonoBehaviour
     void Start()
     {
         // Show_Start_Screen();
+        Load_JSON();
         Start_Game();
+    }
+
+    // Loads the questions from the JSON file
+    private void Load_JSON()
+    {
+        // Load from ../Resources
+        TextAsset json = Resources.Load<TextAsset>("Questions_data");
+
+        if (json == null)
+        {
+            Debug.LogError("JSON file for questions not found!");
+            return;
+        }
+        // make text into C# object
+        QuizData.QuestionWrapper data = JsonUtility.FromJson<QuizData.QuestionWrapper>(json.text);
+        // store the list
+        _questions = new List<QuizData.Question>(data.questions);
     }
 
     public void Show_Start_Screen()
@@ -44,13 +62,11 @@ public class Level4_Manager : MonoBehaviour
 
     public void Start_Game()
     {
-        if (_levelData == null)
+        if (_questions == null || _questions.Count == 0)
         {
-            Debug.LogError("Level Data not loaded!");
+            Debug.LogError("Questions list is null or empty!");
             return;
         }
-        // load questions
-        _questions = _levelData.questions;
 
         // startPanel.SetActive(true);
         endPanel.SetActive(false);
@@ -79,7 +95,7 @@ public class Level4_Manager : MonoBehaviour
             Destroy(child.gameObject);
         }
         // Create the new ones
-        for (int i = 0; i < q.options.Count; i++)
+        for (int i = 0; i < q.options.Length; i++)
         {
             GameObject button = Instantiate(buttonPrefab, answersContainer);
             button.GetComponentInChildren<TextMeshProUGUI>().text = q.options[i];
@@ -112,7 +128,7 @@ public class Level4_Manager : MonoBehaviour
         QuizData.Question q = _questions[_current_Q_index];
         Image img = button.GetComponent<Image>();
 
-        if (index == q.correct_index)
+        if (index == q.correctIndex)
         {
             // correct answer
             Global_Audio_Manager.Instance.Play_SFX_correct();
@@ -125,7 +141,7 @@ public class Level4_Manager : MonoBehaviour
             Global_Audio_Manager.Instance.Play_Error_SFX();
             img.color = wrongColor;
             // show correct answer
-            Transform correct_btn = answersContainer.GetChild(q.correct_index);
+            Transform correct_btn = answersContainer.GetChild(q.correctIndex);
             correct_btn.GetComponent<Image>().color = correctColor;
         }
         Update_Score_UI();

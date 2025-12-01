@@ -1,18 +1,16 @@
-using System.Collections.Generic;
-using UnityEngine;
-
-[CreateAssetMenu(fileName = "QuizData", menuName = "Level4/QuizData")]
-public class QuizData : ScriptableObject
+public class QuizData
 {
     [System.Serializable]
     public class Question
     {
-        [TextArea(3, 5)]
         public string text;         // the Question
-        public List<string> options;    // possible answers
-        public int correct_index;   // correct answer index
+        public string[] options;    // possible answers
+        public int correctIndex;   // correct answer index
     }
-
-    [Header("Question Info")]
-    public List<Question> questions;
+    [System.Serializable]
+    public class QuestionWrapper
+    {
+        // this is needed for jsonUtility of Unity
+        public Question[] questions;
+    }
 }
