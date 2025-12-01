@@ -3,28 +3,28 @@ using TMPro;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 public class Level4_Manager : MonoBehaviour
 {
     [Header("UI Elements")]
+    // [SerializeField] private GameObject QuestionPanel;
     [SerializeField] private TextMeshProUGUI questionText;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Transform answersContainer;
     [SerializeField] private GameObject buttonPrefab;
-
     [Header("Screens")]
     [SerializeField] private GameObject startPanel;
-    [SerializeField] private GameObject endPanel;
-    [SerializeField] private TextMeshProUGUI finalScoreText;
+    [SerializeField] private GameObject WinPanel;
+    [SerializeField] private GameObject LosePanel;
+    [SerializeField] private TextMeshProUGUI finalScoreTextWin;
+    [SerializeField] private TextMeshProUGUI finalScoreTextLose;
 
-    [Header("Colors")]
-    [SerializeField] private Color normalColor = new Color32(35, 62, 139, 255);
-    [SerializeField] private Color correctColor = new Color32(78, 204, 163, 255);
-    [SerializeField] private Color wrongColor = new Color32(233, 69, 96, 255);
-    
     [Header("Game Settings")]
     [SerializeField] private int numberOfQuestions = 5;  
 
-
+    private Color normalColor = new Color32(35, 62, 139, 255);
+    private Color correctColor = new Color32(78, 204, 163, 255);
+    private Color wrongColor = new Color32(233, 69, 96, 255);
     private List<QuizData.Question> _questions;     // the list we store the questions
     private int _current_Q_index = 0;
     private int _score = 0;
@@ -33,13 +33,11 @@ public class Level4_Manager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Show_Start_Screen();
-        Load_JSON(numberOfQuestions);
-        Start_Game();
+        Show_Start_Screen();
     }
 
     // Loads x random questions from the JSON file
-    private void Load_JSON(int x)
+    private void Get_Questions(int x)
     {
         // Load from ../Resources
         TextAsset json = Resources.Load<TextAsset>("Questions_data");
@@ -73,19 +71,22 @@ public class Level4_Manager : MonoBehaviour
     public void Show_Start_Screen()
     {
         startPanel.SetActive(true);
-        endPanel.SetActive(false);
+        WinPanel.SetActive(false);
+        LosePanel.SetActive(false);
+        answersContainer.gameObject.SetActive(false);
     }
 
     public void Start_Game()
     {
+        Get_Questions(numberOfQuestions);
         if (_questions == null || _questions.Count == 0)
         {
             Debug.LogError("Questions list is null or empty!");
             return;
         }
 
-        // startPanel.SetActive(true);
-        endPanel.SetActive(false);
+        startPanel.SetActive(false);
+        answersContainer.gameObject.SetActive(true);
         _score = 0;
         _current_Q_index = 0;
         Update_Score_UI();
@@ -122,6 +123,8 @@ public class Level4_Manager : MonoBehaviour
         }
 
     }
+
+
     // Coroutine so the program will wait 2 seconds before moving on
     // and loads the next question
     IEnumerator Next_Question_Delay()
@@ -168,13 +171,24 @@ public class Level4_Manager : MonoBehaviour
     // Updates the UI text for the score
     private void Update_Score_UI()
     {
-        scoreText.text = "SCORE: " + _score;
+        scoreText.text = "ΒΑΘΜΟΛΟΓΙΑ: " + _score;
+        finalScoreTextWin.text = "Τελική Βαθμολογία: " + _score + "/" + numberOfQuestions * 10;
+        finalScoreTextLose.text = "Τελική Βαθμολογία: " + _score + "/" + numberOfQuestions * 10; 
     }
 
     private void Game_Over()
     {
         Global_Audio_Manager.Instance.Play_Win_SFX();
-        endPanel.SetActive(true);
-        // finalScoreText.text = _score.ToString();
+        if (_score >= (numberOfQuestions-1) * 10)   // if only one wrong answer -> win
+        {
+            WinPanel.SetActive(true);
+        }
+        else
+            LosePanel.SetActive(true);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Default Screen");
     }
 }

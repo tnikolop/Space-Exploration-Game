@@ -29,7 +29,6 @@
 - - borders of info panel
 
 ## Level 4
-- Random Questions
 - Start/End Panel
 - Large Dataset
 - Win Condition
