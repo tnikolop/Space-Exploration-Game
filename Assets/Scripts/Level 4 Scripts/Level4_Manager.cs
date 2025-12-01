@@ -3,15 +3,13 @@ using TMPro;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Collections;
-using Unity.VisualScripting.FullSerializer;
-using NUnit.Framework;
 public class Level4_Manager : MonoBehaviour
 {
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI questionText;
     [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private Transform answersContainer; // Εδώ θα μπαίνουν τα κουμπιά
-    [SerializeField] private GameObject buttonPrefab;    // Το πρότυπο κουμπιού που φτιάξαμε
+    [SerializeField] private Transform answersContainer;
+    [SerializeField] private GameObject buttonPrefab;
 
     [Header("Screens")]
     [SerializeField] private GameObject startPanel;
@@ -19,12 +17,15 @@ public class Level4_Manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI finalScoreText;
 
     [Header("Colors")]
-    [SerializeField] private Color normalColor = new Color32(35, 62, 139, 255); // Σκούρο Μπλε
-    [SerializeField] private Color correctColor = new Color32(78, 204, 163, 255); // Πράσινο Neon
-    [SerializeField] private Color wrongColor = new Color32(233, 69, 96, 255);   // Κόκκινο Neon
+    [SerializeField] private Color normalColor = new Color32(35, 62, 139, 255);
+    [SerializeField] private Color correctColor = new Color32(78, 204, 163, 255);
+    [SerializeField] private Color wrongColor = new Color32(233, 69, 96, 255);
+    
+    [Header("Game Settings")]
+    [SerializeField] private int numberOfQuestions = 5;  
 
 
-    private List<QuizData.Question> _questions;
+    private List<QuizData.Question> _questions;     // the list we store the questions
     private int _current_Q_index = 0;
     private int _score = 0;
     private bool _can_answear = true;
@@ -33,12 +34,12 @@ public class Level4_Manager : MonoBehaviour
     void Start()
     {
         // Show_Start_Screen();
-        Load_JSON();
+        Load_JSON(numberOfQuestions);
         Start_Game();
     }
 
-    // Loads the questions from the JSON file
-    private void Load_JSON()
+    // Loads x random questions from the JSON file
+    private void Load_JSON(int x)
     {
         // Load from ../Resources
         TextAsset json = Resources.Load<TextAsset>("Questions_data");
@@ -51,7 +52,22 @@ public class Level4_Manager : MonoBehaviour
         // make text into C# object
         QuizData.QuestionWrapper data = JsonUtility.FromJson<QuizData.QuestionWrapper>(json.text);
         // store the list
-        _questions = new List<QuizData.Question>(data.questions);
+        List<QuizData.Question> allQuestions = new List<QuizData.Question>(data.questions);
+
+        // shuffle the list (Fisher-Yates Shuffle Algorithm)
+        for (int i = 0; i < allQuestions.Count; i++)
+        {
+            QuizData.Question temp = allQuestions[i];
+            int k = Random.Range(i, allQuestions.Count);
+            allQuestions[i] = allQuestions[k];
+            allQuestions[k] = temp;
+        }
+
+        // Select x first questions
+        // check which is smaller, x or the total number of questions
+        // so the game wont crash
+        int min = Mathf.Min(x, allQuestions.Count);
+        _questions = allQuestions.GetRange(0, min);
     }
 
     public void Show_Start_Screen()
