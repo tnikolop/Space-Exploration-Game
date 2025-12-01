@@ -211,7 +211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &241161068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -899,7 +899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &891595575
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1111,7 +1111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1029281700
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1651,7 +1651,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u0393\u03B5\u03AF\u03B1 \u03C3\u03BF\u03C5 \u03BC\u03B9\u03BA\u03C1\u03AD
-    \u03B5\u03BE\u03B5\u03C1\u03B5\u03C5\u03BD\u03B7\u03C4\u03AE!\n\u0389\u03C1\u03B8\u03B5
+    \u03B5\u03BE\u03B5\u03C1\u03B5\u03C5\u03BD\u03B7\u03C4\u03AE! \u0389\u03C1\u03B8\u03B5
     \u03B7 \u03C3\u03C4\u03B9\u03B3\u03BC\u03AE \u03BD\u03B1 \u03B4\u03BF\u03CD\u03BC\u03B5
     \u03C4\u03B9 \u03AD\u03C7\u03B5\u03B9\u03C2 \u03BC\u03AC\u03B8\u03B5\u03B9."
   m_isRightToLeft: 0

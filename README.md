@@ -29,6 +29,4 @@
 - - borders of info panel
 
 ## Level 4
-- Start/End Panel
 - Large Dataset
-- Win Condition
