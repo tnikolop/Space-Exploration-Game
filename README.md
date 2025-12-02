@@ -17,7 +17,6 @@
     - Complete all minigames in hardmode
     - No errors on quizes
 ## Level 1
-- Hint button
 ## Level 2
 - add final win panel 
 
@@ -28,4 +27,3 @@
 - - borders of info panel
 
 ## Level 4
-- Large Dataset
