@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        Global_Audio_Manager.Instance.Play_Notification_SFX();
 
         if (target_planet != null && target_slot != null)
         {
@@ -144,7 +145,7 @@ public class GameManager : MonoBehaviour
             target_slot.Highlight(true);
 
             // wait 
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(1.0f);
 
             // turn off highlight
             target_planet.Highlight(false);

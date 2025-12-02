@@ -9,6 +9,8 @@ public class Scene_Audio : MonoBehaviour
     [SerializeField] private AudioClip _sfx_win;
     [SerializeField] private AudioClip _sfx_click;
     [SerializeField] private AudioClip _sfx_game_completed;
+    [SerializeField] private AudioClip _sfx_notification;
+
 
 
     [SerializeField] [Range(0f, 1f)] private float _volume = 1f;
@@ -64,6 +66,13 @@ public class Scene_Audio : MonoBehaviour
             Debug.LogError("SFX_Game_Completed IS NULL FOR THIS SCENE!");
         return _sfx_game_completed;
     }
+    public AudioClip GetAudio_SFX_Notification()
+    {
+        if (_sfx_notification == null)
+            Debug.LogError("SFX_NotificaTION IS NULL FOR THIS SCENE!");
+        return _sfx_notification;
+    }
+    
     public AudioClip GetAudio_Background_Music()
     {
         if (_background_music == null)

@@ -670,6 +670,7 @@ MonoBehaviour:
   _sfx_win: {fileID: 8300000, guid: fff77861e3eced61a8cf86b911d6766c, type: 3}
   _sfx_click: {fileID: 0}
   _sfx_game_completed: {fileID: 0}
+  _sfx_notification: {fileID: 8300000, guid: 968f622144215dd34abc88465b92d0ae, type: 3}
   _volume: 1
 --- !u!4 &160226031
 Transform:
