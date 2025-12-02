@@ -306,6 +306,7 @@ public class Level2_Manager : MonoBehaviour
                 hint_line.SetPosition(1, spawned_stars[hint_pair.y].transform.position);
             }
         }
+        Global_Audio_Manager.Instance.Play_Notification_SFX();
     }
 
     // Load the main menu screen

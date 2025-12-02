@@ -2026,6 +2026,7 @@ MonoBehaviour:
   _sfx_win: {fileID: 8300000, guid: fff77861e3eced61a8cf86b911d6766c, type: 3}
   _sfx_click: {fileID: 0}
   _sfx_game_completed: {fileID: 0}
+  _sfx_notification: {fileID: 8300000, guid: 968f622144215dd34abc88465b92d0ae, type: 3}
   _volume: 1
 --- !u!4 &1136486597
 Transform:
@@ -2091,7 +2092,6 @@ MonoBehaviour:
   myth: {fileID: 1297821894}
   next_level_button: {fileID: 1846484599}
   main_menu_button: {fileID: 2072500214}
-  hint_button: {fileID: 1047314417}
   level_text: {fileID: 1303667554}
 --- !u!4 &1206020919
 Transform:
