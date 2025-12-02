@@ -499,7 +499,7 @@ RectTransform:
   m_Father: {fileID: 587506429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -724,12 +724,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -902,8 +902,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1446769632}
-        m_TargetAssemblyTypeName: Level_menu_buttons, Assembly-CSharp
+      - m_Target: {fileID: 2052689474}
+        m_TargetAssemblyTypeName: Main_Menu_manager, Assembly-CSharp
         m_MethodName: OpenLevel
         m_Mode: 3
         m_Arguments:
@@ -1167,8 +1167,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1446769632}
-        m_TargetAssemblyTypeName: Level_menu_buttons, Assembly-CSharp
+      - m_Target: {fileID: 2052689474}
+        m_TargetAssemblyTypeName: Main_Menu_manager, Assembly-CSharp
         m_MethodName: OpenLevel
         m_Mode: 3
         m_Arguments:
@@ -1914,6 +1914,51 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &773342255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773342257}
+  - component: {fileID: 773342256}
+  m_Layer: 0
+  m_Name: Level Completer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &773342256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773342255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0ac85c75108c58e9d011de91a24fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level_Completer
+  levelToUnlock: 4
+--- !u!4 &773342257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773342255}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 571.0415, y: 279.97812, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &779942205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,7 +2048,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -136.52466, y: 0}
-  m_SizeDelta: {x: 179.0493, y: 30}
+  m_SizeDelta: {x: 280.8, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &790339972
 MonoBehaviour:
@@ -2049,10 +2094,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1446769630}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2052689474}
+        m_TargetAssemblyTypeName: Main_Menu_manager, Assembly-CSharp
+        m_MethodName: New_Game
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2156,7 +2201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u03A0\u0391\u0399\u039E\u0395"
+  m_text: "\u039D\u0395\u039F \u03A0\u0391\u0399\u03A7\u039D\u0399\u0394\u0399"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2268,7 +2313,7 @@ RectTransform:
   m_Father: {fileID: 698719828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2529,10 +2574,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1446769630}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2052689474}
+        m_TargetAssemblyTypeName: Main_Menu_manager, Assembly-CSharp
+        m_MethodName: Load_Game
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2596,7 +2641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &920544138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2615,10 +2660,10 @@ RectTransform:
   - {fileID: 328018673}
   m_Father: {fileID: 2067785327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1024, y: 556}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &920544139
 MonoBehaviour:
@@ -3186,6 +3231,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 139491588}
     m_Modifications:
+    - target: {fileID: 4173634169544656594, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.101867676
+      objectReference: {fileID: 0}
     - target: {fileID: 4618964510799401323, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3291,6 +3340,10 @@ PrefabInstance:
       value: "\u03A3\u03C5\u03B3\u03C7\u03B1\u03C1\u03B7\u03C4\u03AE\u03C1\u03B9\u03B1,
         \u039A\u03C5\u03B2\u03B5\u03C1\u03BD\u03AE\u03C4\u03B7!"
       objectReference: {fileID: 0}
+    - target: {fileID: 7801442424502655500, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6919431328188374360, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
@@ -3300,6 +3353,11 @@ PrefabInstance:
 --- !u!224 &1334295779 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4618964510799401323, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
+  m_PrefabInstance: {fileID: 1334295778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1334295780 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5821144462322498073, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
   m_PrefabInstance: {fileID: 1334295778}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1446769630
@@ -3622,8 +3680,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1446769632}
-        m_TargetAssemblyTypeName: Level_menu_buttons, Assembly-CSharp
+      - m_Target: {fileID: 2052689474}
+        m_TargetAssemblyTypeName: Main_Menu_manager, Assembly-CSharp
         m_MethodName: OpenLevel
         m_Mode: 3
         m_Arguments:
@@ -4448,6 +4506,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025687843}
   m_CullTransparentMesh: 1
+--- !u!1 &2052689473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052689475}
+  - component: {fileID: 2052689474}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2052689474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052689473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192a50f08e4ac00cd9b4cb0ae3be2692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  LevelSelectPanel: {fileID: 1446769630}
+  GameCompletedPanel: {fileID: 1334295780}
+  PlayButton: {fileID: 790339972}
+  ResumeButton: {fileID: 919760084}
+  LevelButtons:
+  - {fileID: 303902121}
+  - {fileID: 168422367}
+  - {fileID: 2108229485}
+  - {fileID: 1503249806}
+--- !u!4 &2052689475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052689473}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 613.55817, y: 252.19466, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067785326
 GameObject:
   m_ObjectHideFlags: 0
@@ -4516,12 +4627,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -4583,7 +4694,7 @@ RectTransform:
   m_Father: {fileID: 523326766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4707,8 +4818,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1446769632}
-        m_TargetAssemblyTypeName: Level_menu_buttons, Assembly-CSharp
+      - m_Target: {fileID: 2052689474}
+        m_TargetAssemblyTypeName: Main_Menu_manager, Assembly-CSharp
         m_MethodName: OpenLevel
         m_Mode: 3
         m_Arguments:
@@ -4790,7 +4901,7 @@ RectTransform:
   m_Father: {fileID: 454314042}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4841,3 +4952,5 @@ SceneRoots:
   - {fileID: 1325625452}
   - {fileID: 1768444118}
   - {fileID: 779942207}
+  - {fileID: 2052689475}
+  - {fileID: 773342257}

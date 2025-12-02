@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     // Show winning screen
     private void WinGame()
     {
+        Level_Completer.Instance.WinLevel();    // mark level as completed to unlock the next one
         game_won = true;
         Debug.Log("All planets are in order!");
         InfoDisplay_TMP.Instance.HideInfo();    // hide info for the winning screen

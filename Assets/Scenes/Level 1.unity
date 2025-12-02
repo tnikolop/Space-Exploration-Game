@@ -3488,6 +3488,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071426c1a6a52b653852ae300e671cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!1 &1580526990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580526992}
+  - component: {fileID: 1580526991}
+  m_Layer: 0
+  m_Name: Level Completer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1580526991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580526990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0ac85c75108c58e9d011de91a24fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level_Completer
+  levelToUnlock: 2
+--- !u!4 &1580526992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580526990}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 571.0415, y: 279.97812, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1589790586 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3940946323967918413, guid: 4129f65aa75fc1492a282a122ce95e77, type: 3}
@@ -4936,3 +4981,4 @@ SceneRoots:
   - {fileID: 134343659}
   - {fileID: 873208671}
   - {fileID: 160226031}
+  - {fileID: 1580526992}

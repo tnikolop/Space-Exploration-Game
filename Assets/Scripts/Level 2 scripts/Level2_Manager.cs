@@ -258,15 +258,16 @@ public class Level2_Manager : MonoBehaviour
     // Is Game completed?
     private void Check_Game_Completed()
     {
-        if (current_level_index >= constellation_data_list.Count - 1)
+        if (current_level_index >= constellation_data_list.Count - 1)       // game completed
         {
             if (next_level_button != null)
             {
                 next_level_button.SetActive(false);
                 main_menu_button.SetActive(true);
             }
+            Level_Completer.Instance.WinLevel();    // mark level as completed to unlock the next one
         }
-        else
+        else        // not yet completed
         {
             if (next_level_button != null)
             {

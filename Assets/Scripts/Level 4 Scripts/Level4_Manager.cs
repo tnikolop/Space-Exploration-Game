@@ -182,6 +182,7 @@ public class Level4_Manager : MonoBehaviour
         if (_score >= (numberOfQuestions-1) * 10)   // if only one wrong answer -> win
         {
             WinPanel.SetActive(true);
+            Level_Completer.Instance.WinLevel();    // mark level as completed to unlock the next one
         }
         else
             LosePanel.SetActive(true);
