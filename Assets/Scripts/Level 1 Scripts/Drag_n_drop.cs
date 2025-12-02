@@ -1,30 +1,22 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class Drag_n_drop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
     public PlanetData data;
-
-    private Vector3 startPos;
     private Transform startParent;
     private Canvas canvas;
     private CanvasGroup canvasGroup;
+    private Vector3 _original_scale;
 
-    private Image _image;
-    private Color _original_color;
 
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
 
-        _image = GetComponent<Image>();
-        if (_image != null)
-        {
-            _original_color = _image.color;
-        }
+        _original_scale = transform.localScale;
 
         Debug.Log($"Drag_n_drop Awake: {data?.planetName}");
     }
@@ -33,7 +25,6 @@ public class Drag_n_drop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log($"OnBeginDrag: {data.planetName}");
-        startPos = transform.position;
         startParent = transform.parent;
 
         // while dragging, allow raycasts to pass through this object so slots receive OnDrop
@@ -93,20 +84,16 @@ public class Drag_n_drop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             Debug.LogWarning($"{name} has no PlanetData assigned!");
     }
 
+    // make the planet larger
     public void Highlight(bool active)
     {
-        if (_image == null)
-        {
-            Debug.LogError("Planet IMage is null");
-            return;
-        }
         if (active)
         {
-            _image.color = Color.yellow;
+            transform.localScale = _original_scale * 1.3f;
         }
         else
         {
-            _image.color = _original_color;
+            transform.localScale = _original_scale;
         }
     }
 
