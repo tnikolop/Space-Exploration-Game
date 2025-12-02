@@ -1810,11 +1810,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94f6eacffaa0328bbd693c9f049b79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scene_Audio
-  _background_music: {fileID: 8300000, guid: 81299b17c43831185aed369d59c5e10b, type: 3}
+  _background_music: {fileID: 8300000, guid: b92eb079330fb046094f918fb4b40e82, type: 3}
   _sfx_correct: {fileID: 0}
   _sfx_error: {fileID: 0}
   _sfx_win: {fileID: 0}
   _sfx_click: {fileID: 0}
+  _sfx_game_completed: {fileID: 0}
   _volume: 1
 --- !u!4 &779942207
 Transform:

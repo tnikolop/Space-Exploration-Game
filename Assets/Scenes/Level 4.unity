@@ -748,7 +748,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 400, y: 80}
+  m_CellSize: {x: 750, y: 90}
   m_Spacing: {x: 30, y: 30}
   m_Constraint: 1
   m_ConstraintCount: 2
@@ -790,7 +790,7 @@ MonoBehaviour:
   LosePanel: {fileID: 891595574}
   finalScoreTextWin: {fileID: 1509767327}
   finalScoreTextLose: {fileID: 2133015127}
-  numberOfQuestions: 3
+  numberOfQuestions: 15
 --- !u!4 &673356881
 Transform:
   m_ObjectHideFlags: 0
@@ -1910,7 +1910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94f6eacffaa0328bbd693c9f049b79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scene_Audio
-  _background_music: {fileID: 8300000, guid: b92eb079330fb046094f918fb4b40e82, type: 3}
+  _background_music: {fileID: 8300000, guid: 81299b17c43831185aed369d59c5e10b, type: 3}
   _sfx_correct: {fileID: 8300000, guid: 5aa823be3c60d7b0a832927db13dbda2, type: 3}
   _sfx_error: {fileID: 8300000, guid: b2d5f6fece5680918abfe640a0339b3d, type: 3}
   _sfx_win: {fileID: 8300000, guid: fff77861e3eced61a8cf86b911d6766c, type: 3}

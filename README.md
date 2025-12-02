@@ -17,9 +17,8 @@
     - Complete all minigames in hardmode
     - No errors on quizes
 ## Level 1
+- Hint button
 ## Level 2
-- show constellation image
-- make pretty
 - add final win panel 
 
 ## Level 3
