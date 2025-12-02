@@ -21,7 +21,6 @@ public class Level2_Manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI myth;
     [SerializeField] private GameObject next_level_button;
     [SerializeField] private GameObject main_menu_button;
-    [SerializeField] private GameObject hint_button;
     [SerializeField] private TextMeshProUGUI level_text;
     
     private List<Star_point> spawned_stars = new List<Star_point>();    // list with all the current spawned stars

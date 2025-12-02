@@ -1,11 +1,23 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
     public int expectedOrder;
     private bool occupied = false;
+
+    private Image _image;
+    private Color _original_color;
+
+        void Awake()
+    {
+        _image = GetComponent<Image>();
+        if (_image != null)
+        {
+            _original_color = _image.color;
+        }
+    }
 
     // when a mouse click is released on the slot
     public void OnDrop(PointerEventData eventData)
@@ -70,5 +82,22 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         else
             Debug.LogError("Global Audio Manager is null!!");
 
+    }
+
+    public void Highlight(bool active)
+    {
+        if (_image == null)
+        {
+            Debug.LogError("Slot IMage is null");
+            return;
+        }
+        if (active)
+        {
+            _image.color = Color.yellow;
+        }
+        else
+        {
+            _image.color = _original_color;
+        }
     }
 }

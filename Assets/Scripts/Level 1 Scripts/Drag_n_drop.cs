@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class Drag_n_drop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
@@ -11,10 +12,20 @@ public class Drag_n_drop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private Canvas canvas;
     private CanvasGroup canvasGroup;
 
+    private Image _image;
+    private Color _original_color;
+
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
+
+        _image = GetComponent<Image>();
+        if (_image != null)
+        {
+            _original_color = _image.color;
+        }
+
         Debug.Log($"Drag_n_drop Awake: {data?.planetName}");
     }
 
@@ -80,5 +91,34 @@ public class Drag_n_drop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         }
         else
             Debug.LogWarning($"{name} has no PlanetData assigned!");
+    }
+
+    public void Highlight(bool active)
+    {
+        if (_image == null)
+        {
+            Debug.LogError("Planet IMage is null");
+            return;
+        }
+        if (active)
+        {
+            _image.color = Color.yellow;
+        }
+        else
+        {
+            _image.color = _original_color;
+        }
+    }
+
+    // Helper function for the hint logic
+    // returns true if the planet is placed in the correct slot
+    public bool Is_Correctly_Placed()
+    {
+        ItemSlot slot = GetComponentInParent<ItemSlot>();
+
+        if (slot != null && slot.expectedOrder == data.orderFromSun)
+            return true;
+        else
+            return false;
     }
 }
