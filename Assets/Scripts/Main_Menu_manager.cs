@@ -11,6 +11,8 @@ public class Main_Menu_manager : MonoBehaviour
     [SerializeField] private Button PlayButton;
     [SerializeField] private Button ResumeButton;
     [SerializeField] private Button[] LevelButtons;
+    [SerializeField] private GameObject[] LevelStars;
+
 
 
 
@@ -69,9 +71,9 @@ public class Main_Menu_manager : MonoBehaviour
         {
             int hard_mode = PlayerPrefs.GetInt("No-Hint-Level" + (i+1), 0);
             if (hard_mode == 0)
-                continue;
-            // highlight
-            LevelButtons[i].image.color = Color.yellow;
+                LevelStars[i].SetActive(false);
+            else    // highlight
+                LevelStars[i].SetActive(true);
         }
     }
 
