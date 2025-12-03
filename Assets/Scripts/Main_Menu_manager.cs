@@ -19,7 +19,10 @@ public class Main_Menu_manager : MonoBehaviour
     {
         LevelSelectPanel.SetActive(false);
         GameCompletedPanel.SetActive(false);
-        // ResumeButton.gameObject.SetActive(false);
+        if (Saved_Data_Exists())
+            ResumeButton.gameObject.SetActive(true);
+        else
+            ResumeButton.gameObject.SetActive(false);
     }
 
     // Start New Game with clean data
@@ -33,6 +36,7 @@ public class Main_Menu_manager : MonoBehaviour
     public void Load_Game()
     {
         Lock_buttons();
+        Check_Hard_Mode();
         LevelSelectPanel.SetActive(true);
     }
     
@@ -43,7 +47,7 @@ public class Main_Menu_manager : MonoBehaviour
     }
 
     // locks the levels that are not available yet
-    void Lock_buttons()
+    private void Lock_buttons()
     {
         // get the current level reached, default 1 if it doesnt exist yet
         int level_reached = PlayerPrefs.GetInt("Level-Reached", 1);
@@ -56,6 +60,25 @@ public class Main_Menu_manager : MonoBehaviour
                 LevelButtons[i].image.color = Color.gray;
             }
         }
+    }
+
+    // Check if any level has been completed on hard mode and highlight them
+    private void Check_Hard_Mode()
+    {
+        for (int i = 0; i < LevelButtons.Length; i++)
+        {
+            int hard_mode = PlayerPrefs.GetInt("No-Hint-Level" + (i+1), 0);
+            if (hard_mode == 0)
+                continue;
+            // highlight
+            LevelButtons[i].image.color = Color.yellow;
+        }
+    }
+
+    // returns true if saved Data exists for this computer
+    private bool Saved_Data_Exists()
+    {
+        return PlayerPrefs.HasKey("Level-Reached");
     }
     
     // Delete all saved data

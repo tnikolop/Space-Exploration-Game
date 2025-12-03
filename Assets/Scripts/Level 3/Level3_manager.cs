@@ -276,7 +276,7 @@ public class Level3_manager : MonoBehaviour
         {
             Global_Audio_Manager.Instance.Play_Game_Completed_SFX();
             startScreenButton.gameObject.SetActive(true);
-            Level_Completer.Instance.WinLevel();    // mark level as completed to unlock the next one
+            Level_Completer.Instance.WinLevel(false);    // mark level as completed to unlock the next one
         }
     }
 

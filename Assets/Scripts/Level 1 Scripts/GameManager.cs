@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private int correctly_placed_planets = 0;
     private bool game_won = false;
     private bool _is_hint_active = false;
+    private bool _hint_used = false;
 
     [Header("UI References")]
     public GameObject WinPanel;
@@ -51,7 +52,7 @@ public class GameManager : MonoBehaviour
     // Show winning screen
     private void WinGame()
     {
-        Level_Completer.Instance.WinLevel();    // mark level as completed to unlock the next one
+        Level_Completer.Instance.WinLevel(!_hint_used);    // mark level as completed to unlock the next one
         game_won = true;
         Debug.Log("All planets are in order!");
         InfoDisplay_TMP.Instance.HideInfo();    // hide info for the winning screen
@@ -90,6 +91,7 @@ public class GameManager : MonoBehaviour
     // Highlight one umatched planet to an unmatched slot for 2 seconds
     public void Show_Hint()
     {
+        _hint_used = true;
         // dont show hint if there is already one active or the game is over
         if (_is_hint_active || game_won)
             return;

@@ -31,6 +31,7 @@ public class Level2_Manager : MonoBehaviour
     private int current_level_index; // se pio shmeio ths listas eimaste
     private bool is_hint_active = false;    // ama yparxei active hint on screen
     private Vector2Int hint_pair;       // the hint star pair
+    private bool _hint_used = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -265,7 +266,7 @@ public class Level2_Manager : MonoBehaviour
                 next_level_button.SetActive(false);
                 main_menu_button.SetActive(true);
             }
-            Level_Completer.Instance.WinLevel();    // mark level as completed to unlock the next one
+            Level_Completer.Instance.WinLevel(!_hint_used);    // mark level as completed to unlock the next one
         }
         else        // not yet completed
         {
@@ -279,6 +280,7 @@ public class Level2_Manager : MonoBehaviour
     // Shows one missing star pair
     public void Show_Hint()
     {
+        _hint_used = true;
         // if hint is active dont show another hint
         if (is_hint_active)
             return;

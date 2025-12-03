@@ -2598,7 +2598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0ac85c75108c58e9d011de91a24fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Level_Completer
-  levelToUnlock: 3
+  current_level: 2
 --- !u!4 &1891262031
 Transform:
   m_ObjectHideFlags: 0
