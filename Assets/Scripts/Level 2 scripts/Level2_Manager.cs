@@ -22,6 +22,9 @@ public class Level2_Manager : MonoBehaviour
     [SerializeField] private GameObject next_level_button;
     [SerializeField] private GameObject main_menu_button;
     [SerializeField] private TextMeshProUGUI level_text;
+    [SerializeField] private GameObject GameCompletedPanel;
+    [SerializeField] private GameObject InfoPanel;
+
     
     private List<Star_point> spawned_stars = new List<Star_point>();    // list with all the current spawned stars
     private HashSet<string> completed_connections = new HashSet<string>();  // stores all the completed lines/ star connections
@@ -41,6 +44,9 @@ public class Level2_Manager : MonoBehaviour
         if (hint_line == null) Debug.LogError("hint_line is null!");
         if (constellation_data_list.Count == 0) Debug.LogError("no constellation data found!");
         current_level_index = 0;
+        GameCompletedPanel.SetActive(false);
+        InfoPanel.SetActive(true);
+        
     }
 
     public void Load_next_level()
@@ -264,7 +270,8 @@ public class Level2_Manager : MonoBehaviour
             if (next_level_button != null)
             {
                 next_level_button.SetActive(false);
-                main_menu_button.SetActive(true);
+                // main_menu_button.SetActive(true);
+                GameCompletedPanel.SetActive(true);
             }
             Level_Completer.Instance.WinLevel(!_hint_used);    // mark level as completed to unlock the next one
         }

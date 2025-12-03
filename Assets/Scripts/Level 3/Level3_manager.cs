@@ -41,7 +41,7 @@ public class Level3_manager : MonoBehaviour
     private Memory_Card _second_card;               // second card flipped open
     private bool _is_waiting_to_reset = false;      // wait for the clock to finish (cant open new card)
     private float _timer = 0f;                      // the clock
-   [SerializeField] private bool[] _levels_won = new bool[2];        // true if a level has been won (automatically initialized to false in C#)
+    [SerializeField] private bool[] _levels_won = new bool[2];        // true if a level has been won (automatically initialized to false in C#)
     private int _current_level_index;               // current level playing
     private int match_count = 0;                    // how many matches have been found, (win condition check)
 
@@ -54,13 +54,7 @@ public class Level3_manager : MonoBehaviour
         InfoPanel.gameObject.SetActive(false);
         grid_panel.gameObject.SetActive(false);
         startScreenButton.gameObject.SetActive(false);
-
-        for (int i = 0; i < 3; i++)
-        {
-            Color temp = level_button_image[i].color;
-            temp.a = 0.4f;
-            level_button_image[i].color = temp;
-        }
+        Highlight_Levels();
     }
 
     // Update is called once per frame
@@ -91,9 +85,6 @@ public class Level3_manager : MonoBehaviour
             case 1:
                 _current_level_data = level2_data;
                 cols = 5;
-                break;
-            case 2:
-                // _current_level_data = level3_data;
                 break;
             default:
                 Debug.LogError($"Invalid Level Number Selected!: {level_number}");
@@ -245,9 +236,8 @@ public class Level3_manager : MonoBehaviour
         {
             Global_Audio_Manager.Instance.Play_Win_SFX();
             _levels_won[_current_level_index] = true;
-            Color temp = Color.white;
-            temp.a = 1f;
-            level_button_image[_current_level_index].color = temp;
+            Highlight_Levels();
+            Save_Progress();
             Check_Game_Completed();
         }
 
@@ -276,7 +266,7 @@ public class Level3_manager : MonoBehaviour
         {
             Global_Audio_Manager.Instance.Play_Game_Completed_SFX();
             startScreenButton.gameObject.SetActive(true);
-            Level_Completer.Instance.WinLevel(false);    // mark level as completed to unlock the next one
+            Level_Completer.Instance.WinLevel(true);    // mark level as completed to unlock the next one
         }
     }
 
@@ -311,5 +301,52 @@ public class Level3_manager : MonoBehaviour
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("Default Screen");
+    }
+
+    private void Save_Progress()
+    {
+        if (_levels_won[0])
+        {
+            Debug.Log("Level3: Completed Game " + 1);
+            PlayerPrefs.SetInt("Level3_1-Completed", 1);       // first game won
+            PlayerPrefs.Save();
+        }
+        if (_levels_won[1])
+        {
+            Debug.Log("Level3: Completed Game " + 2);
+            PlayerPrefs.SetInt("Level3_2-Completed", 1);       // second game won
+            PlayerPrefs.Save();
+        }
+    }
+
+    // lowers alpha if not yet completed
+    // if game completed alpha = 1
+    private void Highlight_Levels()
+    {
+        Color c = Color.white;
+        int pref = PlayerPrefs.GetInt("Level3_1-Completed", 0);
+        if (pref == 0)
+        {
+            c.a = 0.4f;
+            level_button_image[0].color = c;
+        }
+        else if (pref == 1)
+        {
+            c.a = 1f;
+            level_button_image[0].color = c;
+            _levels_won[0] = true;
+        }
+        pref = PlayerPrefs.GetInt("Level3_2-Completed", 0);
+        if (pref == 0)
+        {
+            c.a = 0.4f;
+            level_button_image[1].color = c;
+        }
+        else if (pref == 1)
+        {
+            c.a = 1f;
+            level_button_image[1].color = c;
+            _levels_won[1] = true;
+        }
     }
 }

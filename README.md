@@ -4,10 +4,8 @@
 - Game win SFX
 - Settings panel colors
 - Settings panel background blur behind the panel
-- lock next levels?
 - Return to Level Screen
 - Maybe 2 quizes?
-- Save progress
 - Final victory Panel?
 - Hard Mode
 - Achievements
@@ -16,8 +14,6 @@
     - No errors on quizes
 ## Level 1
 ## Level 2
-- add final win panel 
-
 ## Level 3
 - make pretty
 - - cards
