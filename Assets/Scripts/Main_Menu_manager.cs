@@ -4,20 +4,16 @@ using UnityEngine.SceneManagement;
 
 public class Main_Menu_manager : MonoBehaviour
 {
-
     [Header("UI")]
     [SerializeField] private GameObject LevelSelectPanel;
     [SerializeField] private GameObject GameCompletedPanel;
     [SerializeField] private GameObject AchievementPanel;
-
     [SerializeField] private Button PlayButton;
     [SerializeField] private Button ResumeButton;
     [SerializeField] private Button[] LevelButtons;
     [SerializeField] private GameObject[] LevelStars;
     [SerializeField] private Image[] AchievementStars;
-
-
-
+    private const int _NUM_of_LEVELS = 4;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -76,8 +72,13 @@ public class Main_Menu_manager : MonoBehaviour
             int hard_mode = PlayerPrefs.GetInt("No-Hint-Level" + (i + 1), 0);
             if (hard_mode == 0)
                 LevelStars[i].SetActive(false);
-            else    // highlight
+            else
+            {    // highlight
                 LevelStars[i].SetActive(true);
+                int res = PlayerPrefs.GetInt("Total Stars", 0);     // get number of stars collected
+                PlayerPrefs.SetInt("Total Stars", res + 1);         // 1 more star collected
+                PlayerPrefs.Save();
+            }
         }
     }
 
@@ -97,23 +98,30 @@ public class Main_Menu_manager : MonoBehaviour
     public void Show_Achievements()
     {
         AchievementPanel.SetActive(true);
-
-        int star;
-
-        // Make star visible if achievement unlocked
-        // otherwise make it black
-        for (int i = 0; i < AchievementStars.Length; i++)
+        // Reset all achievements, make them black
+        foreach (var star in AchievementStars)
         {
-            star = PlayerPrefs.GetInt("Achievement" + (i + 1), 0);      // see if achievement unlocked
-            if (star == 1)      // unlocked
-            {
-                AchievementStars[i].color = Color.white;
-            }
-            else                // not yet unlocked
-            {
-                AchievementStars[i].color = Color.black;
-            }
+            star.color = Color.black;
         }
+
+        // Check achievemnt 1
+        int res = PlayerPrefs.GetInt("Level-Reached", 1);
+        if (res > _NUM_of_LEVELS)
+        {
+            // all levels completed: Achievement 1 unlocked
+            AchievementStars[0].color = Color.white;
+        }
+
+        // Check achievement 2
+        res = PlayerPrefs.GetInt("Total Stars", 0);
+        if (res >= _NUM_of_LEVELS)
+        {
+            // all Stars collected: Achievement 2 unlocked
+            AchievementStars[1].color = Color.white;
+        }
+
+        // Chech achievement 3
     }
+
 
 }

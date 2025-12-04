@@ -1154,6 +1154,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4342563052139183598, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
+      propertyPath: m_text
+      value: "\u0393\u03B9\u03B1 \u03BD\u03B1 \u03C0\u03AC\u03C1\u03B5\u03B9\u03C2
+        \u03C4\u03BF \u03B1\u03C3\u03C4\u03AD\u03C1\u03B9 \u03C3\u03B5 \u03B1\u03C5\u03C4\u03AE\u03BD
+        \u03C4\u03B7\u03BD \u03B1\u03C0\u03BF\u03C3\u03C4\u03BF\u03BB\u03AE \u03B8\u03B1
+        \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03BC\u03B7\u03BD \u03BA\u03AC\u03BD\u03B5\u03B9\u03C2
+        \u03BF\u03CD\u03C4\u03B5 \u03AD\u03BD\u03B1 \u03BB\u03AC\u03B8\u03BF\u03C2"
+      objectReference: {fileID: 0}
     - target: {fileID: 4618964510799401323, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1180,11 +1188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4618964510799401323, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 674.1172
+      value: 686.4899
       objectReference: {fileID: 0}
     - target: {fileID: 4618964510799401323, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 237.498
+      value: 274.571
       objectReference: {fileID: 0}
     - target: {fileID: 4618964510799401323, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_LocalScale.x
@@ -1228,11 +1236,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4618964510799401323, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.1364
+      value: 0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 4618964510799401323, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.2726
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4618964510799401323, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1255,15 +1263,20 @@ PrefabInstance:
         \u03C3\u03C4\u03B9\u03C2 \u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2
         \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03BF\u03BB\u03BF\u03BA\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03B9\u03C2
         \u03C4\u03B7\u03BD \u03C4\u03B5\u03BB\u03B5\u03C5\u03C4\u03B1\u03AF\u03B1
-        \u03C3\u03BF\u03C5 \u03B1\u03C0\u03BF\u03C3\u03C4\u03BF\u03BB\u03AE."
+        \u03C3\u03BF\u03C5 \u03B1\u03C0\u03BF\u03C3\u03C4\u03BF\u03BB\u03AE. \u0388\u03C7\u03B5\u03B9\u03C2
+        \u03C0\u03B5\u03C1\u03B9\u03B8\u03CE\u03C1\u03B9\u03BF 2 \u03BB\u03B1\u03B8\u03CE\u03BD."
       objectReference: {fileID: 0}
     - target: {fileID: 5787089453653496127, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_fontSize
-      value: 26.95
+      value: 22.4
       objectReference: {fileID: 0}
     - target: {fileID: 5821144462322498073, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_Name
       value: Info Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5821144462322498073, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6444328434689564490, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_text

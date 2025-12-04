@@ -7,10 +7,7 @@
 - Return to Level Screen
 - Maybe 2 quizes?
 - Final victory Panel?
-- Hard Mode
 - Achievements
-    - Complete all minigames
-    - Complete all minigames in hardmode
     - No errors on quizes
 
 ## Level 1
