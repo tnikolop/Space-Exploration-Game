@@ -12,6 +12,7 @@
     - Complete all minigames
     - Complete all minigames in hardmode
     - No errors on quizes
+
 ## Level 1
 ## Level 2
 ## Level 3

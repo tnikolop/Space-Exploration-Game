@@ -30,6 +30,8 @@ public class Level4_Manager : MonoBehaviour
     private int _score = 0;
     private bool _can_answear = true;
 
+    private bool _no_mistakes = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -157,6 +159,7 @@ public class Level4_Manager : MonoBehaviour
         else
         {
             // wrong answer
+            _no_mistakes = false;
             Global_Audio_Manager.Instance.Play_Error_SFX();
             img.color = wrongColor;
             // show correct answer
@@ -182,7 +185,7 @@ public class Level4_Manager : MonoBehaviour
         if (_score >= (numberOfQuestions-1) * 10)   // if only one wrong answer -> win
         {
             WinPanel.SetActive(true);
-            Level_Completer.Instance.WinLevel(false);    // mark level as completed to unlock the next one
+            Level_Completer.Instance.WinLevel(_no_mistakes);    // mark level as completed to unlock the next one
         }
         else
             LosePanel.SetActive(true);

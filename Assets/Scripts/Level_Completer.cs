@@ -16,7 +16,7 @@ public class Level_Completer : MonoBehaviour
 
 
     // Mark Level as completed and unlock the next level
-    public void WinLevel(bool hard_mode = true)
+    public void WinLevel(bool hard_mode)
     {
         // Get the currently reached level
         int currentLevelReached = PlayerPrefs.GetInt("Level-Reached", 1);

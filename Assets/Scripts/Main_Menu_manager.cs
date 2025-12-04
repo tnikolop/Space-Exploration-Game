@@ -8,10 +8,13 @@ public class Main_Menu_manager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject LevelSelectPanel;
     [SerializeField] private GameObject GameCompletedPanel;
+    [SerializeField] private GameObject AchievementPanel;
+
     [SerializeField] private Button PlayButton;
     [SerializeField] private Button ResumeButton;
     [SerializeField] private Button[] LevelButtons;
     [SerializeField] private GameObject[] LevelStars;
+    [SerializeField] private Image[] AchievementStars;
 
 
 
@@ -21,6 +24,7 @@ public class Main_Menu_manager : MonoBehaviour
     {
         LevelSelectPanel.SetActive(false);
         GameCompletedPanel.SetActive(false);
+        AchievementPanel.SetActive(false);
         if (Saved_Data_Exists())
             ResumeButton.gameObject.SetActive(true);
         else
@@ -41,7 +45,7 @@ public class Main_Menu_manager : MonoBehaviour
         Check_Hard_Mode();
         LevelSelectPanel.SetActive(true);
     }
-    
+
     // Load selected Level
     public void OpenLevel(int level_id)
     {
@@ -69,7 +73,7 @@ public class Main_Menu_manager : MonoBehaviour
     {
         for (int i = 0; i < LevelButtons.Length; i++)
         {
-            int hard_mode = PlayerPrefs.GetInt("No-Hint-Level" + (i+1), 0);
+            int hard_mode = PlayerPrefs.GetInt("No-Hint-Level" + (i + 1), 0);
             if (hard_mode == 0)
                 LevelStars[i].SetActive(false);
             else    // highlight
@@ -82,10 +86,34 @@ public class Main_Menu_manager : MonoBehaviour
     {
         return PlayerPrefs.HasKey("Level-Reached");
     }
-    
+
     // Delete all saved data
     private void Delete_Saved_Data()
     {
         PlayerPrefs.DeleteAll();
     }
+
+    // Show achievement Panel
+    public void Show_Achievements()
+    {
+        AchievementPanel.SetActive(true);
+
+        int star;
+
+        // Make star visible if achievement unlocked
+        // otherwise make it black
+        for (int i = 0; i < AchievementStars.Length; i++)
+        {
+            star = PlayerPrefs.GetInt("Achievement" + (i + 1), 0);      // see if achievement unlocked
+            if (star == 1)      // unlocked
+            {
+                AchievementStars[i].color = Color.white;
+            }
+            else                // not yet unlocked
+            {
+                AchievementStars[i].color = Color.black;
+            }
+        }
+    }
+
 }
