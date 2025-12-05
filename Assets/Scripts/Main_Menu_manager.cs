@@ -13,7 +13,7 @@ public class Main_Menu_manager : MonoBehaviour
     [SerializeField] private Button[] LevelButtons;
     [SerializeField] private GameObject[] LevelStars;
     [SerializeField] private Image[] AchievementStars;
-    private const int _NUM_of_LEVELS = 4;
+    private const int _NUM_of_LEVELS = 5;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -53,6 +53,7 @@ public class Main_Menu_manager : MonoBehaviour
     {
         // get the current level reached, default 1 if it doesnt exist yet
         int level_reached = PlayerPrefs.GetInt("Level-Reached", 1);
+        // Debug.Log("Lock_buttons() Level reached: " + level_reached);
 
         for (int i = 0; i < LevelButtons.Length; i++)
         {
@@ -75,9 +76,6 @@ public class Main_Menu_manager : MonoBehaviour
             else
             {    // highlight
                 LevelStars[i].SetActive(true);
-                int res = PlayerPrefs.GetInt("Total Stars", 0);     // get number of stars collected
-                PlayerPrefs.SetInt("Total Stars", res + 1);         // 1 more star collected
-                PlayerPrefs.Save();
             }
         }
     }
@@ -113,13 +111,22 @@ public class Main_Menu_manager : MonoBehaviour
         }
 
         // Check achievement 2
-        res = PlayerPrefs.GetInt("Total Stars", 0);
+        // res = PlayerPrefs.GetInt("Total Stars", 0);
+        // if (res >= _NUM_of_LEVELS)
+        // {
+        //     // all Stars collected: Achievement 2 unlocked
+        //     AchievementStars[1].color = Color.white;
+        // }
+        res = 0;
+        for (int i = 1; i < _NUM_of_LEVELS + 1; i++)
+        {
+            res += PlayerPrefs.GetInt("No-Hint-Level" + i, 0);
+        }
         if (res >= _NUM_of_LEVELS)
         {
             // all Stars collected: Achievement 2 unlocked
             AchievementStars[1].color = Color.white;
         }
-
         // Chech achievement 3
     }
 

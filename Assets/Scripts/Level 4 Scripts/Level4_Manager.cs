@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System;
 public class Level4_Manager : MonoBehaviour
 {
     [Header("UI Elements")]
@@ -20,7 +21,8 @@ public class Level4_Manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI finalScoreTextLose;
 
     [Header("Game Settings")]
-    [SerializeField] private int numberOfQuestions = 5;  
+    [SerializeField] private int numberOfQuestions = 5;
+    [SerializeField] private String QuestionsFileName;
 
     private Color normalColor = new Color32(35, 62, 139, 255);
     private Color correctColor = new Color32(78, 204, 163, 255);
@@ -39,10 +41,10 @@ public class Level4_Manager : MonoBehaviour
     }
 
     // Loads x random questions from the JSON file
-    private void Get_Questions(int x)
+    private void Get_Questions(int x, string file_name)
     {
         // Load from ../Resources
-        TextAsset json = Resources.Load<TextAsset>("Questions_data");
+        TextAsset json = Resources.Load<TextAsset>(file_name);
 
         if (json == null)
         {
@@ -58,7 +60,7 @@ public class Level4_Manager : MonoBehaviour
         for (int i = 0; i < allQuestions.Count; i++)
         {
             QuizData.Question temp = allQuestions[i];
-            int k = Random.Range(i, allQuestions.Count);
+            int k = UnityEngine.Random.Range(i, allQuestions.Count);
             allQuestions[i] = allQuestions[k];
             allQuestions[k] = temp;
         }
@@ -80,7 +82,7 @@ public class Level4_Manager : MonoBehaviour
 
     public void Start_Game()
     {
-        Get_Questions(numberOfQuestions);
+        Get_Questions(numberOfQuestions,QuestionsFileName);
         if (_questions == null || _questions.Count == 0)
         {
             Debug.LogError("Questions list is null or empty!");

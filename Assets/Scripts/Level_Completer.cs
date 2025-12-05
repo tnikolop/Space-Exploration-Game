@@ -40,8 +40,11 @@ public class Level_Completer : MonoBehaviour
     private void WinLevel_Hard(int level)
     {
         PlayerPrefs.SetInt("No-Hint-Level" + level, 1);
-        PlayerPrefs.Save();
+        // PlayerPrefs.Save();
         Debug.Log("Level " + level + " won without hint");
+        // int res = PlayerPrefs.GetInt("Total Stars", 0);     // get number of stars collected
+        // PlayerPrefs.SetInt("Total Stars", res + 1);         // 1 more star collected
+        PlayerPrefs.Save();
     }
 
         // mark current level as comlete and unlock the next one

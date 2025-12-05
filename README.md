@@ -5,17 +5,20 @@
 - Settings panel colors
 - Settings panel background blur behind the panel
 - Return to Level Screen
-- Maybe 2 quizes?
 - Final victory Panel?
-- Achievements
-    - No errors on quizes
 
 ## Level 1
 ## Level 2
 ## Level 3
+## Level 4
 - make pretty
 - - cards
 - - png/background?
 - - borders of info panel
 
-## Level 4
+## Level 5
+
+
+## Bugs
+- Level 4 first stage no highlight when completed (only on scene reload)
+- Main menu quit button not working
