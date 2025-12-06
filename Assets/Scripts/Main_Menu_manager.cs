@@ -8,6 +8,9 @@ public class Main_Menu_manager : MonoBehaviour
     [SerializeField] private GameObject LevelSelectPanel;
     [SerializeField] private GameObject GameCompletedPanel;
     [SerializeField] private GameObject AchievementPanel;
+    [SerializeField] private GameObject GameInfoPanel;
+    [SerializeField] private GameObject LevelsImage;
+
     [SerializeField] private Button PlayButton;
     [SerializeField] private Button ResumeButton;
     [SerializeField] private Button[] LevelButtons;
@@ -21,6 +24,7 @@ public class Main_Menu_manager : MonoBehaviour
         LevelSelectPanel.SetActive(false);
         GameCompletedPanel.SetActive(false);
         AchievementPanel.SetActive(false);
+        GameInfoPanel.SetActive(true);
         if (Saved_Data_Exists())
             ResumeButton.gameObject.SetActive(true);
         else
@@ -39,6 +43,7 @@ public class Main_Menu_manager : MonoBehaviour
     {
         Lock_buttons();
         Check_Hard_Mode();
+        Show_Info_Panel();
         LevelSelectPanel.SetActive(true);
     }
 
@@ -92,6 +97,35 @@ public class Main_Menu_manager : MonoBehaviour
         PlayerPrefs.DeleteAll();
     }
 
+
+    // Chech achievemnt 1: Complete all levels
+    // Returns True if conditions have been met
+    // Retuns False otherwise
+    private bool Check_Achievement1()
+    {
+        int res = PlayerPrefs.GetInt("Level-Reached", 1);
+        if (res > _NUM_of_LEVELS)       // all levels completed: Achievement 1 unlocked
+            return true;
+        else
+            return false;
+    }
+    
+    // Chech achievemnt 2: Collect all stars
+    // Returns True if conditions have been met
+    // Retuns False otherwise
+    private bool Check_Achievement2()
+    {
+        int res = 0;
+        for (int i = 1; i < _NUM_of_LEVELS + 1; i++)
+        {
+            res += PlayerPrefs.GetInt("No-Hint-Level" + i, 0);
+        }
+        if (res >= _NUM_of_LEVELS)      // all Stars collected: Achievement 2 unlocked
+            return true;
+        else
+            return false;
+    }
+
     // Show achievement Panel
     public void Show_Achievements()
     {
@@ -102,33 +136,38 @@ public class Main_Menu_manager : MonoBehaviour
             star.color = Color.black;
         }
 
-        // Check achievemnt 1
-        int res = PlayerPrefs.GetInt("Level-Reached", 1);
-        if (res > _NUM_of_LEVELS)
-        {
-            // all levels completed: Achievement 1 unlocked
-            AchievementStars[0].color = Color.white;
-        }
-
-        // Check achievement 2
-        // res = PlayerPrefs.GetInt("Total Stars", 0);
-        // if (res >= _NUM_of_LEVELS)
-        // {
-        //     // all Stars collected: Achievement 2 unlocked
-        //     AchievementStars[1].color = Color.white;
-        // }
-        res = 0;
-        for (int i = 1; i < _NUM_of_LEVELS + 1; i++)
-        {
-            res += PlayerPrefs.GetInt("No-Hint-Level" + i, 0);
-        }
-        if (res >= _NUM_of_LEVELS)
-        {
-            // all Stars collected: Achievement 2 unlocked
-            AchievementStars[1].color = Color.white;
-        }
-        // Chech achievement 3
+        if (Check_Achievement1())
+            AchievementStars[0].color = Color.white;        // all levels completed: Achievement 1 unlocked
+        
+        if (Check_Achievement2())
+            AchievementStars[1].color = Color.white;         // all Stars collected: Achievement 2 unlocked
     }
 
+    // Shows apropriate info panel for the level select screen
+    private void Show_Info_Panel()
+    {
+
+        if (Check_Achievement1())
+        {
+            // all levels completed
+            GameCompletedPanel.SetActive(true);
+            GameInfoPanel.SetActive(false);
+        }
+        else
+        {
+            GameCompletedPanel.SetActive(false);
+            GameInfoPanel.SetActive(true);
+        }
+
+        // check if all Stars unlocked
+        if (Check_Achievement2())
+        {
+            LevelsImage.GetComponent<Outline>().enabled = true;
+        }
+        else
+        {
+            LevelsImage.GetComponent<Outline>().enabled = false;
+        }
+    }
 
 }

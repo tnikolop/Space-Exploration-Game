@@ -5,7 +5,6 @@
 - Settings panel colors
 - Settings panel background blur behind the panel
 - Return to Level Screen
-- Final victory Panel?
 
 ## Level 1
 ## Level 2
