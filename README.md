@@ -19,5 +19,3 @@
 
 
 ## Bugs
-- Level 4 first stage no highlight when completed (only on scene reload)
-- Main menu quit button not working

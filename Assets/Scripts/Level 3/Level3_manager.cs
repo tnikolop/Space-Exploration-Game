@@ -236,8 +236,8 @@ public class Level3_manager : MonoBehaviour
         {
             Global_Audio_Manager.Instance.Play_Win_SFX();
             _levels_won[_current_level_index] = true;
-            Highlight_Levels();
             Save_Progress();
+            Highlight_Levels();
             Check_Game_Completed();
         }
 
