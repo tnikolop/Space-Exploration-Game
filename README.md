@@ -5,7 +5,6 @@
 - Settings panel colors
 - Settings panel background blur behind the panel
 - Return to Level Screen
-- Blur level images
 
 ## Level 1
 ## Level 2
