@@ -65,7 +65,7 @@ public class Main_Menu_manager : MonoBehaviour
             if (i + 1 > level_reached)    // lock next levels
             {
                 LevelButtons[i].interactable = false;
-                LevelButtons[i].GetComponent<ImageBlurrer>().ToggleBlur(true);
+                LevelButtons[i].GetComponent<ImageBlurrer>().ToggleBlur(true);      //blur locked level
             }
         }
     }
