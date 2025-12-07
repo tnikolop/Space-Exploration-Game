@@ -33,17 +33,22 @@ public class Level3_manager : MonoBehaviour
     [Header("Data lists")]
     [SerializeField] private List<Card_data> level1_data;
     [SerializeField] private List<Card_data> level2_data;
-    // [SerializeField] private List<Card_data> level3_data;
+
+    [Header("UI References")]
+    [SerializeField] private TextMeshProUGUI timerText;
 
 
     private List<Card_data> _current_level_data;
     private Memory_Card _first_card;                // first card flipped open
     private Memory_Card _second_card;               // second card flipped open
     private bool _is_waiting_to_reset = false;      // wait for the clock to finish (cant open new card)
-    private float _timer = 0f;                      // the clock
+    private float _timer = 0f;                      // the countdown timer for waiting on card reveal
     [SerializeField] private bool[] _levels_won = new bool[2];        // true if a level has been won (automatically initialized to false in C#)
     private int _current_level_index;               // current level playing
     private int match_count = 0;                    // how many matches have been found, (win condition check)
+    private float _time_elapsed = 0;
+    private bool _time_is_running = false;
+
 
 
 
@@ -54,14 +59,14 @@ public class Level3_manager : MonoBehaviour
         InfoPanel.gameObject.SetActive(false);
         grid_panel.gameObject.SetActive(false);
         startScreenButton.gameObject.SetActive(false);
+        timerText.gameObject.SetActive(false);
         Highlight_Levels();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Check_Game_Completed(); // to be removed!!!!!!!!!!!!!!!!!!!!!!
-        // clock
+        // Countdown clock for card reveal
         if (_is_waiting_to_reset)
         {
             _timer -= Time.deltaTime;
@@ -70,6 +75,32 @@ public class Level3_manager : MonoBehaviour
                 Close_Mismatch();
             }
         }
+        // Actual game timer
+        if (_time_is_running)
+        {
+            _time_elapsed += Time.deltaTime;
+            Display_Time(_time_elapsed);
+        }
+    }
+
+    // Display the the timer on the screen TMP object
+    private void Display_Time(float time)
+    {
+        float minutes = Mathf.FloorToInt(time / 60);
+        float seconds = Mathf.FloorToInt(time % 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    private void Stop_Timer()
+    {
+        _time_is_running = false;
+        if (showDebugLogs) Debug.Log("Timer stopped at: "+ _time_elapsed);
+
+    }
+    private void Start_Timer()
+    {
+        _time_elapsed = 0;
+        _time_is_running = true;
     }
 
     // Load necessary game data
@@ -104,7 +135,8 @@ public class Level3_manager : MonoBehaviour
         match_count = 0;
         Show_Info(null, null, null);
         imageSlot.gameObject.SetActive(false);
-
+        timerText.gameObject.SetActive(true);
+        Start_Timer();
     }
 
     // function for dynamically setting up the grid layout
@@ -239,6 +271,7 @@ public class Level3_manager : MonoBehaviour
             Save_Progress();
             Highlight_Levels();
             Check_Game_Completed();
+            Stop_Timer();
         }
 
     }

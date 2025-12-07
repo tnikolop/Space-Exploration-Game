@@ -14,6 +14,7 @@
 - - cards
 - - png/background?
 - - borders of info panel
+- timer for star
 
 ## Level 5
 
