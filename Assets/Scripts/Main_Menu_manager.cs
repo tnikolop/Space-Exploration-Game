@@ -19,7 +19,7 @@ public class Main_Menu_manager : MonoBehaviour
     private const int _NUM_of_LEVELS = 5;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         LevelSelectPanel.SetActive(false);
         GameCompletedPanel.SetActive(false);
@@ -41,10 +41,10 @@ public class Main_Menu_manager : MonoBehaviour
     // Start Game with saved Data
     public void Load_Game()
     {
+        LevelSelectPanel.SetActive(true);       // gia kapion logo prepei na einai edw allios to build version den douleybei
         Lock_buttons();
         Check_Hard_Mode();
         Show_Info_Panel();
-        LevelSelectPanel.SetActive(true);
     }
 
     // Load selected Level
@@ -58,7 +58,7 @@ public class Main_Menu_manager : MonoBehaviour
     {
         // get the current level reached, default 1 if it doesnt exist yet
         int level_reached = PlayerPrefs.GetInt("Level-Reached", 1);
-        // Debug.Log("Lock_buttons() Level reached: " + level_reached);
+        Debug.Log("Lock_buttons() Level reached: " + level_reached);
 
         for (int i = 0; i < LevelButtons.Length; i++)
         {

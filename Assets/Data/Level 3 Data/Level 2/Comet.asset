@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Comet
   m_EditorClassIdentifier: Assembly-CSharp::Card_data
   name: "\u039A\u03BF\u03BC\u03AE\u03C4\u03B7\u03C2"
-  sprite: {fileID: -1617386218436233310, guid: e3ffd616a4fa0b25588091df9891f39f, type: 3}
+  sprite: {fileID: 7029301469737702658, guid: 9a2871f07c65da3fb9bcfebc6c071cbb, type: 3}
   description: "\u03A0\u03C1\u03BF\u03AD\u03C1\u03C7\u03BF\u03BD\u03C4\u03B1\u03B9
     \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03C0\u03B1\u03B3\u03C9\u03BC\u03AD\u03BD\u03B5\u03C2,
     \u03B5\u03BE\u03C9\u03C4\u03B5\u03C1\u03B9\u03BA\u03AD\u03C2 \u03C0\u03B5\u03C1\u03B9\u03BF\u03C7\u03AD\u03C2

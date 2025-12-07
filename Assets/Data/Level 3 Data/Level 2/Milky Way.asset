@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Milky Way
   m_EditorClassIdentifier: Assembly-CSharp::Card_data
   name: "\u039F \u0393\u03B1\u03BB\u03B1\u03BE\u03AF\u03B1\u03C2 \u03BC\u03B1\u03C2"
-  sprite: {fileID: 21846656257367697, guid: 15bb5ddc3368dfba3b44f0af346221a5, type: 3}
+  sprite: {fileID: 5847381939639569064, guid: d1940ed01b54cb5bdbfb6747a17520cb, type: 3}
   description: "\u0388\u03BD\u03B1\u03C2 \u03C1\u03B1\u03B2\u03B4\u03C9\u03C4\u03CC\u03C2
     \u03C3\u03C0\u03B5\u03B9\u03C1\u03BF\u03B5\u03B9\u03B4\u03AE\u03C2 \u03B3\u03B1\u03BB\u03B1\u03BE\u03AF\u03B1\u03C2
     \u03C0\u03BF\u03C5 \u03C6\u03B9\u03BB\u03BF\u03BE\u03B5\u03BD\u03B5\u03AF \u03C4\u03BF

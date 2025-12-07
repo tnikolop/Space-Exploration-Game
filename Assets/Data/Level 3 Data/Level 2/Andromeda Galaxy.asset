@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Andromeda Galaxy
   m_EditorClassIdentifier: Assembly-CSharp::Card_data
   name: "\u0393\u03B1\u03BB\u03B1\u03BE\u03AF\u03B1\u03C2 \u03C4\u03B7\u03C2 \u0391\u03BD\u03B4\u03C1\u03BF\u03BC\u03AD\u03B4\u03B1\u03C2"
-  sprite: {fileID: 4483493825711861377, guid: aa9d9ce12eae550ed862af66b3a44a61, type: 3}
+  sprite: {fileID: -3573180245231442306, guid: 958aba55f3032806fb4fe4f2844d5127, type: 3}
   description: "\u039F \u03C0\u03BB\u03B7\u03C3\u03B9\u03AD\u03C3\u03C4\u03B5\u03C1\u03BF\u03C2
     \u03BC\u03B5\u03B3\u03AC\u03BB\u03BF\u03C2 \u03B3\u03B1\u03BB\u03B1\u03BE\u03AF\u03B1\u03C2
     \u03C3\u03C4\u03BF\u03BD \u03B4\u03B9\u03BA\u03CC \u03BC\u03B1\u03C2, \u03C0\u03BF\u03C5
