@@ -17,6 +17,8 @@ public class Main_Menu_manager : MonoBehaviour
     [SerializeField] private GameObject[] LevelStars;
     [SerializeField] private Image[] AchievementStars;
     private const int _NUM_of_LEVELS = 5;
+    private static bool _open_level_select = false;         // If true when the scene is loaded the levels panel is also activated
+                                                            // so we dont have to press continue again and again after every minigame
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -29,6 +31,12 @@ public class Main_Menu_manager : MonoBehaviour
             ResumeButton.gameObject.SetActive(true);
         else
             ResumeButton.gameObject.SetActive(false);
+    }
+
+    void Start()
+    {
+        if (_open_level_select)
+            Load_Game();
     }
 
     // Start New Game with clean data
@@ -50,6 +58,7 @@ public class Main_Menu_manager : MonoBehaviour
     // Load selected Level
     public void OpenLevel(int level_id)
     {
+        _open_level_select = true;
         SceneManager.LoadScene("Level " + level_id);
     }
 

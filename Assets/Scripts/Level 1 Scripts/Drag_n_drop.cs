@@ -10,11 +10,15 @@ public class Drag_n_drop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private CanvasGroup canvasGroup;
     private Vector3 _original_scale;
 
+    private RectTransform _RectTransform;
+
 
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
+
+        _RectTransform = GetComponent<RectTransform>();
 
         _original_scale = transform.localScale;
 
@@ -50,7 +54,7 @@ public class Drag_n_drop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         // Move the UI element by pointer delta, adjusted for canvas scale
         // in our case the scale is 1 so its obsolete
-        transform.position += (Vector3)eventData.delta / canvas.scaleFactor;
+        _RectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     // when you stop draggin the planet

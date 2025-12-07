@@ -14,10 +14,8 @@ public class Level3_manager : MonoBehaviour
     [SerializeField] private float padding = 20f;     // Space between cards
     [SerializeField] private int edge_padding = 20;
 
-    [Header("Game Settings")]
-    [SerializeField] private float timeToWait = 1.0f; // Time before wrong pair closes in seconds
-    [SerializeField] private bool showDebugLogs = false;
-
+    [Header("UI References")]
+    [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private Transform GameInfoPanel;
     [SerializeField] private Transform InfoPanel;
     [SerializeField] private TextMeshProUGUI InfoText;
@@ -27,31 +25,26 @@ public class Level3_manager : MonoBehaviour
 
     [Header("Levels Buttons")]
     [SerializeField] private Image[] level_button_image;
-
-
+    
+    [Header("Game Settings")]
+    [SerializeField] private float timeToWait = 1.0f; // Time before wrong pair closes in seconds
+    [SerializeField] private bool showDebugLogs = false;
 
     [Header("Data lists")]
     [SerializeField] private List<Card_data> level1_data;
     [SerializeField] private List<Card_data> level2_data;
-
-    [Header("UI References")]
-    [SerializeField] private TextMeshProUGUI timerText;
-
 
     private List<Card_data> _current_level_data;
     private Memory_Card _first_card;                // first card flipped open
     private Memory_Card _second_card;               // second card flipped open
     private bool _is_waiting_to_reset = false;      // wait for the clock to finish (cant open new card)
     private float _timer = 0f;                      // the countdown timer for waiting on card reveal
-    [SerializeField] private bool[] _levels_won = new bool[2];        // true if a level has been won (automatically initialized to false in C#)
+    private bool[] _levels_won = new bool[2];        // true if a level has been won (automatically initialized to false in C#)
     private int _current_level_index;               // current level playing
     private int match_count = 0;                    // how many matches have been found, (win condition check)
     private float _time_elapsed = 0;
     private bool _time_is_running = false;
     private bool _hard_mode = false;
-
-
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
