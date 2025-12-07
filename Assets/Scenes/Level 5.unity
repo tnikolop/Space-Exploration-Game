@@ -926,7 +926,7 @@ MonoBehaviour:
   LosePanel: {fileID: 1141644570}
   finalScoreTextWin: {fileID: 140329228}
   finalScoreTextLose: {fileID: 45407650}
-  numberOfQuestions: 15
+  numberOfQuestions: 3
   QuestionsFileName: Questions_data2
 --- !u!4 &398093012
 Transform:

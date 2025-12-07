@@ -1457,7 +1457,8 @@ MonoBehaviour:
     \u03C4\u03BF \u03C3\u03CD\u03BC\u03C0\u03B1\u03BD!\n\n\u0393\u03B9\u03B1 \u03BD\u03B1
     \u03C0\u03AC\u03C1\u03B5\u03B9\u03C2 \u03C4\u03BF \u03B1\u03C3\u03C4\u03AD\u03C1\u03B9
     \u03B8\u03B1 \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03BF\u03BB\u03BF\u03BA\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03B9\u03C2
-    \u03BA\u03B1\u03B9 \u03C4\u03B9\u03C2 2 \u03C0\u03AF\u03C3\u03C4\u03B5\u03C2."
+    \u03BA\u03AC\u03B8\u03B5 \u03C0\u03AF\u03C3\u03C4\u03B1 \n\u03C3\u03B5 \u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF
+    \u03B1\u03C0\u03CC 1 \u03BB\u03B5\u03C0\u03C4\u03CC."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1484,7 +1485,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.5
+  m_fontSize: 31.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1647,7 +1648,7 @@ MonoBehaviour:
   padding: 20
   edge_padding: 20
   timeToWait: 1
-  showDebugLogs: 1
+  showDebugLogs: 0
   GameInfoPanel: {fileID: 737815339}
   InfoPanel: {fileID: 491490933}
   InfoText: {fileID: 905608459}

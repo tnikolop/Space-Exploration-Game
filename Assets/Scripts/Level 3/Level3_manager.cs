@@ -48,6 +48,7 @@ public class Level3_manager : MonoBehaviour
     private int match_count = 0;                    // how many matches have been found, (win condition check)
     private float _time_elapsed = 0;
     private bool _time_is_running = false;
+    private bool _hard_mode = false;
 
 
 
@@ -272,6 +273,15 @@ public class Level3_manager : MonoBehaviour
             Highlight_Levels();
             Check_Game_Completed();
             Stop_Timer();
+
+            if (_time_elapsed < 60)     // if under a minute get a star
+            {
+                _hard_mode = true;
+            }
+            else
+            {
+                _hard_mode = false;
+            }
         }
 
     }
@@ -299,7 +309,7 @@ public class Level3_manager : MonoBehaviour
         {
             Global_Audio_Manager.Instance.Play_Game_Completed_SFX();
             startScreenButton.gameObject.SetActive(true);
-            Level_Completer.Instance.WinLevel(true);    // mark level as completed to unlock the next one
+            Level_Completer.Instance.WinLevel(_hard_mode);    // mark level as completed to unlock the next one
         }
     }
 

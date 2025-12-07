@@ -47,11 +47,22 @@ public class Level_Completer : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-        // mark current level as comlete and unlock the next one
+    // mark current level as comlete and unlock the next one
 #if UNITY_EDITOR
     // Αυτό προσθέτει επιλογή στο δεξί κλικ του Component
     [ContextMenu("💾 Unlock all Levels")]
     public void unlock_all()
+    {
+        int total = current_level;
+        for (int i = 0; i < total; i++)
+        {
+            current_level = i + 1;
+            WinLevel(false);
+
+        }
+    }
+    [ContextMenu("💾 Unlock all Levels Hard")]
+    public void unlock_allHard()
     {
         int total = current_level;
         for (int i = 0; i < total; i++)
