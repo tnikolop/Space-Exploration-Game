@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Asteroid
   m_EditorClassIdentifier: Assembly-CSharp::Card_data
   name: "\u0391\u03C3\u03C4\u03B5\u03C1\u03BF\u03B5\u03B9\u03B4\u03AE\u03C2"
-  sprite: {fileID: -4195109963101604610, guid: 2c182409d371334f1b65fbb91e556b18, type: 3}
+  sprite: {fileID: 231141743235482212, guid: 668ad1a4a41d8eaaba5d0110cbe75959, type: 3}
   description: "\u0395\u03AF\u03BD\u03B1\u03B9 \u03B2\u03C1\u03B1\u03C7\u03CE\u03B4\u03B7,
     \u03AC\u03BD\u03C5\u03B4\u03C1\u03B1 \u03C3\u03CE\u03BC\u03B1\u03C4\u03B1 \u03C0\u03BF\u03C5
     \u03B1\u03C0\u03BF\u03C4\u03B5\u03BB\u03BF\u03CD\u03BD\u03C4\u03B1\u03B9 \u03BA\u03C5\u03C1\u03AF\u03C9\u03C2

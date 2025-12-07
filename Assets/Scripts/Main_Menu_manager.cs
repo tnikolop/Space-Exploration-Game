@@ -109,7 +109,7 @@ public class Main_Menu_manager : MonoBehaviour
         else
             return false;
     }
-    
+
     // Chech achievemnt 2: Collect all stars
     // Returns True if conditions have been met
     // Retuns False otherwise
@@ -138,7 +138,7 @@ public class Main_Menu_manager : MonoBehaviour
 
         if (Check_Achievement1())
             AchievementStars[0].color = Color.white;        // all levels completed: Achievement 1 unlocked
-        
+
         if (Check_Achievement2())
             AchievementStars[1].color = Color.white;         // all Stars collected: Achievement 2 unlocked
     }
@@ -170,4 +170,8 @@ public class Main_Menu_manager : MonoBehaviour
         }
     }
 
+    public void Quit_Game()
+    {
+        Application.Quit();
+    }
 }

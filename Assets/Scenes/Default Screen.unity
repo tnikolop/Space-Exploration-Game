@@ -4913,8 +4913,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1768444117}
-        m_TargetAssemblyTypeName: Global_Audio_Manager, Assembly-CSharp
+      - m_Target: {fileID: 2052689474}
+        m_TargetAssemblyTypeName: Main_Menu_manager, Assembly-CSharp
         m_MethodName: Quit_Game
         m_Mode: 1
         m_Arguments:
