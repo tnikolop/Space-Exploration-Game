@@ -211,7 +211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &241161068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -875,7 +875,7 @@ MonoBehaviour:
   LosePanel: {fileID: 891595574}
   finalScoreTextWin: {fileID: 447390543}
   finalScoreTextLose: {fileID: 1824091951}
-  numberOfQuestions: 3
+  numberOfQuestions: 15
   QuestionsFileName: Questions_data
 --- !u!4 &673356881
 Transform:
@@ -985,7 +985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &891595575
 RectTransform:
   m_ObjectHideFlags: 0
