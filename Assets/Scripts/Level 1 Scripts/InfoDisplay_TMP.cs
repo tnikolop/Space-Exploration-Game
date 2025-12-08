@@ -6,10 +6,10 @@ public class InfoDisplay_TMP : MonoBehaviour
     public static InfoDisplay_TMP Instance;
 
     [Header("UI references")]
-    public TMP_Text titleText;      // Planet Name
+    public TMP_Text titleText;                      // Planet Name
     public TMP_Text descriptionText;
     public TMP_Text funFactText;
-    public UnityEngine.UI.Image planetImage;       // for the sprite
+    public UnityEngine.UI.Image planetImage;        // for the sprite
 
     void Awake()
     {
@@ -24,7 +24,7 @@ public class InfoDisplay_TMP : MonoBehaviour
     public void ShowInfo(PlanetData data)
     {
         this.gameObject.SetActive(true);
-        UnityEngine.Debug.Log($"InfoDisplay_TMP.ShowInfo called for: {data?.planetName}");
+        Debug.Log($"InfoDisplay_TMP.ShowInfo called for: {data?.planetName}");
         if (data == null)
         {
             HideInfo();
@@ -60,7 +60,6 @@ public class InfoDisplay_TMP : MonoBehaviour
         Color c = planetImage.color;
         c.a = 0f;
         planetImage.color = c;
-
         // den ginetai planetImage.color.a = 0f gt to color einai struct kai den epireazei to original
     }
 }

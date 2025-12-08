@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class Level3_manager : MonoBehaviour
 {
     [Header("Grid Configuration")]
-    [SerializeField] private Transform grid_panel; // The Panel holding the cards
-    [SerializeField] private GameObject card_prefab;   // The card object to spawn
+    [SerializeField] private Transform grid_panel;          // The Panel holding the cards
+    [SerializeField] private GameObject card_prefab;        // The card object to spawn
     [SerializeField] private int rows = 4;
     [SerializeField] private int cols = 4;
-    [SerializeField] private float padding = 20f;     // Space between cards
+    [SerializeField] private float padding = 20f;           // Space between cards
     [SerializeField] private int edge_padding = 20;
 
     [Header("UI References")]
@@ -27,7 +27,7 @@ public class Level3_manager : MonoBehaviour
     [SerializeField] private Image[] level_button_image;
     
     [Header("Game Settings")]
-    [SerializeField] private float timeToWait = 1.0f; // Time before wrong pair closes in seconds
+    [SerializeField] private float timeToWait = 1.0f;       // Time before wrong pair closes in seconds
     [SerializeField] private bool showDebugLogs = false;
 
     [Header("Data lists")]
@@ -35,13 +35,13 @@ public class Level3_manager : MonoBehaviour
     [SerializeField] private List<Card_data> level2_data;
 
     private List<Card_data> _current_level_data;
-    private Memory_Card _first_card;                // first card flipped open
-    private Memory_Card _second_card;               // second card flipped open
-    private bool _is_waiting_to_reset = false;      // wait for the clock to finish (cant open new card)
-    private float _timer = 0f;                      // the countdown timer for waiting on card reveal
-    private bool[] _levels_won = new bool[2];        // true if a level has been won (automatically initialized to false in C#)
-    private int _current_level_index;               // current level playing
-    private int match_count = 0;                    // how many matches have been found, (win condition check)
+    private Memory_Card _first_card;                    // first card flipped open
+    private Memory_Card _second_card;                   // second card flipped open
+    private bool _is_waiting_to_reset = false;          // wait for the clock to finish (cant open new card)
+    private float _timer = 0f;                          // the countdown timer for waiting on card reveal
+    private bool[] _levels_won = new bool[2];           // true if a level has been won (automatically initialized to false in C#)
+    private int _current_level_index;                   // current level playing
+    private int match_count = 0;                        // how many matches have been found, (win condition check)
     private float _time_elapsed = 0;
     private bool _time_is_running = false;
     private bool _hard_mode = false;
@@ -279,7 +279,6 @@ public class Level3_manager : MonoBehaviour
 
     }
 
-
     // close the open cards when the time runs out
     private void Close_Mismatch()
     {
@@ -294,7 +293,6 @@ public class Level3_manager : MonoBehaviour
         _second_card = null;
         _is_waiting_to_reset = false;
     }
-
 
     private void Check_Game_Completed()
     {

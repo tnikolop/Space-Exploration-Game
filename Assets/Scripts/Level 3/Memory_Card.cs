@@ -11,8 +11,7 @@ public class Memory_Card : MonoBehaviour
     [SerializeField] private bool showDebugLogs = true;
 
     private Card_data _data;
-
-    private int _id;    // the matching pair id
+    private int _id;                                    // the matching pair id
     private Level3_manager _manager;
     private bool _is_FaceUp;
 
@@ -51,7 +50,6 @@ public class Memory_Card : MonoBehaviour
     public void Flip_Closed()
     {
         _is_FaceUp = false;
-
         image.sprite = back_sprite;
         image.color = Color.gray;
         if (showDebugLogs) Debug.Log($"Flip_Closed() called on card id:{get_ID()}");

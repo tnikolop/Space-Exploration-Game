@@ -10,9 +10,6 @@ public class Scene_Audio : MonoBehaviour
     [SerializeField] private AudioClip _sfx_click;
     [SerializeField] private AudioClip _sfx_game_completed;
     [SerializeField] private AudioClip _sfx_notification;
-
-
-
     [SerializeField] [Range(0f, 1f)] private float _volume = 1f;
 
     // Singleton wste na mporoume na ton kaloume apo pantou

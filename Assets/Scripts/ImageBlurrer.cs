@@ -5,7 +5,6 @@ public class ImageBlurrer : MonoBehaviour
 {
     [SerializeField] private Sprite sprite;
     [SerializeField] private Sprite blurred_sprite;
-
     private Image _image;
 
     private void Awake()

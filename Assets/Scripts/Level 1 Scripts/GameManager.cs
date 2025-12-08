@@ -4,26 +4,22 @@ using TMPro;
 using System.Collections;
 public class GameManager : MonoBehaviour
 {
-    // for easy access from other scripts
-    public static GameManager Instance;
+    public static GameManager Instance;             // for easy access from other scripts
+    [Header("UI References")]
+    public GameObject WinPanel;
+    public GameObject GameInfoPanel;
+    public TMP_Text winText;
+    public GameObject top_info_panel;
 
+    [Header("Game Objects")]
+    public Drag_n_drop[] allPlanets;
+    public ItemSlot[] allSlots;
+        
     private int total_slots = 8;
     private int correctly_placed_planets = 0;
     private bool game_won = false;
     private bool _is_hint_active = false;
     private bool _hint_used = false;
-
-    [Header("UI References")]
-    public GameObject WinPanel;
-
-    public GameObject GameInfoPanel;
-    public TMP_Text winText;
-    public GameObject top_info_panel;
-
-
-        [Header("Game Objects")]
-        public Drag_n_drop[] allPlanets;
-        public ItemSlot[] allSlots;
 
     void Awake()
     {
@@ -67,8 +63,6 @@ public class GameManager : MonoBehaviour
             Global_Audio_Manager.Instance.Play_Win_SFX();
         else
             Debug.LogError("Global Audio Manager is null!!");
-
-
     }
 
     // Load the main menu screen
@@ -84,7 +78,6 @@ public class GameManager : MonoBehaviour
         else
             Debug.LogError("Info Panel is null!");
 
-        // Audio_Manager.Instance.Play_Music();
         top_info_panel.gameObject.SetActive(false);
     }
 
@@ -160,5 +153,4 @@ public class GameManager : MonoBehaviour
         }
         _is_hint_active = false;
     }
-
 }

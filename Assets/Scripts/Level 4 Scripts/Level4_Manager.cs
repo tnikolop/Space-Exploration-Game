@@ -8,7 +8,6 @@ using System;
 public class Level4_Manager : MonoBehaviour
 {
     [Header("UI Elements")]
-    // [SerializeField] private GameObject QuestionPanel;
     [SerializeField] private TextMeshProUGUI questionText;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Transform answersContainer;
@@ -19,7 +18,6 @@ public class Level4_Manager : MonoBehaviour
     [SerializeField] private GameObject LosePanel;
     [SerializeField] private TextMeshProUGUI finalScoreTextWin;
     [SerializeField] private TextMeshProUGUI finalScoreTextLose;
-
     [Header("Game Settings")]
     [SerializeField] private int numberOfQuestions = 5;
     [SerializeField] private String QuestionsFileName;
@@ -128,7 +126,6 @@ public class Level4_Manager : MonoBehaviour
 
     }
 
-
     // Coroutine so the program will wait 2 seconds before moving on
     // and loads the next question
     IEnumerator Next_Question_Delay()
@@ -170,7 +167,6 @@ public class Level4_Manager : MonoBehaviour
         }
         Update_Score_UI();
         StartCoroutine(Next_Question_Delay());
-
     }
  
     // Updates the UI text for the score

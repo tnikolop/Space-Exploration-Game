@@ -8,10 +8,8 @@ public class Global_Audio_Manager : MonoBehaviour
     // Singleton wste na mporoume na ton kaloume apo pantou
     public static Global_Audio_Manager Instance;
     [Header("Audio Sources")]
-    // Source for background music
-    [SerializeField] private AudioSource music_source;
-    // Source for one-shot sound effects
-    [SerializeField] private AudioSource sfx_source;
+    [SerializeField] private AudioSource music_source;          // Source for background music
+    [SerializeField] private AudioSource sfx_source;            // Source for one-shot sound effects
 
     [Header("UI Settings")]
     [SerializeField] private GameObject settings_panel;
@@ -88,7 +86,6 @@ public class Global_Audio_Manager : MonoBehaviour
         sfx_slider_text.text = volume.ToString("F2");
     }
 
-    // for background music
     public void Play_Music(AudioClip clip)
     {
         if (music_slider.value == 0)

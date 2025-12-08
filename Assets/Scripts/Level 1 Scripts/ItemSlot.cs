@@ -6,7 +6,6 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 {
     public int expectedOrder;
     private bool occupied = false;
-
     private Image _image;
     private Color _original_color;
 
@@ -84,6 +83,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
     }
 
+    // Makes slot yellow in order to highlight it
     public void Highlight(bool active)
     {
         if (_image == null)

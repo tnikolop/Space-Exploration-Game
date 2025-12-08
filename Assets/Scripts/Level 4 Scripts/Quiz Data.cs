@@ -5,7 +5,7 @@ public class QuizData
     {
         public string text;         // the Question
         public string[] options;    // possible answers
-        public int correctIndex;   // correct answer index
+        public int correctIndex;    // correct answer index
     }
     [System.Serializable]
     public class QuestionWrapper

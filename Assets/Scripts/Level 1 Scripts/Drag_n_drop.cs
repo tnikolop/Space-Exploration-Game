@@ -9,7 +9,6 @@ public class Drag_n_drop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private Canvas canvas;
     private CanvasGroup canvasGroup;
     private Vector3 _original_scale;
-
     private RectTransform _RectTransform;
 
 
@@ -53,7 +52,6 @@ public class Drag_n_drop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public void OnDrag(PointerEventData eventData)
     {
         // Move the UI element by pointer delta, adjusted for canvas scale
-        // in our case the scale is 1 so its obsolete
         _RectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 

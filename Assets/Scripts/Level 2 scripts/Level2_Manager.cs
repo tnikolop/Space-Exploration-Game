@@ -12,8 +12,8 @@ public class Level2_Manager : MonoBehaviour
     [SerializeField] private List<Constellation_Data> constellation_data_list;
     [SerializeField] private GameObject star_prefab;
     [SerializeField] private GameObject line_prefab;
-    [SerializeField] private LineRenderer drag_line;    // the line the player will be creating when draggin
-    [SerializeField] private LineRenderer hint_line;    // the line that will be created for the hints
+    [SerializeField] private LineRenderer drag_line;                        // the line the player will be creating when draggin
+    [SerializeField] private LineRenderer hint_line;                        // the line that will be created for the hints
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI title_text;
     [SerializeField] private GameObject win_panel;
@@ -25,15 +25,14 @@ public class Level2_Manager : MonoBehaviour
     [SerializeField] private GameObject GameCompletedPanel;
     [SerializeField] private GameObject InfoPanel;
 
-    
-    private List<Star_point> spawned_stars = new List<Star_point>();    // list with all the current spawned stars
+    private List<Star_point> spawned_stars = new List<Star_point>();        // list with all the current spawned stars
     private HashSet<string> completed_connections = new HashSet<string>();  // stores all the completed lines/ star connections
-    private Star_point starting_star;   // from which star the player started drawing
+    private Star_point starting_star;                                       // from which star the player started drawing
     private Camera mainCam;
-    private Constellation_Data current_level_data;  // ta data tou torinou asterismou
-    private int current_level_index; // se pio shmeio ths listas eimaste
-    private bool is_hint_active = false;    // ama yparxei active hint on screen
-    private Vector2Int hint_pair;       // the hint star pair
+    private Constellation_Data current_level_data;                          // ta data tou torinou asterismou
+    private int current_level_index;                                        // se pio shmeio ths listas eimaste
+    private bool is_hint_active = false;                                    // ama yparxei active hint on screen
+    private Vector2Int hint_pair;                                           // the hint star pair
     private bool _hint_used = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,7 +45,6 @@ public class Level2_Manager : MonoBehaviour
         current_level_index = 0;
         GameCompletedPanel.SetActive(false);
         InfoPanel.SetActive(true);
-        
     }
 
     public void Load_next_level()
@@ -142,7 +140,6 @@ public class Level2_Manager : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && starting_star != null)
         {
             RaycastHit2D hit = Physics2D.Raycast(mouse_pos, Vector2.zero);
-            // bool connectionMade = false;
 
             if (hit.collider != null && hit.collider.TryGetComponent(out Star_point end_Star))
             {
@@ -258,7 +255,6 @@ public class Level2_Manager : MonoBehaviour
             Global_Audio_Manager.Instance.Play_Win_SFX();
 
             Check_Game_Completed(); 
-
         }
     }
     
@@ -281,7 +277,7 @@ public class Level2_Manager : MonoBehaviour
             {
                 next_level_button.SetActive(true);
             }
-    }
+        }
     }
 
     // Shows one missing star pair
