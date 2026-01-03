@@ -7,12 +7,16 @@
 
 ## Level 1
 ## Level 2
+- δρακοντας- προστατευοντας τες
+
 ## Level 3
 ## Level 4
 - make pretty
 - - cards
 - - png/background?
 - - borders of info panel
+
+να βρεις
 
 ## Level 5
 
