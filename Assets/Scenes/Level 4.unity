@@ -1449,7 +1449,7 @@ MonoBehaviour:
     \u03AD\u03BE\u03C5\u03C0\u03BD\u03BF\u03B9 \u03BA\u03B1\u03B9 \u03BD\u03B1 \u03B8\u03C5\u03BC\u03BF\u03CD\u03BD\u03C4\u03B1\u03B9
     \u03C0\u03BF\u03CD \u03AD\u03C7\u03BF\u03C5\u03BD \u03C4\u03B1 \u03B5\u03C1\u03B3\u03B1\u03BB\u03B5\u03AF\u03B1
     \u03C4\u03BF\u03C5\u03C2.\n \u03A3\u03B5 \u03BA\u03AC\u03B8\u03B5 \u03C0\u03AF\u03C3\u03C4\u03B1
-    \u03B8\u03B1 \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03B2\u03C1\u03B5\u03AF\u03C2
+    \u03B8\u03B1 \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03B2\u03C1\u03B5\u03B9\u03C2
     \u03CC\u03BB\u03B1 \u03C4\u03B1 \u03BA\u03C1\u03C5\u03C6\u03AC \u03B6\u03B5\u03C5\u03B3\u03AC\u03C1\u03B9\u03B1
     \u03BA\u03B1\u03C1\u03C4\u03CE\u03BD. \u03A4\u03B1\u03C5\u03C4\u03CC\u03C7\u03C1\u03BF\u03BD\u03B1
     \u03B8\u03B1 \u03BC\u03B1\u03B8\u03B1\u03AF\u03BD\u03B5\u03B9\u03C2 \u03BD\u03AD\u03B5\u03C2
@@ -1647,8 +1647,7 @@ MonoBehaviour:
   cols: 4
   padding: 20
   edge_padding: 20
-  timeToWait: 1
-  showDebugLogs: 0
+  timerText: {fileID: 1772489489}
   GameInfoPanel: {fileID: 737815339}
   InfoPanel: {fileID: 491490933}
   InfoText: {fileID: 905608459}
@@ -1658,6 +1657,8 @@ MonoBehaviour:
   level_button_image:
   - {fileID: 1968561037}
   - {fileID: 2094898140}
+  timeToWait: 1
+  showDebugLogs: 0
   level1_data:
   - {fileID: 11400000, guid: 993ef48f5b0687f62996e985143e28f2, type: 2}
   - {fileID: 11400000, guid: db9d8423d1c89d257b12f37cb0c5eb39, type: 2}
@@ -1678,8 +1679,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ba749d71a9f8a701a95f2c8e0597b4c9, type: 2}
   - {fileID: 11400000, guid: 8b93bc6ffbbef37029afd01fcc1f5a87, type: 2}
   - {fileID: 11400000, guid: 6f153aefc14afb0a091c16b7e1f47d92, type: 2}
-  timerText: {fileID: 1772489489}
-  _levels_won: 0000
 --- !u!4 &1261580877
 Transform:
   m_ObjectHideFlags: 0
