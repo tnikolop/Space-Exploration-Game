@@ -180,7 +180,7 @@ public class Level4_Manager : MonoBehaviour
     private void Game_Over()
     {
         Global_Audio_Manager.Instance.Play_Win_SFX();
-        if (_score >= (numberOfQuestions-1) * 10)   // if only one wrong answer -> win
+        if (_score >= (numberOfQuestions-2) * 10)   // if only 2 wrong answers -> win
         {
             WinPanel.SetActive(true);
             Level_Completer.Instance.WinLevel(_no_mistakes);    // mark level as completed to unlock the next one

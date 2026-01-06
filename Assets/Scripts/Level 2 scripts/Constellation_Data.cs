@@ -9,7 +9,7 @@ public class Constellation_Data : ScriptableObject
     [TextArea] public string description;
     [TextArea] public string myth;
 
-    [Header("Συντεταγμένες Αστεριών (0.1-0.9)")]    // pososto othonis
+    [Header("Συντεταγμένες Αστεριών (0.0-1.0)")]    // pososto othonis
     public List<Vector2> star_positions;
 
     [Header("Συνδέσεις (Connections Index)")]    // pio asteri enonete me pio
