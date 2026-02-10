@@ -576,7 +576,7 @@ PrefabInstance:
         \u03C3\u03B5\u03B9\u03C1\u03AC;\n\u039E\u03B5\u03BA\u03AF\u03BD\u03B1 \u03BC\u03B5
         \u03B1\u03C5\u03C4\u03CC\u03BD \u03C0\u03BF\u03C5 \u03B5\u03AF\u03BD\u03B1\u03B9
         \u03C0\u03B9\u03BF \u03BA\u03BF\u03BD\u03C4\u03AC \u03C3\u03C4\u03BF\u03BD
-        \u0389\u03BB\u03B9\u03BF!\""
+        \u0389\u03BB\u03B9\u03BF!"
       objectReference: {fileID: 0}
     - target: {fileID: 5787089453653496127, guid: 6ef2e68418fab6f6aa693a55dbf9ae68, type: 3}
       propertyPath: m_fontSize
